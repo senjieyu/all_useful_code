@@ -1,0 +1,114 @@
+===================================
+Starting TTT (Full Relax) Batch...
+Processing: Twin_Double_Asym_Inner0.21nm_Outer2.09nm_1L.vasp
+Processing: Twin_Double_Asym_Inner0.42nm_Outer2.09nm_2L.vasp
+Processing: Twin_Double_Asym_Inner0.63nm_Outer2.09nm_3L.vasp
+Processing: Twin_Double_Asym_Inner0.83nm_Outer2.09nm_4L.vasp
+Processing: Twin_Double_Asym_Inner1.04nm_Outer2.09nm_5L.vasp
+Processing: Twin_Double_Asym_Inner1.25nm_Outer2.09nm_6L.vasp
+Processing: Twin_Double_Asym_Inner1.46nm_Outer2.09nm_7L.vasp
+Processing: Twin_Double_Asym_Inner1.67nm_Outer2.09nm_8L.vasp
+Processing: Twin_Double_Asym_Inner1.88nm_Outer2.09nm_9L.vasp
+Processing: Twin_Double_Asym_Inner2.30nm_Outer2.09nm_11L.vasp
+Processing: Twin_Double_Asym_Inner2.50nm_Outer2.09nm_12L.vasp
+Processing: Twin_Double_Asym_Inner2.71nm_Outer2.09nm_13L.vasp
+Processing: Twin_Double_Asym_Inner2.92nm_Outer2.09nm_14L.vasp
+Processing: Twin_Double_Asym_Inner3.13nm_Outer2.09nm_15L.vasp
+Processing: Twin_Double_Sym_Sp0.21nm_1L.vasp
+Processing: Twin_Double_Sym_Sp0.42nm_2L.vasp
+Processing: Twin_Double_Sym_Sp0.63nm_3L.vasp
+Processing: Twin_Double_Sym_Sp0.83nm_4L.vasp
+Processing: Twin_Double_Sym_Sp1.04nm_5L.vasp
+Processing: Twin_Double_Sym_Sp1.25nm_6L.vasp
+Processing: Twin_Double_Sym_Sp1.46nm_7L.vasp
+Processing: Twin_Double_Sym_Sp1.67nm_8L.vasp
+Processing: Twin_Double_Sym_Sp1.88nm_9L.vasp
+Processing: Twin_Double_Sym_Sp2.09nm_10L.vasp
+Processing: Twin_Double_Sym_Sp2.30nm_11L.vasp
+Processing: Twin_Double_Sym_Sp2.50nm_12L.vasp
+Processing: Twin_Double_Sym_Sp2.71nm_13L.vasp
+Processing: Twin_Double_Sym_Sp2.92nm_14L.vasp
+Processing: Twin_Double_Sym_Sp3.13nm_15L.vasp
+Processing: Twin_Single_TB.vasp
+TTT Batch Finished.
+===================================
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@be1u29a>
+Subject: Job 2875014: <Cu_TTT> in cluster <qmhpc> Done
+
+Job <Cu_TTT> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Sun Dec 28 15:00:56 2025
+Job was executed on host(s) <96*be1u29a>, in queue <1t88c>, as user <phy-luoyf> in cluster <qmhpc> at Sun Dec 28 15:00:56 2025
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/relax_fixed_all_with_EAM> was used as the working directory.
+Started at Sun Dec 28 15:00:56 2025
+Terminated at Sun Dec 28 15:01:17 2025
+Results reported at Sun Dec 28 15:01:17 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Cu_TTT
+#BSUB -q 1t88c
+#BSUB -n 96
+#BSUB -R "span[ptile=96]"
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+# --- 设置 LAMMPS 路径 (请确认路径正确) ---
+LMP_EXEC="/work/phy-luoyf/apps/lammps2025/lammps-22Jul2025/build/lmp"
+
+# 创建文件夹
+mkdir -p datattt
+mkdir -p relaxed_ttt
+
+echo "==================================="
+echo "Starting TTT (Full Relax) Batch..."
+
+for vasp_file in struttt/*; do
+    # 确保是文件
+    [ -f "$vasp_file" ] || continue
+    
+    filename=$(basename "$vasp_file")
+    data_file="datattt/${filename}.data"
+    result_file="relaxed_ttt/${filename}_relaxed.data"
+
+    # 1. 转换格式
+    python vasp2data.py "$vasp_file" "$data_file"
+
+    # 2. 运行 LAMMPS
+    echo "Processing: $filename"
+    $LMP_EXEC -in in.relax_ttt -var fname "$data_file" -var oname "$result_file" > /dev/null
+done
+
+echo "TTT Batch Finished."
+echo "==================================="
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   4.40 sec.
+    Max Memory :                                 23 MB
+    Average Memory :                             19.20 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   20 sec.
+    Turnaround time :                            21 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <2875014.err> for stderr output of this job.
+

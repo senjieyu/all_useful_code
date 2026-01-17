@@ -1,0 +1,44 @@
+af_adaptive: None
+af_default: 0.01
+af_failed: 0.5
+af_limit: 0.2
+body_list:
+- two
+- three
+bw: 0.01
+bw_method: Freedman_Diaconis
+coverage_rate_method: mean
+coverage_rate_threshold:
+- 99.5
+- 99.9
+- 99.95
+das_ambiguity: "True \u4F1A\u9009\u62E9\u6B64\u79CD\u5206\u6B67\u9608\u503C\u8BA1\u7B97\
+  \u65B9\u6CD5"
+dft:
+  calc_dir_num: 5
+  force_threshold: 20
+ele:
+- Cu
+ele_model: 1
+end: 1
+mlp_encode_model: false
+mlp_nums: 3
+mtp_type: l2k2.mtp
+num_elements: 6
+nvt_lattice_scaling_factor:
+- 1
+over_fitting_factor: 1.1
+sample:
+  cluster_threshold_init: 0.5
+  clustering_by_ambiguity: true
+  k: 2
+  n: 5
+select_stru_num: None
+size: (1, 1, 1)
+stru_num:
+- 20
+- 15
+- 10
+task_submission_method: bsub<bsub.lsf
+threshold_high: 0.3
+threshold_low: 0.08

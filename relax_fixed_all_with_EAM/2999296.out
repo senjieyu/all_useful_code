@@ -1,0 +1,2160 @@
+===================================
+Starting TTT (Full Relax) Batch...
+Converted: 1_cut_0_0_0_N134.vasp -> 1_cut_0_0_0_N134.vasp.data
+Processing: 1_cut_0_0_0_N134.vasp
+Converted: 1_cut_0_0_1_N145.vasp -> 1_cut_0_0_1_N145.vasp.data
+Processing: 1_cut_0_0_1_N145.vasp
+Converted: 1_cut_0_0_2_N149.vasp -> 1_cut_0_0_2_N149.vasp.data
+Processing: 1_cut_0_0_2_N149.vasp
+Converted: 1_cut_0_0_3_N137.vasp -> 1_cut_0_0_3_N137.vasp.data
+Processing: 1_cut_0_0_3_N137.vasp
+Converted: 1_cut_0_0_4_N149.vasp -> 1_cut_0_0_4_N149.vasp.data
+Processing: 1_cut_0_0_4_N149.vasp
+Converted: 1_cut_0_0_5_N155.vasp -> 1_cut_0_0_5_N155.vasp.data
+Processing: 1_cut_0_0_5_N155.vasp
+Converted: 1_cut_0_1_0_N153.vasp -> 1_cut_0_1_0_N153.vasp.data
+Processing: 1_cut_0_1_0_N153.vasp
+Converted: 1_cut_0_1_1_N142.vasp -> 1_cut_0_1_1_N142.vasp.data
+Processing: 1_cut_0_1_1_N142.vasp
+Converted: 1_cut_0_1_2_N141.vasp -> 1_cut_0_1_2_N141.vasp.data
+Processing: 1_cut_0_1_2_N141.vasp
+Converted: 1_cut_0_1_3_N157.vasp -> 1_cut_0_1_3_N157.vasp.data
+Processing: 1_cut_0_1_3_N157.vasp
+Converted: 1_cut_0_1_4_N147.vasp -> 1_cut_0_1_4_N147.vasp.data
+Processing: 1_cut_0_1_4_N147.vasp
+Converted: 1_cut_0_1_5_N139.vasp -> 1_cut_0_1_5_N139.vasp.data
+Processing: 1_cut_0_1_5_N139.vasp
+Converted: 1_cut_0_2_0_N138.vasp -> 1_cut_0_2_0_N138.vasp.data
+Processing: 1_cut_0_2_0_N138.vasp
+Converted: 1_cut_0_2_1_N156.vasp -> 1_cut_0_2_1_N156.vasp.data
+Processing: 1_cut_0_2_1_N156.vasp
+Converted: 1_cut_0_2_2_N144.vasp -> 1_cut_0_2_2_N144.vasp.data
+Processing: 1_cut_0_2_2_N144.vasp
+Converted: 1_cut_0_2_3_N142.vasp -> 1_cut_0_2_3_N142.vasp.data
+Processing: 1_cut_0_2_3_N142.vasp
+Converted: 1_cut_0_2_4_N143.vasp -> 1_cut_0_2_4_N143.vasp.data
+Processing: 1_cut_0_2_4_N143.vasp
+Converted: 1_cut_0_2_5_N148.vasp -> 1_cut_0_2_5_N148.vasp.data
+Processing: 1_cut_0_2_5_N148.vasp
+Converted: 1_cut_0_3_0_N146.vasp -> 1_cut_0_3_0_N146.vasp.data
+Processing: 1_cut_0_3_0_N146.vasp
+Converted: 1_cut_0_3_1_N128.vasp -> 1_cut_0_3_1_N128.vasp.data
+Processing: 1_cut_0_3_1_N128.vasp
+Converted: 1_cut_0_3_2_N164.vasp -> 1_cut_0_3_2_N164.vasp.data
+Processing: 1_cut_0_3_2_N164.vasp
+Converted: 1_cut_0_3_3_N147.vasp -> 1_cut_0_3_3_N147.vasp.data
+Processing: 1_cut_0_3_3_N147.vasp
+Converted: 1_cut_0_3_4_N145.vasp -> 1_cut_0_3_4_N145.vasp.data
+Processing: 1_cut_0_3_4_N145.vasp
+Converted: 1_cut_0_3_5_N141.vasp -> 1_cut_0_3_5_N141.vasp.data
+Processing: 1_cut_0_3_5_N141.vasp
+Converted: 1_cut_0_4_0_N150.vasp -> 1_cut_0_4_0_N150.vasp.data
+Processing: 1_cut_0_4_0_N150.vasp
+Converted: 1_cut_0_4_1_N152.vasp -> 1_cut_0_4_1_N152.vasp.data
+Processing: 1_cut_0_4_1_N152.vasp
+Converted: 1_cut_0_4_2_N147.vasp -> 1_cut_0_4_2_N147.vasp.data
+Processing: 1_cut_0_4_2_N147.vasp
+Converted: 1_cut_0_4_3_N142.vasp -> 1_cut_0_4_3_N142.vasp.data
+Processing: 1_cut_0_4_3_N142.vasp
+Converted: 1_cut_0_4_4_N134.vasp -> 1_cut_0_4_4_N134.vasp.data
+Processing: 1_cut_0_4_4_N134.vasp
+Converted: 1_cut_0_4_5_N155.vasp -> 1_cut_0_4_5_N155.vasp.data
+Processing: 1_cut_0_4_5_N155.vasp
+Converted: 1_cut_1_0_0_N133.vasp -> 1_cut_1_0_0_N133.vasp.data
+Processing: 1_cut_1_0_0_N133.vasp
+Converted: 1_cut_1_0_1_N144.vasp -> 1_cut_1_0_1_N144.vasp.data
+Processing: 1_cut_1_0_1_N144.vasp
+Converted: 1_cut_1_0_2_N149.vasp -> 1_cut_1_0_2_N149.vasp.data
+Processing: 1_cut_1_0_2_N149.vasp
+Converted: 1_cut_1_0_3_N130.vasp -> 1_cut_1_0_3_N130.vasp.data
+Processing: 1_cut_1_0_3_N130.vasp
+Converted: 1_cut_1_0_4_N150.vasp -> 1_cut_1_0_4_N150.vasp.data
+Processing: 1_cut_1_0_4_N150.vasp
+Converted: 1_cut_1_0_5_N158.vasp -> 1_cut_1_0_5_N158.vasp.data
+Processing: 1_cut_1_0_5_N158.vasp
+Converted: 1_cut_1_1_0_N149.vasp -> 1_cut_1_1_0_N149.vasp.data
+Processing: 1_cut_1_1_0_N149.vasp
+Converted: 1_cut_1_1_1_N147.vasp -> 1_cut_1_1_1_N147.vasp.data
+Processing: 1_cut_1_1_1_N147.vasp
+Converted: 1_cut_1_1_2_N142.vasp -> 1_cut_1_1_2_N142.vasp.data
+Processing: 1_cut_1_1_2_N142.vasp
+Converted: 1_cut_1_1_3_N159.vasp -> 1_cut_1_1_3_N159.vasp.data
+Processing: 1_cut_1_1_3_N159.vasp
+Converted: 1_cut_1_1_4_N146.vasp -> 1_cut_1_1_4_N146.vasp.data
+Processing: 1_cut_1_1_4_N146.vasp
+Converted: 1_cut_1_1_5_N146.vasp -> 1_cut_1_1_5_N146.vasp.data
+Processing: 1_cut_1_1_5_N146.vasp
+Converted: 1_cut_1_2_0_N136.vasp -> 1_cut_1_2_0_N136.vasp.data
+Processing: 1_cut_1_2_0_N136.vasp
+Converted: 1_cut_1_2_1_N158.vasp -> 1_cut_1_2_1_N158.vasp.data
+Processing: 1_cut_1_2_1_N158.vasp
+Converted: 1_cut_1_2_2_N144.vasp -> 1_cut_1_2_2_N144.vasp.data
+Processing: 1_cut_1_2_2_N144.vasp
+Converted: 1_cut_1_2_3_N138.vasp -> 1_cut_1_2_3_N138.vasp.data
+Processing: 1_cut_1_2_3_N138.vasp
+Converted: 1_cut_1_2_4_N148.vasp -> 1_cut_1_2_4_N148.vasp.data
+Processing: 1_cut_1_2_4_N148.vasp
+Converted: 1_cut_1_2_5_N149.vasp -> 1_cut_1_2_5_N149.vasp.data
+Processing: 1_cut_1_2_5_N149.vasp
+Converted: 1_cut_1_3_0_N152.vasp -> 1_cut_1_3_0_N152.vasp.data
+Processing: 1_cut_1_3_0_N152.vasp
+Converted: 1_cut_1_3_1_N127.vasp -> 1_cut_1_3_1_N127.vasp.data
+Processing: 1_cut_1_3_1_N127.vasp
+Converted: 1_cut_1_3_2_N158.vasp -> 1_cut_1_3_2_N158.vasp.data
+Processing: 1_cut_1_3_2_N158.vasp
+Converted: 1_cut_1_3_3_N147.vasp -> 1_cut_1_3_3_N147.vasp.data
+Processing: 1_cut_1_3_3_N147.vasp
+Converted: 1_cut_1_3_4_N146.vasp -> 1_cut_1_3_4_N146.vasp.data
+Processing: 1_cut_1_3_4_N146.vasp
+Converted: 1_cut_1_3_5_N144.vasp -> 1_cut_1_3_5_N144.vasp.data
+Processing: 1_cut_1_3_5_N144.vasp
+Converted: 1_cut_1_4_0_N141.vasp -> 1_cut_1_4_0_N141.vasp.data
+Processing: 1_cut_1_4_0_N141.vasp
+Converted: 1_cut_1_4_1_N152.vasp -> 1_cut_1_4_1_N152.vasp.data
+Processing: 1_cut_1_4_1_N152.vasp
+Converted: 1_cut_1_4_2_N145.vasp -> 1_cut_1_4_2_N145.vasp.data
+Processing: 1_cut_1_4_2_N145.vasp
+Converted: 1_cut_1_4_3_N142.vasp -> 1_cut_1_4_3_N142.vasp.data
+Processing: 1_cut_1_4_3_N142.vasp
+Converted: 1_cut_1_4_4_N136.vasp -> 1_cut_1_4_4_N136.vasp.data
+Processing: 1_cut_1_4_4_N136.vasp
+Converted: 1_cut_1_4_5_N152.vasp -> 1_cut_1_4_5_N152.vasp.data
+Processing: 1_cut_1_4_5_N152.vasp
+Converted: 1_cut_2_0_0_N136.vasp -> 1_cut_2_0_0_N136.vasp.data
+Processing: 1_cut_2_0_0_N136.vasp
+Converted: 1_cut_2_0_1_N142.vasp -> 1_cut_2_0_1_N142.vasp.data
+Processing: 1_cut_2_0_1_N142.vasp
+Converted: 1_cut_2_0_2_N147.vasp -> 1_cut_2_0_2_N147.vasp.data
+Processing: 1_cut_2_0_2_N147.vasp
+Converted: 1_cut_2_0_3_N132.vasp -> 1_cut_2_0_3_N132.vasp.data
+Processing: 1_cut_2_0_3_N132.vasp
+Converted: 1_cut_2_0_4_N146.vasp -> 1_cut_2_0_4_N146.vasp.data
+Processing: 1_cut_2_0_4_N146.vasp
+Converted: 1_cut_2_0_5_N151.vasp -> 1_cut_2_0_5_N151.vasp.data
+Processing: 1_cut_2_0_5_N151.vasp
+Converted: 1_cut_2_1_0_N152.vasp -> 1_cut_2_1_0_N152.vasp.data
+Processing: 1_cut_2_1_0_N152.vasp
+Converted: 1_cut_2_1_1_N146.vasp -> 1_cut_2_1_1_N146.vasp.data
+Processing: 1_cut_2_1_1_N146.vasp
+Converted: 1_cut_2_1_2_N141.vasp -> 1_cut_2_1_2_N141.vasp.data
+Processing: 1_cut_2_1_2_N141.vasp
+Converted: 1_cut_2_1_3_N157.vasp -> 1_cut_2_1_3_N157.vasp.data
+Processing: 1_cut_2_1_3_N157.vasp
+Converted: 1_cut_2_1_4_N147.vasp -> 1_cut_2_1_4_N147.vasp.data
+Processing: 1_cut_2_1_4_N147.vasp
+Converted: 1_cut_2_1_5_N141.vasp -> 1_cut_2_1_5_N141.vasp.data
+Processing: 1_cut_2_1_5_N141.vasp
+Converted: 1_cut_2_2_0_N133.vasp -> 1_cut_2_2_0_N133.vasp.data
+Processing: 1_cut_2_2_0_N133.vasp
+Converted: 1_cut_2_2_1_N154.vasp -> 1_cut_2_2_1_N154.vasp.data
+Processing: 1_cut_2_2_1_N154.vasp
+Converted: 1_cut_2_2_2_N145.vasp -> 1_cut_2_2_2_N145.vasp.data
+Processing: 1_cut_2_2_2_N145.vasp
+Converted: 1_cut_2_2_3_N143.vasp -> 1_cut_2_2_3_N143.vasp.data
+Processing: 1_cut_2_2_3_N143.vasp
+Converted: 1_cut_2_2_4_N147.vasp -> 1_cut_2_2_4_N147.vasp.data
+Processing: 1_cut_2_2_4_N147.vasp
+Converted: 1_cut_2_2_5_N150.vasp -> 1_cut_2_2_5_N150.vasp.data
+Processing: 1_cut_2_2_5_N150.vasp
+Converted: 1_cut_2_3_0_N147.vasp -> 1_cut_2_3_0_N147.vasp.data
+Processing: 1_cut_2_3_0_N147.vasp
+Converted: 1_cut_2_3_1_N126.vasp -> 1_cut_2_3_1_N126.vasp.data
+Processing: 1_cut_2_3_1_N126.vasp
+Converted: 1_cut_2_3_2_N160.vasp -> 1_cut_2_3_2_N160.vasp.data
+Processing: 1_cut_2_3_2_N160.vasp
+Converted: 1_cut_2_3_3_N148.vasp -> 1_cut_2_3_3_N148.vasp.data
+Processing: 1_cut_2_3_3_N148.vasp
+Converted: 1_cut_2_3_4_N146.vasp -> 1_cut_2_3_4_N146.vasp.data
+Processing: 1_cut_2_3_4_N146.vasp
+Converted: 1_cut_2_3_5_N149.vasp -> 1_cut_2_3_5_N149.vasp.data
+Processing: 1_cut_2_3_5_N149.vasp
+Converted: 1_cut_2_4_0_N145.vasp -> 1_cut_2_4_0_N145.vasp.data
+Processing: 1_cut_2_4_0_N145.vasp
+Converted: 1_cut_2_4_1_N153.vasp -> 1_cut_2_4_1_N153.vasp.data
+Processing: 1_cut_2_4_1_N153.vasp
+Converted: 1_cut_2_4_2_N148.vasp -> 1_cut_2_4_2_N148.vasp.data
+Processing: 1_cut_2_4_2_N148.vasp
+Converted: 1_cut_2_4_3_N141.vasp -> 1_cut_2_4_3_N141.vasp.data
+Processing: 1_cut_2_4_3_N141.vasp
+Converted: 1_cut_2_4_4_N137.vasp -> 1_cut_2_4_4_N137.vasp.data
+Processing: 1_cut_2_4_4_N137.vasp
+Converted: 1_cut_2_4_5_N161.vasp -> 1_cut_2_4_5_N161.vasp.data
+Processing: 1_cut_2_4_5_N161.vasp
+Converted: 1_cut_3_0_0_N133.vasp -> 1_cut_3_0_0_N133.vasp.data
+Processing: 1_cut_3_0_0_N133.vasp
+Converted: 1_cut_3_0_1_N147.vasp -> 1_cut_3_0_1_N147.vasp.data
+Processing: 1_cut_3_0_1_N147.vasp
+Converted: 1_cut_3_0_2_N146.vasp -> 1_cut_3_0_2_N146.vasp.data
+Processing: 1_cut_3_0_2_N146.vasp
+Converted: 1_cut_3_0_3_N129.vasp -> 1_cut_3_0_3_N129.vasp.data
+Processing: 1_cut_3_0_3_N129.vasp
+Converted: 1_cut_3_0_4_N150.vasp -> 1_cut_3_0_4_N150.vasp.data
+Processing: 1_cut_3_0_4_N150.vasp
+Converted: 1_cut_3_0_5_N151.vasp -> 1_cut_3_0_5_N151.vasp.data
+Processing: 1_cut_3_0_5_N151.vasp
+Converted: 1_cut_3_1_0_N145.vasp -> 1_cut_3_1_0_N145.vasp.data
+Processing: 1_cut_3_1_0_N145.vasp
+Converted: 1_cut_3_1_1_N147.vasp -> 1_cut_3_1_1_N147.vasp.data
+Processing: 1_cut_3_1_1_N147.vasp
+Converted: 1_cut_3_1_2_N144.vasp -> 1_cut_3_1_2_N144.vasp.data
+Processing: 1_cut_3_1_2_N144.vasp
+Converted: 1_cut_3_1_3_N165.vasp -> 1_cut_3_1_3_N165.vasp.data
+Processing: 1_cut_3_1_3_N165.vasp
+Converted: 1_cut_3_1_4_N143.vasp -> 1_cut_3_1_4_N143.vasp.data
+Processing: 1_cut_3_1_4_N143.vasp
+Converted: 1_cut_3_1_5_N148.vasp -> 1_cut_3_1_5_N148.vasp.data
+Processing: 1_cut_3_1_5_N148.vasp
+Converted: 1_cut_3_2_0_N139.vasp -> 1_cut_3_2_0_N139.vasp.data
+Processing: 1_cut_3_2_0_N139.vasp
+Converted: 1_cut_3_2_1_N154.vasp -> 1_cut_3_2_1_N154.vasp.data
+Processing: 1_cut_3_2_1_N154.vasp
+Converted: 1_cut_3_2_2_N144.vasp -> 1_cut_3_2_2_N144.vasp.data
+Processing: 1_cut_3_2_2_N144.vasp
+Converted: 1_cut_3_2_3_N138.vasp -> 1_cut_3_2_3_N138.vasp.data
+Processing: 1_cut_3_2_3_N138.vasp
+Converted: 1_cut_3_2_4_N147.vasp -> 1_cut_3_2_4_N147.vasp.data
+Processing: 1_cut_3_2_4_N147.vasp
+Converted: 1_cut_3_2_5_N147.vasp -> 1_cut_3_2_5_N147.vasp.data
+Processing: 1_cut_3_2_5_N147.vasp
+Converted: 1_cut_3_3_0_N147.vasp -> 1_cut_3_3_0_N147.vasp.data
+Processing: 1_cut_3_3_0_N147.vasp
+Converted: 1_cut_3_3_1_N129.vasp -> 1_cut_3_3_1_N129.vasp.data
+Processing: 1_cut_3_3_1_N129.vasp
+Converted: 1_cut_3_3_2_N158.vasp -> 1_cut_3_3_2_N158.vasp.data
+Processing: 1_cut_3_3_2_N158.vasp
+Converted: 1_cut_3_3_3_N145.vasp -> 1_cut_3_3_3_N145.vasp.data
+Processing: 1_cut_3_3_3_N145.vasp
+Converted: 1_cut_3_3_4_N146.vasp -> 1_cut_3_3_4_N146.vasp.data
+Processing: 1_cut_3_3_4_N146.vasp
+Converted: 1_cut_3_3_5_N148.vasp -> 1_cut_3_3_5_N148.vasp.data
+Processing: 1_cut_3_3_5_N148.vasp
+Converted: 1_cut_3_4_0_N149.vasp -> 1_cut_3_4_0_N149.vasp.data
+Processing: 1_cut_3_4_0_N149.vasp
+Converted: 1_cut_3_4_1_N151.vasp -> 1_cut_3_4_1_N151.vasp.data
+Processing: 1_cut_3_4_1_N151.vasp
+Converted: 1_cut_3_4_2_N147.vasp -> 1_cut_3_4_2_N147.vasp.data
+Processing: 1_cut_3_4_2_N147.vasp
+Converted: 1_cut_3_4_3_N144.vasp -> 1_cut_3_4_3_N144.vasp.data
+Processing: 1_cut_3_4_3_N144.vasp
+Converted: 1_cut_3_4_4_N136.vasp -> 1_cut_3_4_4_N136.vasp.data
+Processing: 1_cut_3_4_4_N136.vasp
+Converted: 1_cut_3_4_5_N151.vasp -> 1_cut_3_4_5_N151.vasp.data
+Processing: 1_cut_3_4_5_N151.vasp
+Converted: 1_cut_4_0_0_N132.vasp -> 1_cut_4_0_0_N132.vasp.data
+Processing: 1_cut_4_0_0_N132.vasp
+Converted: 1_cut_4_0_1_N148.vasp -> 1_cut_4_0_1_N148.vasp.data
+Processing: 1_cut_4_0_1_N148.vasp
+Converted: 1_cut_4_0_2_N145.vasp -> 1_cut_4_0_2_N145.vasp.data
+Processing: 1_cut_4_0_2_N145.vasp
+Converted: 1_cut_4_0_3_N132.vasp -> 1_cut_4_0_3_N132.vasp.data
+Processing: 1_cut_4_0_3_N132.vasp
+Converted: 1_cut_4_0_4_N148.vasp -> 1_cut_4_0_4_N148.vasp.data
+Processing: 1_cut_4_0_4_N148.vasp
+Converted: 1_cut_4_0_5_N152.vasp -> 1_cut_4_0_5_N152.vasp.data
+Processing: 1_cut_4_0_5_N152.vasp
+Converted: 1_cut_4_1_0_N150.vasp -> 1_cut_4_1_0_N150.vasp.data
+Processing: 1_cut_4_1_0_N150.vasp
+Converted: 1_cut_4_1_1_N139.vasp -> 1_cut_4_1_1_N139.vasp.data
+Processing: 1_cut_4_1_1_N139.vasp
+Converted: 1_cut_4_1_2_N143.vasp -> 1_cut_4_1_2_N143.vasp.data
+Processing: 1_cut_4_1_2_N143.vasp
+Converted: 1_cut_4_1_3_N156.vasp -> 1_cut_4_1_3_N156.vasp.data
+Processing: 1_cut_4_1_3_N156.vasp
+Converted: 1_cut_4_1_4_N152.vasp -> 1_cut_4_1_4_N152.vasp.data
+Processing: 1_cut_4_1_4_N152.vasp
+Converted: 1_cut_4_1_5_N144.vasp -> 1_cut_4_1_5_N144.vasp.data
+Processing: 1_cut_4_1_5_N144.vasp
+Converted: 1_cut_4_2_0_N136.vasp -> 1_cut_4_2_0_N136.vasp.data
+Processing: 1_cut_4_2_0_N136.vasp
+Converted: 1_cut_4_2_1_N159.vasp -> 1_cut_4_2_1_N159.vasp.data
+Processing: 1_cut_4_2_1_N159.vasp
+Converted: 1_cut_4_2_2_N144.vasp -> 1_cut_4_2_2_N144.vasp.data
+Processing: 1_cut_4_2_2_N144.vasp
+Converted: 1_cut_4_2_3_N141.vasp -> 1_cut_4_2_3_N141.vasp.data
+Processing: 1_cut_4_2_3_N141.vasp
+Converted: 1_cut_4_2_4_N144.vasp -> 1_cut_4_2_4_N144.vasp.data
+Processing: 1_cut_4_2_4_N144.vasp
+Converted: 1_cut_4_2_5_N148.vasp -> 1_cut_4_2_5_N148.vasp.data
+Processing: 1_cut_4_2_5_N148.vasp
+Converted: 1_cut_4_3_0_N152.vasp -> 1_cut_4_3_0_N152.vasp.data
+Processing: 1_cut_4_3_0_N152.vasp
+Converted: 1_cut_4_3_1_N124.vasp -> 1_cut_4_3_1_N124.vasp.data
+Processing: 1_cut_4_3_1_N124.vasp
+Converted: 1_cut_4_3_2_N166.vasp -> 1_cut_4_3_2_N166.vasp.data
+Processing: 1_cut_4_3_2_N166.vasp
+Converted: 1_cut_4_3_3_N147.vasp -> 1_cut_4_3_3_N147.vasp.data
+Processing: 1_cut_4_3_3_N147.vasp
+Converted: 1_cut_4_3_4_N148.vasp -> 1_cut_4_3_4_N148.vasp.data
+Processing: 1_cut_4_3_4_N148.vasp
+Converted: 1_cut_4_3_5_N141.vasp -> 1_cut_4_3_5_N141.vasp.data
+Processing: 1_cut_4_3_5_N141.vasp
+Converted: 1_cut_4_4_0_N150.vasp -> 1_cut_4_4_0_N150.vasp.data
+Processing: 1_cut_4_4_0_N150.vasp
+Converted: 1_cut_4_4_1_N153.vasp -> 1_cut_4_4_1_N153.vasp.data
+Processing: 1_cut_4_4_1_N153.vasp
+Converted: 1_cut_4_4_2_N145.vasp -> 1_cut_4_4_2_N145.vasp.data
+Processing: 1_cut_4_4_2_N145.vasp
+Converted: 1_cut_4_4_3_N143.vasp -> 1_cut_4_4_3_N143.vasp.data
+Processing: 1_cut_4_4_3_N143.vasp
+Converted: 1_cut_4_4_4_N138.vasp -> 1_cut_4_4_4_N138.vasp.data
+Processing: 1_cut_4_4_4_N138.vasp
+Converted: 1_cut_4_4_5_N159.vasp -> 1_cut_4_4_5_N159.vasp.data
+Processing: 1_cut_4_4_5_N159.vasp
+Converted: 1_cut_5_0_0_N132.vasp -> 1_cut_5_0_0_N132.vasp.data
+Processing: 1_cut_5_0_0_N132.vasp
+Converted: 1_cut_5_0_1_N145.vasp -> 1_cut_5_0_1_N145.vasp.data
+Processing: 1_cut_5_0_1_N145.vasp
+Converted: 1_cut_5_0_2_N150.vasp -> 1_cut_5_0_2_N150.vasp.data
+Processing: 1_cut_5_0_2_N150.vasp
+Converted: 1_cut_5_0_3_N131.vasp -> 1_cut_5_0_3_N131.vasp.data
+Processing: 1_cut_5_0_3_N131.vasp
+Converted: 1_cut_5_0_4_N148.vasp -> 1_cut_5_0_4_N148.vasp.data
+Processing: 1_cut_5_0_4_N148.vasp
+Converted: 1_cut_5_0_5_N156.vasp -> 1_cut_5_0_5_N156.vasp.data
+Processing: 1_cut_5_0_5_N156.vasp
+Converted: 1_cut_5_1_0_N150.vasp -> 1_cut_5_1_0_N150.vasp.data
+Processing: 1_cut_5_1_0_N150.vasp
+Converted: 1_cut_5_1_1_N145.vasp -> 1_cut_5_1_1_N145.vasp.data
+Processing: 1_cut_5_1_1_N145.vasp
+Converted: 1_cut_5_1_2_N143.vasp -> 1_cut_5_1_2_N143.vasp.data
+Processing: 1_cut_5_1_2_N143.vasp
+Converted: 1_cut_5_1_3_N162.vasp -> 1_cut_5_1_3_N162.vasp.data
+Processing: 1_cut_5_1_3_N162.vasp
+Converted: 1_cut_5_1_4_N145.vasp -> 1_cut_5_1_4_N145.vasp.data
+Processing: 1_cut_5_1_4_N145.vasp
+Converted: 1_cut_5_1_5_N144.vasp -> 1_cut_5_1_5_N144.vasp.data
+Processing: 1_cut_5_1_5_N144.vasp
+Converted: 1_cut_5_2_0_N139.vasp -> 1_cut_5_2_0_N139.vasp.data
+Processing: 1_cut_5_2_0_N139.vasp
+Converted: 1_cut_5_2_1_N156.vasp -> 1_cut_5_2_1_N156.vasp.data
+Processing: 1_cut_5_2_1_N156.vasp
+Converted: 1_cut_5_2_2_N145.vasp -> 1_cut_5_2_2_N145.vasp.data
+Processing: 1_cut_5_2_2_N145.vasp
+Converted: 1_cut_5_2_3_N138.vasp -> 1_cut_5_2_3_N138.vasp.data
+Processing: 1_cut_5_2_3_N138.vasp
+Converted: 1_cut_5_2_4_N147.vasp -> 1_cut_5_2_4_N147.vasp.data
+Processing: 1_cut_5_2_4_N147.vasp
+Converted: 1_cut_5_2_5_N149.vasp -> 1_cut_5_2_5_N149.vasp.data
+Processing: 1_cut_5_2_5_N149.vasp
+Converted: 1_cut_5_3_0_N152.vasp -> 1_cut_5_3_0_N152.vasp.data
+Processing: 1_cut_5_3_0_N152.vasp
+Converted: 1_cut_5_3_1_N128.vasp -> 1_cut_5_3_1_N128.vasp.data
+Processing: 1_cut_5_3_1_N128.vasp
+Converted: 1_cut_5_3_2_N161.vasp -> 1_cut_5_3_2_N161.vasp.data
+Processing: 1_cut_5_3_2_N161.vasp
+Converted: 1_cut_5_3_3_N145.vasp -> 1_cut_5_3_3_N145.vasp.data
+Processing: 1_cut_5_3_3_N145.vasp
+Converted: 1_cut_5_3_4_N149.vasp -> 1_cut_5_3_4_N149.vasp.data
+Processing: 1_cut_5_3_4_N149.vasp
+Converted: 1_cut_5_3_5_N146.vasp -> 1_cut_5_3_5_N146.vasp.data
+Processing: 1_cut_5_3_5_N146.vasp
+Converted: 1_cut_5_4_0_N147.vasp -> 1_cut_5_4_0_N147.vasp.data
+Processing: 1_cut_5_4_0_N147.vasp
+Converted: 1_cut_5_4_1_N152.vasp -> 1_cut_5_4_1_N152.vasp.data
+Processing: 1_cut_5_4_1_N152.vasp
+Converted: 1_cut_5_4_2_N144.vasp -> 1_cut_5_4_2_N144.vasp.data
+Processing: 1_cut_5_4_2_N144.vasp
+Converted: 1_cut_5_4_3_N143.vasp -> 1_cut_5_4_3_N143.vasp.data
+Processing: 1_cut_5_4_3_N143.vasp
+Converted: 1_cut_5_4_4_N138.vasp -> 1_cut_5_4_4_N138.vasp.data
+Processing: 1_cut_5_4_4_N138.vasp
+Converted: 1_cut_5_4_5_N158.vasp -> 1_cut_5_4_5_N158.vasp.data
+Processing: 1_cut_5_4_5_N158.vasp
+Converted: 2_cut_0_0_0_N117.vasp -> 2_cut_0_0_0_N117.vasp.data
+Processing: 2_cut_0_0_0_N117.vasp
+Converted: 2_cut_0_0_1_N122.vasp -> 2_cut_0_0_1_N122.vasp.data
+Processing: 2_cut_0_0_1_N122.vasp
+Converted: 2_cut_0_0_2_N131.vasp -> 2_cut_0_0_2_N131.vasp.data
+Processing: 2_cut_0_0_2_N131.vasp
+Converted: 2_cut_0_0_3_N124.vasp -> 2_cut_0_0_3_N124.vasp.data
+Processing: 2_cut_0_0_3_N124.vasp
+Converted: 2_cut_0_0_4_N115.vasp -> 2_cut_0_0_4_N115.vasp.data
+Processing: 2_cut_0_0_4_N115.vasp
+Converted: 2_cut_0_0_5_N132.vasp -> 2_cut_0_0_5_N132.vasp.data
+Processing: 2_cut_0_0_5_N132.vasp
+Converted: 2_cut_0_0_6_N122.vasp -> 2_cut_0_0_6_N122.vasp.data
+Processing: 2_cut_0_0_6_N122.vasp
+Converted: 2_cut_0_1_0_N133.vasp -> 2_cut_0_1_0_N133.vasp.data
+Processing: 2_cut_0_1_0_N133.vasp
+Converted: 2_cut_0_1_1_N119.vasp -> 2_cut_0_1_1_N119.vasp.data
+Processing: 2_cut_0_1_1_N119.vasp
+Converted: 2_cut_0_1_2_N131.vasp -> 2_cut_0_1_2_N131.vasp.data
+Processing: 2_cut_0_1_2_N131.vasp
+Converted: 2_cut_0_1_3_N128.vasp -> 2_cut_0_1_3_N128.vasp.data
+Processing: 2_cut_0_1_3_N128.vasp
+Converted: 2_cut_0_1_4_N135.vasp -> 2_cut_0_1_4_N135.vasp.data
+Processing: 2_cut_0_1_4_N135.vasp
+Converted: 2_cut_0_1_5_N124.vasp -> 2_cut_0_1_5_N124.vasp.data
+Processing: 2_cut_0_1_5_N124.vasp
+Converted: 2_cut_0_1_6_N124.vasp -> 2_cut_0_1_6_N124.vasp.data
+Processing: 2_cut_0_1_6_N124.vasp
+Converted: 2_cut_0_2_0_N122.vasp -> 2_cut_0_2_0_N122.vasp.data
+Processing: 2_cut_0_2_0_N122.vasp
+Converted: 2_cut_0_2_1_N119.vasp -> 2_cut_0_2_1_N119.vasp.data
+Processing: 2_cut_0_2_1_N119.vasp
+Converted: 2_cut_0_2_2_N121.vasp -> 2_cut_0_2_2_N121.vasp.data
+Processing: 2_cut_0_2_2_N121.vasp
+Converted: 2_cut_0_2_3_N123.vasp -> 2_cut_0_2_3_N123.vasp.data
+Processing: 2_cut_0_2_3_N123.vasp
+Converted: 2_cut_0_2_4_N135.vasp -> 2_cut_0_2_4_N135.vasp.data
+Processing: 2_cut_0_2_4_N135.vasp
+Converted: 2_cut_0_2_5_N117.vasp -> 2_cut_0_2_5_N117.vasp.data
+Processing: 2_cut_0_2_5_N117.vasp
+Converted: 2_cut_0_2_6_N124.vasp -> 2_cut_0_2_6_N124.vasp.data
+Processing: 2_cut_0_2_6_N124.vasp
+Converted: 2_cut_0_3_0_N124.vasp -> 2_cut_0_3_0_N124.vasp.data
+Processing: 2_cut_0_3_0_N124.vasp
+Converted: 2_cut_0_3_1_N121.vasp -> 2_cut_0_3_1_N121.vasp.data
+Processing: 2_cut_0_3_1_N121.vasp
+Converted: 2_cut_0_3_2_N129.vasp -> 2_cut_0_3_2_N129.vasp.data
+Processing: 2_cut_0_3_2_N129.vasp
+Converted: 2_cut_0_3_3_N118.vasp -> 2_cut_0_3_3_N118.vasp.data
+Processing: 2_cut_0_3_3_N118.vasp
+Converted: 2_cut_0_3_4_N122.vasp -> 2_cut_0_3_4_N122.vasp.data
+Processing: 2_cut_0_3_4_N122.vasp
+Converted: 2_cut_0_3_5_N123.vasp -> 2_cut_0_3_5_N123.vasp.data
+Processing: 2_cut_0_3_5_N123.vasp
+Converted: 2_cut_0_3_6_N128.vasp -> 2_cut_0_3_6_N128.vasp.data
+Processing: 2_cut_0_3_6_N128.vasp
+Converted: 2_cut_0_4_0_N127.vasp -> 2_cut_0_4_0_N127.vasp.data
+Processing: 2_cut_0_4_0_N127.vasp
+Converted: 2_cut_0_4_1_N125.vasp -> 2_cut_0_4_1_N125.vasp.data
+Processing: 2_cut_0_4_1_N125.vasp
+Converted: 2_cut_0_4_2_N126.vasp -> 2_cut_0_4_2_N126.vasp.data
+Processing: 2_cut_0_4_2_N126.vasp
+Converted: 2_cut_0_4_3_N125.vasp -> 2_cut_0_4_3_N125.vasp.data
+Processing: 2_cut_0_4_3_N125.vasp
+Converted: 2_cut_0_4_4_N127.vasp -> 2_cut_0_4_4_N127.vasp.data
+Processing: 2_cut_0_4_4_N127.vasp
+Converted: 2_cut_0_4_5_N135.vasp -> 2_cut_0_4_5_N135.vasp.data
+Processing: 2_cut_0_4_5_N135.vasp
+Converted: 2_cut_0_4_6_N133.vasp -> 2_cut_0_4_6_N133.vasp.data
+Processing: 2_cut_0_4_6_N133.vasp
+Converted: 2_cut_1_0_0_N119.vasp -> 2_cut_1_0_0_N119.vasp.data
+Processing: 2_cut_1_0_0_N119.vasp
+Converted: 2_cut_1_0_1_N121.vasp -> 2_cut_1_0_1_N121.vasp.data
+Processing: 2_cut_1_0_1_N121.vasp
+Converted: 2_cut_1_0_2_N128.vasp -> 2_cut_1_0_2_N128.vasp.data
+Processing: 2_cut_1_0_2_N128.vasp
+Converted: 2_cut_1_0_3_N120.vasp -> 2_cut_1_0_3_N120.vasp.data
+Processing: 2_cut_1_0_3_N120.vasp
+Converted: 2_cut_1_0_4_N119.vasp -> 2_cut_1_0_4_N119.vasp.data
+Processing: 2_cut_1_0_4_N119.vasp
+Converted: 2_cut_1_0_5_N132.vasp -> 2_cut_1_0_5_N132.vasp.data
+Processing: 2_cut_1_0_5_N132.vasp
+Converted: 2_cut_1_0_6_N125.vasp -> 2_cut_1_0_6_N125.vasp.data
+Processing: 2_cut_1_0_6_N125.vasp
+Converted: 2_cut_1_1_0_N128.vasp -> 2_cut_1_1_0_N128.vasp.data
+Processing: 2_cut_1_1_0_N128.vasp
+Converted: 2_cut_1_1_1_N119.vasp -> 2_cut_1_1_1_N119.vasp.data
+Processing: 2_cut_1_1_1_N119.vasp
+Converted: 2_cut_1_1_2_N134.vasp -> 2_cut_1_1_2_N134.vasp.data
+Processing: 2_cut_1_1_2_N134.vasp
+Converted: 2_cut_1_1_3_N129.vasp -> 2_cut_1_1_3_N129.vasp.data
+Processing: 2_cut_1_1_3_N129.vasp
+Converted: 2_cut_1_1_4_N135.vasp -> 2_cut_1_1_4_N135.vasp.data
+Processing: 2_cut_1_1_4_N135.vasp
+Converted: 2_cut_1_1_5_N124.vasp -> 2_cut_1_1_5_N124.vasp.data
+Processing: 2_cut_1_1_5_N124.vasp
+Converted: 2_cut_1_1_6_N125.vasp -> 2_cut_1_1_6_N125.vasp.data
+Processing: 2_cut_1_1_6_N125.vasp
+Converted: 2_cut_1_2_0_N127.vasp -> 2_cut_1_2_0_N127.vasp.data
+Processing: 2_cut_1_2_0_N127.vasp
+Converted: 2_cut_1_2_1_N120.vasp -> 2_cut_1_2_1_N120.vasp.data
+Processing: 2_cut_1_2_1_N120.vasp
+Converted: 2_cut_1_2_2_N121.vasp -> 2_cut_1_2_2_N121.vasp.data
+Processing: 2_cut_1_2_2_N121.vasp
+Converted: 2_cut_1_2_3_N120.vasp -> 2_cut_1_2_3_N120.vasp.data
+Processing: 2_cut_1_2_3_N120.vasp
+Converted: 2_cut_1_2_4_N135.vasp -> 2_cut_1_2_4_N135.vasp.data
+Processing: 2_cut_1_2_4_N135.vasp
+Converted: 2_cut_1_2_5_N120.vasp -> 2_cut_1_2_5_N120.vasp.data
+Processing: 2_cut_1_2_5_N120.vasp
+Converted: 2_cut_1_2_6_N119.vasp -> 2_cut_1_2_6_N119.vasp.data
+Processing: 2_cut_1_2_6_N119.vasp
+Converted: 2_cut_1_3_0_N122.vasp -> 2_cut_1_3_0_N122.vasp.data
+Processing: 2_cut_1_3_0_N122.vasp
+Converted: 2_cut_1_3_1_N121.vasp -> 2_cut_1_3_1_N121.vasp.data
+Processing: 2_cut_1_3_1_N121.vasp
+Converted: 2_cut_1_3_2_N126.vasp -> 2_cut_1_3_2_N126.vasp.data
+Processing: 2_cut_1_3_2_N126.vasp
+Converted: 2_cut_1_3_3_N116.vasp -> 2_cut_1_3_3_N116.vasp.data
+Processing: 2_cut_1_3_3_N116.vasp
+Converted: 2_cut_1_3_4_N127.vasp -> 2_cut_1_3_4_N127.vasp.data
+Processing: 2_cut_1_3_4_N127.vasp
+Converted: 2_cut_1_3_5_N122.vasp -> 2_cut_1_3_5_N122.vasp.data
+Processing: 2_cut_1_3_5_N122.vasp
+Converted: 2_cut_1_3_6_N123.vasp -> 2_cut_1_3_6_N123.vasp.data
+Processing: 2_cut_1_3_6_N123.vasp
+Converted: 2_cut_1_4_0_N125.vasp -> 2_cut_1_4_0_N125.vasp.data
+Processing: 2_cut_1_4_0_N125.vasp
+Converted: 2_cut_1_4_1_N126.vasp -> 2_cut_1_4_1_N126.vasp.data
+Processing: 2_cut_1_4_1_N126.vasp
+Converted: 2_cut_1_4_2_N126.vasp -> 2_cut_1_4_2_N126.vasp.data
+Processing: 2_cut_1_4_2_N126.vasp
+Converted: 2_cut_1_4_3_N125.vasp -> 2_cut_1_4_3_N125.vasp.data
+Processing: 2_cut_1_4_3_N125.vasp
+Converted: 2_cut_1_4_4_N123.vasp -> 2_cut_1_4_4_N123.vasp.data
+Processing: 2_cut_1_4_4_N123.vasp
+Converted: 2_cut_1_4_5_N133.vasp -> 2_cut_1_4_5_N133.vasp.data
+Processing: 2_cut_1_4_5_N133.vasp
+Converted: 2_cut_1_4_6_N138.vasp -> 2_cut_1_4_6_N138.vasp.data
+Processing: 2_cut_1_4_6_N138.vasp
+Converted: 2_cut_2_0_0_N120.vasp -> 2_cut_2_0_0_N120.vasp.data
+Processing: 2_cut_2_0_0_N120.vasp
+Converted: 2_cut_2_0_1_N121.vasp -> 2_cut_2_0_1_N121.vasp.data
+Processing: 2_cut_2_0_1_N121.vasp
+Converted: 2_cut_2_0_2_N132.vasp -> 2_cut_2_0_2_N132.vasp.data
+Processing: 2_cut_2_0_2_N132.vasp
+Converted: 2_cut_2_0_3_N121.vasp -> 2_cut_2_0_3_N121.vasp.data
+Processing: 2_cut_2_0_3_N121.vasp
+Converted: 2_cut_2_0_4_N117.vasp -> 2_cut_2_0_4_N117.vasp.data
+Processing: 2_cut_2_0_4_N117.vasp
+Converted: 2_cut_2_0_5_N133.vasp -> 2_cut_2_0_5_N133.vasp.data
+Processing: 2_cut_2_0_5_N133.vasp
+Converted: 2_cut_2_0_6_N119.vasp -> 2_cut_2_0_6_N119.vasp.data
+Processing: 2_cut_2_0_6_N119.vasp
+Converted: 2_cut_2_1_0_N130.vasp -> 2_cut_2_1_0_N130.vasp.data
+Processing: 2_cut_2_1_0_N130.vasp
+Converted: 2_cut_2_1_1_N118.vasp -> 2_cut_2_1_1_N118.vasp.data
+Processing: 2_cut_2_1_1_N118.vasp
+Converted: 2_cut_2_1_2_N133.vasp -> 2_cut_2_1_2_N133.vasp.data
+Processing: 2_cut_2_1_2_N133.vasp
+Converted: 2_cut_2_1_3_N130.vasp -> 2_cut_2_1_3_N130.vasp.data
+Processing: 2_cut_2_1_3_N130.vasp
+Converted: 2_cut_2_1_4_N135.vasp -> 2_cut_2_1_4_N135.vasp.data
+Processing: 2_cut_2_1_4_N135.vasp
+Converted: 2_cut_2_1_5_N117.vasp -> 2_cut_2_1_5_N117.vasp.data
+Processing: 2_cut_2_1_5_N117.vasp
+Converted: 2_cut_2_1_6_N125.vasp -> 2_cut_2_1_6_N125.vasp.data
+Processing: 2_cut_2_1_6_N125.vasp
+Converted: 2_cut_2_2_0_N122.vasp -> 2_cut_2_2_0_N122.vasp.data
+Processing: 2_cut_2_2_0_N122.vasp
+Converted: 2_cut_2_2_1_N121.vasp -> 2_cut_2_2_1_N121.vasp.data
+Processing: 2_cut_2_2_1_N121.vasp
+Converted: 2_cut_2_2_2_N123.vasp -> 2_cut_2_2_2_N123.vasp.data
+Processing: 2_cut_2_2_2_N123.vasp
+Converted: 2_cut_2_2_3_N123.vasp -> 2_cut_2_2_3_N123.vasp.data
+Processing: 2_cut_2_2_3_N123.vasp
+Converted: 2_cut_2_2_4_N134.vasp -> 2_cut_2_2_4_N134.vasp.data
+Processing: 2_cut_2_2_4_N134.vasp
+Converted: 2_cut_2_2_5_N119.vasp -> 2_cut_2_2_5_N119.vasp.data
+Processing: 2_cut_2_2_5_N119.vasp
+Converted: 2_cut_2_2_6_N124.vasp -> 2_cut_2_2_6_N124.vasp.data
+Processing: 2_cut_2_2_6_N124.vasp
+Converted: 2_cut_2_3_0_N125.vasp -> 2_cut_2_3_0_N125.vasp.data
+Processing: 2_cut_2_3_0_N125.vasp
+Converted: 2_cut_2_3_1_N122.vasp -> 2_cut_2_3_1_N122.vasp.data
+Processing: 2_cut_2_3_1_N122.vasp
+Converted: 2_cut_2_3_2_N130.vasp -> 2_cut_2_3_2_N130.vasp.data
+Processing: 2_cut_2_3_2_N130.vasp
+Converted: 2_cut_2_3_3_N118.vasp -> 2_cut_2_3_3_N118.vasp.data
+Processing: 2_cut_2_3_3_N118.vasp
+Converted: 2_cut_2_3_4_N120.vasp -> 2_cut_2_3_4_N120.vasp.data
+Processing: 2_cut_2_3_4_N120.vasp
+Converted: 2_cut_2_3_5_N119.vasp -> 2_cut_2_3_5_N119.vasp.data
+Processing: 2_cut_2_3_5_N119.vasp
+Converted: 2_cut_2_3_6_N128.vasp -> 2_cut_2_3_6_N128.vasp.data
+Processing: 2_cut_2_3_6_N128.vasp
+Converted: 2_cut_2_4_0_N123.vasp -> 2_cut_2_4_0_N123.vasp.data
+Processing: 2_cut_2_4_0_N123.vasp
+Converted: 2_cut_2_4_1_N126.vasp -> 2_cut_2_4_1_N126.vasp.data
+Processing: 2_cut_2_4_1_N126.vasp
+Converted: 2_cut_2_4_2_N125.vasp -> 2_cut_2_4_2_N125.vasp.data
+Processing: 2_cut_2_4_2_N125.vasp
+Converted: 2_cut_2_4_3_N123.vasp -> 2_cut_2_4_3_N123.vasp.data
+Processing: 2_cut_2_4_3_N123.vasp
+Converted: 2_cut_2_4_4_N126.vasp -> 2_cut_2_4_4_N126.vasp.data
+Processing: 2_cut_2_4_4_N126.vasp
+Converted: 2_cut_2_4_5_N136.vasp -> 2_cut_2_4_5_N136.vasp.data
+Processing: 2_cut_2_4_5_N136.vasp
+Converted: 2_cut_2_4_6_N131.vasp -> 2_cut_2_4_6_N131.vasp.data
+Processing: 2_cut_2_4_6_N131.vasp
+Converted: 2_cut_3_0_0_N117.vasp -> 2_cut_3_0_0_N117.vasp.data
+Processing: 2_cut_3_0_0_N117.vasp
+Converted: 2_cut_3_0_1_N123.vasp -> 2_cut_3_0_1_N123.vasp.data
+Processing: 2_cut_3_0_1_N123.vasp
+Converted: 2_cut_3_0_2_N132.vasp -> 2_cut_3_0_2_N132.vasp.data
+Processing: 2_cut_3_0_2_N132.vasp
+Converted: 2_cut_3_0_3_N119.vasp -> 2_cut_3_0_3_N119.vasp.data
+Processing: 2_cut_3_0_3_N119.vasp
+Converted: 2_cut_3_0_4_N118.vasp -> 2_cut_3_0_4_N118.vasp.data
+Processing: 2_cut_3_0_4_N118.vasp
+Converted: 2_cut_3_0_5_N137.vasp -> 2_cut_3_0_5_N137.vasp.data
+Processing: 2_cut_3_0_5_N137.vasp
+Converted: 2_cut_3_0_6_N127.vasp -> 2_cut_3_0_6_N127.vasp.data
+Processing: 2_cut_3_0_6_N127.vasp
+Converted: 2_cut_3_1_0_N129.vasp -> 2_cut_3_1_0_N129.vasp.data
+Processing: 2_cut_3_1_0_N129.vasp
+Converted: 2_cut_3_1_1_N118.vasp -> 2_cut_3_1_1_N118.vasp.data
+Processing: 2_cut_3_1_1_N118.vasp
+Converted: 2_cut_3_1_2_N133.vasp -> 2_cut_3_1_2_N133.vasp.data
+Processing: 2_cut_3_1_2_N133.vasp
+Converted: 2_cut_3_1_3_N129.vasp -> 2_cut_3_1_3_N129.vasp.data
+Processing: 2_cut_3_1_3_N129.vasp
+Converted: 2_cut_3_1_4_N135.vasp -> 2_cut_3_1_4_N135.vasp.data
+Processing: 2_cut_3_1_4_N135.vasp
+Converted: 2_cut_3_1_5_N118.vasp -> 2_cut_3_1_5_N118.vasp.data
+Processing: 2_cut_3_1_5_N118.vasp
+Converted: 2_cut_3_1_6_N131.vasp -> 2_cut_3_1_6_N131.vasp.data
+Processing: 2_cut_3_1_6_N131.vasp
+Converted: 2_cut_3_2_0_N125.vasp -> 2_cut_3_2_0_N125.vasp.data
+Processing: 2_cut_3_2_0_N125.vasp
+Converted: 2_cut_3_2_1_N118.vasp -> 2_cut_3_2_1_N118.vasp.data
+Processing: 2_cut_3_2_1_N118.vasp
+Converted: 2_cut_3_2_2_N121.vasp -> 2_cut_3_2_2_N121.vasp.data
+Processing: 2_cut_3_2_2_N121.vasp
+Converted: 2_cut_3_2_3_N120.vasp -> 2_cut_3_2_3_N120.vasp.data
+Processing: 2_cut_3_2_3_N120.vasp
+Converted: 2_cut_3_2_4_N135.vasp -> 2_cut_3_2_4_N135.vasp.data
+Processing: 2_cut_3_2_4_N135.vasp
+Converted: 2_cut_3_2_5_N127.vasp -> 2_cut_3_2_5_N127.vasp.data
+Processing: 2_cut_3_2_5_N127.vasp
+Converted: 2_cut_3_2_6_N119.vasp -> 2_cut_3_2_6_N119.vasp.data
+Processing: 2_cut_3_2_6_N119.vasp
+Converted: 2_cut_3_3_0_N125.vasp -> 2_cut_3_3_0_N125.vasp.data
+Processing: 2_cut_3_3_0_N125.vasp
+Converted: 2_cut_3_3_1_N122.vasp -> 2_cut_3_3_1_N122.vasp.data
+Processing: 2_cut_3_3_1_N122.vasp
+Converted: 2_cut_3_3_2_N128.vasp -> 2_cut_3_3_2_N128.vasp.data
+Processing: 2_cut_3_3_2_N128.vasp
+Converted: 2_cut_3_3_3_N112.vasp -> 2_cut_3_3_3_N112.vasp.data
+Processing: 2_cut_3_3_3_N112.vasp
+Converted: 2_cut_3_3_4_N124.vasp -> 2_cut_3_3_4_N124.vasp.data
+Processing: 2_cut_3_3_4_N124.vasp
+Converted: 2_cut_3_3_5_N123.vasp -> 2_cut_3_3_5_N123.vasp.data
+Processing: 2_cut_3_3_5_N123.vasp
+Converted: 2_cut_3_3_6_N131.vasp -> 2_cut_3_3_6_N131.vasp.data
+Processing: 2_cut_3_3_6_N131.vasp
+Converted: 2_cut_3_4_0_N126.vasp -> 2_cut_3_4_0_N126.vasp.data
+Processing: 2_cut_3_4_0_N126.vasp
+Converted: 2_cut_3_4_1_N127.vasp -> 2_cut_3_4_1_N127.vasp.data
+Processing: 2_cut_3_4_1_N127.vasp
+Converted: 2_cut_3_4_2_N125.vasp -> 2_cut_3_4_2_N125.vasp.data
+Processing: 2_cut_3_4_2_N125.vasp
+Converted: 2_cut_3_4_3_N124.vasp -> 2_cut_3_4_3_N124.vasp.data
+Processing: 2_cut_3_4_3_N124.vasp
+Converted: 2_cut_3_4_4_N126.vasp -> 2_cut_3_4_4_N126.vasp.data
+Processing: 2_cut_3_4_4_N126.vasp
+Converted: 2_cut_3_4_5_N127.vasp -> 2_cut_3_4_5_N127.vasp.data
+Processing: 2_cut_3_4_5_N127.vasp
+Converted: 2_cut_3_4_6_N140.vasp -> 2_cut_3_4_6_N140.vasp.data
+Processing: 2_cut_3_4_6_N140.vasp
+Converted: 2_cut_4_0_0_N118.vasp -> 2_cut_4_0_0_N118.vasp.data
+Processing: 2_cut_4_0_0_N118.vasp
+Converted: 2_cut_4_0_1_N122.vasp -> 2_cut_4_0_1_N122.vasp.data
+Processing: 2_cut_4_0_1_N122.vasp
+Converted: 2_cut_4_0_2_N134.vasp -> 2_cut_4_0_2_N134.vasp.data
+Processing: 2_cut_4_0_2_N134.vasp
+Converted: 2_cut_4_0_3_N121.vasp -> 2_cut_4_0_3_N121.vasp.data
+Processing: 2_cut_4_0_3_N121.vasp
+Converted: 2_cut_4_0_4_N118.vasp -> 2_cut_4_0_4_N118.vasp.data
+Processing: 2_cut_4_0_4_N118.vasp
+Converted: 2_cut_4_0_5_N129.vasp -> 2_cut_4_0_5_N129.vasp.data
+Processing: 2_cut_4_0_5_N129.vasp
+Converted: 2_cut_4_0_6_N124.vasp -> 2_cut_4_0_6_N124.vasp.data
+Processing: 2_cut_4_0_6_N124.vasp
+Converted: 2_cut_4_1_0_N132.vasp -> 2_cut_4_1_0_N132.vasp.data
+Processing: 2_cut_4_1_0_N132.vasp
+Converted: 2_cut_4_1_1_N118.vasp -> 2_cut_4_1_1_N118.vasp.data
+Processing: 2_cut_4_1_1_N118.vasp
+Converted: 2_cut_4_1_2_N131.vasp -> 2_cut_4_1_2_N131.vasp.data
+Processing: 2_cut_4_1_2_N131.vasp
+Converted: 2_cut_4_1_3_N131.vasp -> 2_cut_4_1_3_N131.vasp.data
+Processing: 2_cut_4_1_3_N131.vasp
+Converted: 2_cut_4_1_4_N135.vasp -> 2_cut_4_1_4_N135.vasp.data
+Processing: 2_cut_4_1_4_N135.vasp
+Converted: 2_cut_4_1_5_N120.vasp -> 2_cut_4_1_5_N120.vasp.data
+Processing: 2_cut_4_1_5_N120.vasp
+Converted: 2_cut_4_1_6_N129.vasp -> 2_cut_4_1_6_N129.vasp.data
+Processing: 2_cut_4_1_6_N129.vasp
+Converted: 2_cut_4_2_0_N122.vasp -> 2_cut_4_2_0_N122.vasp.data
+Processing: 2_cut_4_2_0_N122.vasp
+Converted: 2_cut_4_2_1_N120.vasp -> 2_cut_4_2_1_N120.vasp.data
+Processing: 2_cut_4_2_1_N120.vasp
+Converted: 2_cut_4_2_2_N120.vasp -> 2_cut_4_2_2_N120.vasp.data
+Processing: 2_cut_4_2_2_N120.vasp
+Converted: 2_cut_4_2_3_N125.vasp -> 2_cut_4_2_3_N125.vasp.data
+Processing: 2_cut_4_2_3_N125.vasp
+Converted: 2_cut_4_2_4_N132.vasp -> 2_cut_4_2_4_N132.vasp.data
+Processing: 2_cut_4_2_4_N132.vasp
+Converted: 2_cut_4_2_5_N122.vasp -> 2_cut_4_2_5_N122.vasp.data
+Processing: 2_cut_4_2_5_N122.vasp
+Converted: 2_cut_4_2_6_N118.vasp -> 2_cut_4_2_6_N118.vasp.data
+Processing: 2_cut_4_2_6_N118.vasp
+Converted: 2_cut_4_3_0_N125.vasp -> 2_cut_4_3_0_N125.vasp.data
+Processing: 2_cut_4_3_0_N125.vasp
+Converted: 2_cut_4_3_1_N122.vasp -> 2_cut_4_3_1_N122.vasp.data
+Processing: 2_cut_4_3_1_N122.vasp
+Converted: 2_cut_4_3_2_N132.vasp -> 2_cut_4_3_2_N132.vasp.data
+Processing: 2_cut_4_3_2_N132.vasp
+Converted: 2_cut_4_3_3_N118.vasp -> 2_cut_4_3_3_N118.vasp.data
+Processing: 2_cut_4_3_3_N118.vasp
+Converted: 2_cut_4_3_4_N122.vasp -> 2_cut_4_3_4_N122.vasp.data
+Processing: 2_cut_4_3_4_N122.vasp
+Converted: 2_cut_4_3_5_N118.vasp -> 2_cut_4_3_5_N118.vasp.data
+Processing: 2_cut_4_3_5_N118.vasp
+Converted: 2_cut_4_3_6_N127.vasp -> 2_cut_4_3_6_N127.vasp.data
+Processing: 2_cut_4_3_6_N127.vasp
+Converted: 2_cut_4_4_0_N127.vasp -> 2_cut_4_4_0_N127.vasp.data
+Processing: 2_cut_4_4_0_N127.vasp
+Converted: 2_cut_4_4_1_N125.vasp -> 2_cut_4_4_1_N125.vasp.data
+Processing: 2_cut_4_4_1_N125.vasp
+Converted: 2_cut_4_4_2_N122.vasp -> 2_cut_4_4_2_N122.vasp.data
+Processing: 2_cut_4_4_2_N122.vasp
+Converted: 2_cut_4_4_3_N120.vasp -> 2_cut_4_4_3_N120.vasp.data
+Processing: 2_cut_4_4_3_N120.vasp
+Converted: 2_cut_4_4_4_N127.vasp -> 2_cut_4_4_4_N127.vasp.data
+Processing: 2_cut_4_4_4_N127.vasp
+Converted: 2_cut_4_4_5_N129.vasp -> 2_cut_4_4_5_N129.vasp.data
+Processing: 2_cut_4_4_5_N129.vasp
+Converted: 2_cut_4_4_6_N133.vasp -> 2_cut_4_4_6_N133.vasp.data
+Processing: 2_cut_4_4_6_N133.vasp
+Converted: 2_cut_5_0_0_N119.vasp -> 2_cut_5_0_0_N119.vasp.data
+Processing: 2_cut_5_0_0_N119.vasp
+Converted: 2_cut_5_0_1_N119.vasp -> 2_cut_5_0_1_N119.vasp.data
+Processing: 2_cut_5_0_1_N119.vasp
+Converted: 2_cut_5_0_2_N134.vasp -> 2_cut_5_0_2_N134.vasp.data
+Processing: 2_cut_5_0_2_N134.vasp
+Converted: 2_cut_5_0_3_N121.vasp -> 2_cut_5_0_3_N121.vasp.data
+Processing: 2_cut_5_0_3_N121.vasp
+Converted: 2_cut_5_0_4_N118.vasp -> 2_cut_5_0_4_N118.vasp.data
+Processing: 2_cut_5_0_4_N118.vasp
+Converted: 2_cut_5_0_5_N136.vasp -> 2_cut_5_0_5_N136.vasp.data
+Processing: 2_cut_5_0_5_N136.vasp
+Converted: 2_cut_5_0_6_N119.vasp -> 2_cut_5_0_6_N119.vasp.data
+Processing: 2_cut_5_0_6_N119.vasp
+Converted: 2_cut_5_1_0_N129.vasp -> 2_cut_5_1_0_N129.vasp.data
+Processing: 2_cut_5_1_0_N129.vasp
+Converted: 2_cut_5_1_1_N116.vasp -> 2_cut_5_1_1_N116.vasp.data
+Processing: 2_cut_5_1_1_N116.vasp
+Converted: 2_cut_5_1_2_N132.vasp -> 2_cut_5_1_2_N132.vasp.data
+Processing: 2_cut_5_1_2_N132.vasp
+Converted: 2_cut_5_1_3_N129.vasp -> 2_cut_5_1_3_N129.vasp.data
+Processing: 2_cut_5_1_3_N129.vasp
+Converted: 2_cut_5_1_4_N135.vasp -> 2_cut_5_1_4_N135.vasp.data
+Processing: 2_cut_5_1_4_N135.vasp
+Converted: 2_cut_5_1_5_N122.vasp -> 2_cut_5_1_5_N122.vasp.data
+Processing: 2_cut_5_1_5_N122.vasp
+Converted: 2_cut_5_1_6_N128.vasp -> 2_cut_5_1_6_N128.vasp.data
+Processing: 2_cut_5_1_6_N128.vasp
+Converted: 2_cut_5_2_0_N125.vasp -> 2_cut_5_2_0_N125.vasp.data
+Processing: 2_cut_5_2_0_N125.vasp
+Converted: 2_cut_5_2_1_N120.vasp -> 2_cut_5_2_1_N120.vasp.data
+Processing: 2_cut_5_2_1_N120.vasp
+Converted: 2_cut_5_2_2_N119.vasp -> 2_cut_5_2_2_N119.vasp.data
+Processing: 2_cut_5_2_2_N119.vasp
+Converted: 2_cut_5_2_3_N123.vasp -> 2_cut_5_2_3_N123.vasp.data
+Processing: 2_cut_5_2_3_N123.vasp
+Converted: 2_cut_5_2_4_N132.vasp -> 2_cut_5_2_4_N132.vasp.data
+Processing: 2_cut_5_2_4_N132.vasp
+Converted: 2_cut_5_2_5_N123.vasp -> 2_cut_5_2_5_N123.vasp.data
+Processing: 2_cut_5_2_5_N123.vasp
+Converted: 2_cut_5_2_6_N118.vasp -> 2_cut_5_2_6_N118.vasp.data
+Processing: 2_cut_5_2_6_N118.vasp
+Converted: 2_cut_5_3_0_N125.vasp -> 2_cut_5_3_0_N125.vasp.data
+Processing: 2_cut_5_3_0_N125.vasp
+Converted: 2_cut_5_3_1_N122.vasp -> 2_cut_5_3_1_N122.vasp.data
+Processing: 2_cut_5_3_1_N122.vasp
+Converted: 2_cut_5_3_2_N127.vasp -> 2_cut_5_3_2_N127.vasp.data
+Processing: 2_cut_5_3_2_N127.vasp
+Converted: 2_cut_5_3_3_N113.vasp -> 2_cut_5_3_3_N113.vasp.data
+Processing: 2_cut_5_3_3_N113.vasp
+Converted: 2_cut_5_3_4_N119.vasp -> 2_cut_5_3_4_N119.vasp.data
+Processing: 2_cut_5_3_4_N119.vasp
+Converted: 2_cut_5_3_5_N122.vasp -> 2_cut_5_3_5_N122.vasp.data
+Processing: 2_cut_5_3_5_N122.vasp
+Converted: 2_cut_5_3_6_N127.vasp -> 2_cut_5_3_6_N127.vasp.data
+Processing: 2_cut_5_3_6_N127.vasp
+Converted: 2_cut_5_4_0_N126.vasp -> 2_cut_5_4_0_N126.vasp.data
+Processing: 2_cut_5_4_0_N126.vasp
+Converted: 2_cut_5_4_1_N127.vasp -> 2_cut_5_4_1_N127.vasp.data
+Processing: 2_cut_5_4_1_N127.vasp
+Converted: 2_cut_5_4_2_N122.vasp -> 2_cut_5_4_2_N122.vasp.data
+Processing: 2_cut_5_4_2_N122.vasp
+Converted: 2_cut_5_4_3_N124.vasp -> 2_cut_5_4_3_N124.vasp.data
+Processing: 2_cut_5_4_3_N124.vasp
+Converted: 2_cut_5_4_4_N119.vasp -> 2_cut_5_4_4_N119.vasp.data
+Processing: 2_cut_5_4_4_N119.vasp
+Converted: 2_cut_5_4_5_N137.vasp -> 2_cut_5_4_5_N137.vasp.data
+Processing: 2_cut_5_4_5_N137.vasp
+Converted: 2_cut_5_4_6_N135.vasp -> 2_cut_5_4_6_N135.vasp.data
+Processing: 2_cut_5_4_6_N135.vasp
+Converted: 3_cut_0_0_0_N125.vasp -> 3_cut_0_0_0_N125.vasp.data
+Processing: 3_cut_0_0_0_N125.vasp
+Converted: 3_cut_0_0_1_N127.vasp -> 3_cut_0_0_1_N127.vasp.data
+Processing: 3_cut_0_0_1_N127.vasp
+Converted: 3_cut_0_0_2_N126.vasp -> 3_cut_0_0_2_N126.vasp.data
+Processing: 3_cut_0_0_2_N126.vasp
+Converted: 3_cut_0_0_3_N124.vasp -> 3_cut_0_0_3_N124.vasp.data
+Processing: 3_cut_0_0_3_N124.vasp
+Converted: 3_cut_0_0_4_N123.vasp -> 3_cut_0_0_4_N123.vasp.data
+Processing: 3_cut_0_0_4_N123.vasp
+Converted: 3_cut_0_0_5_N126.vasp -> 3_cut_0_0_5_N126.vasp.data
+Processing: 3_cut_0_0_5_N126.vasp
+Converted: 3_cut_0_0_6_N121.vasp -> 3_cut_0_0_6_N121.vasp.data
+Processing: 3_cut_0_0_6_N121.vasp
+Converted: 3_cut_0_1_0_N115.vasp -> 3_cut_0_1_0_N115.vasp.data
+Processing: 3_cut_0_1_0_N115.vasp
+Converted: 3_cut_0_1_1_N133.vasp -> 3_cut_0_1_1_N133.vasp.data
+Processing: 3_cut_0_1_1_N133.vasp
+Converted: 3_cut_0_1_2_N120.vasp -> 3_cut_0_1_2_N120.vasp.data
+Processing: 3_cut_0_1_2_N120.vasp
+Converted: 3_cut_0_1_3_N131.vasp -> 3_cut_0_1_3_N131.vasp.data
+Processing: 3_cut_0_1_3_N131.vasp
+Converted: 3_cut_0_1_4_N131.vasp -> 3_cut_0_1_4_N131.vasp.data
+Processing: 3_cut_0_1_4_N131.vasp
+Converted: 3_cut_0_1_5_N126.vasp -> 3_cut_0_1_5_N126.vasp.data
+Processing: 3_cut_0_1_5_N126.vasp
+Converted: 3_cut_0_1_6_N132.vasp -> 3_cut_0_1_6_N132.vasp.data
+Processing: 3_cut_0_1_6_N132.vasp
+Converted: 3_cut_0_2_0_N118.vasp -> 3_cut_0_2_0_N118.vasp.data
+Processing: 3_cut_0_2_0_N118.vasp
+Converted: 3_cut_0_2_1_N128.vasp -> 3_cut_0_2_1_N128.vasp.data
+Processing: 3_cut_0_2_1_N128.vasp
+Converted: 3_cut_0_2_2_N131.vasp -> 3_cut_0_2_2_N131.vasp.data
+Processing: 3_cut_0_2_2_N131.vasp
+Converted: 3_cut_0_2_3_N116.vasp -> 3_cut_0_2_3_N116.vasp.data
+Processing: 3_cut_0_2_3_N116.vasp
+Converted: 3_cut_0_2_4_N121.vasp -> 3_cut_0_2_4_N121.vasp.data
+Processing: 3_cut_0_2_4_N121.vasp
+Converted: 3_cut_0_2_5_N129.vasp -> 3_cut_0_2_5_N129.vasp.data
+Processing: 3_cut_0_2_5_N129.vasp
+Converted: 3_cut_0_2_6_N120.vasp -> 3_cut_0_2_6_N120.vasp.data
+Processing: 3_cut_0_2_6_N120.vasp
+Converted: 3_cut_0_3_0_N120.vasp -> 3_cut_0_3_0_N120.vasp.data
+Processing: 3_cut_0_3_0_N120.vasp
+Converted: 3_cut_0_3_1_N143.vasp -> 3_cut_0_3_1_N143.vasp.data
+Processing: 3_cut_0_3_1_N143.vasp
+Converted: 3_cut_0_3_2_N116.vasp -> 3_cut_0_3_2_N116.vasp.data
+Processing: 3_cut_0_3_2_N116.vasp
+Converted: 3_cut_0_3_3_N117.vasp -> 3_cut_0_3_3_N117.vasp.data
+Processing: 3_cut_0_3_3_N117.vasp
+Converted: 3_cut_0_3_4_N123.vasp -> 3_cut_0_3_4_N123.vasp.data
+Processing: 3_cut_0_3_4_N123.vasp
+Converted: 3_cut_0_3_5_N128.vasp -> 3_cut_0_3_5_N128.vasp.data
+Processing: 3_cut_0_3_5_N128.vasp
+Converted: 3_cut_0_3_6_N122.vasp -> 3_cut_0_3_6_N122.vasp.data
+Processing: 3_cut_0_3_6_N122.vasp
+Converted: 3_cut_0_4_0_N122.vasp -> 3_cut_0_4_0_N122.vasp.data
+Processing: 3_cut_0_4_0_N122.vasp
+Converted: 3_cut_0_4_1_N127.vasp -> 3_cut_0_4_1_N127.vasp.data
+Processing: 3_cut_0_4_1_N127.vasp
+Converted: 3_cut_0_4_2_N125.vasp -> 3_cut_0_4_2_N125.vasp.data
+Processing: 3_cut_0_4_2_N125.vasp
+Converted: 3_cut_0_4_3_N120.vasp -> 3_cut_0_4_3_N120.vasp.data
+Processing: 3_cut_0_4_3_N120.vasp
+Converted: 3_cut_0_4_4_N132.vasp -> 3_cut_0_4_4_N132.vasp.data
+Processing: 3_cut_0_4_4_N132.vasp
+Converted: 3_cut_0_4_5_N129.vasp -> 3_cut_0_4_5_N129.vasp.data
+Processing: 3_cut_0_4_5_N129.vasp
+Converted: 3_cut_0_4_6_N131.vasp -> 3_cut_0_4_6_N131.vasp.data
+Processing: 3_cut_0_4_6_N131.vasp
+Converted: 3_cut_1_0_0_N129.vasp -> 3_cut_1_0_0_N129.vasp.data
+Processing: 3_cut_1_0_0_N129.vasp
+Converted: 3_cut_1_0_1_N124.vasp -> 3_cut_1_0_1_N124.vasp.data
+Processing: 3_cut_1_0_1_N124.vasp
+Converted: 3_cut_1_0_2_N122.vasp -> 3_cut_1_0_2_N122.vasp.data
+Processing: 3_cut_1_0_2_N122.vasp
+Converted: 3_cut_1_0_3_N123.vasp -> 3_cut_1_0_3_N123.vasp.data
+Processing: 3_cut_1_0_3_N123.vasp
+Converted: 3_cut_1_0_4_N131.vasp -> 3_cut_1_0_4_N131.vasp.data
+Processing: 3_cut_1_0_4_N131.vasp
+Converted: 3_cut_1_0_5_N123.vasp -> 3_cut_1_0_5_N123.vasp.data
+Processing: 3_cut_1_0_5_N123.vasp
+Converted: 3_cut_1_0_6_N115.vasp -> 3_cut_1_0_6_N115.vasp.data
+Processing: 3_cut_1_0_6_N115.vasp
+Converted: 3_cut_1_1_0_N117.vasp -> 3_cut_1_1_0_N117.vasp.data
+Processing: 3_cut_1_1_0_N117.vasp
+Converted: 3_cut_1_1_1_N135.vasp -> 3_cut_1_1_1_N135.vasp.data
+Processing: 3_cut_1_1_1_N135.vasp
+Converted: 3_cut_1_1_2_N121.vasp -> 3_cut_1_1_2_N121.vasp.data
+Processing: 3_cut_1_1_2_N121.vasp
+Converted: 3_cut_1_1_3_N129.vasp -> 3_cut_1_1_3_N129.vasp.data
+Processing: 3_cut_1_1_3_N129.vasp
+Converted: 3_cut_1_1_4_N130.vasp -> 3_cut_1_1_4_N130.vasp.data
+Processing: 3_cut_1_1_4_N130.vasp
+Converted: 3_cut_1_1_5_N125.vasp -> 3_cut_1_1_5_N125.vasp.data
+Processing: 3_cut_1_1_5_N125.vasp
+Converted: 3_cut_1_1_6_N132.vasp -> 3_cut_1_1_6_N132.vasp.data
+Processing: 3_cut_1_1_6_N132.vasp
+Converted: 3_cut_1_2_0_N122.vasp -> 3_cut_1_2_0_N122.vasp.data
+Processing: 3_cut_1_2_0_N122.vasp
+Converted: 3_cut_1_2_1_N124.vasp -> 3_cut_1_2_1_N124.vasp.data
+Processing: 3_cut_1_2_1_N124.vasp
+Converted: 3_cut_1_2_2_N127.vasp -> 3_cut_1_2_2_N127.vasp.data
+Processing: 3_cut_1_2_2_N127.vasp
+Converted: 3_cut_1_2_3_N114.vasp -> 3_cut_1_2_3_N114.vasp.data
+Processing: 3_cut_1_2_3_N114.vasp
+Converted: 3_cut_1_2_4_N128.vasp -> 3_cut_1_2_4_N128.vasp.data
+Processing: 3_cut_1_2_4_N128.vasp
+Converted: 3_cut_1_2_5_N124.vasp -> 3_cut_1_2_5_N124.vasp.data
+Processing: 3_cut_1_2_5_N124.vasp
+Converted: 3_cut_1_2_6_N122.vasp -> 3_cut_1_2_6_N122.vasp.data
+Processing: 3_cut_1_2_6_N122.vasp
+Converted: 3_cut_1_3_0_N120.vasp -> 3_cut_1_3_0_N120.vasp.data
+Processing: 3_cut_1_3_0_N120.vasp
+Converted: 3_cut_1_3_1_N136.vasp -> 3_cut_1_3_1_N136.vasp.data
+Processing: 3_cut_1_3_1_N136.vasp
+Converted: 3_cut_1_3_2_N119.vasp -> 3_cut_1_3_2_N119.vasp.data
+Processing: 3_cut_1_3_2_N119.vasp
+Converted: 3_cut_1_3_3_N121.vasp -> 3_cut_1_3_3_N121.vasp.data
+Processing: 3_cut_1_3_3_N121.vasp
+Converted: 3_cut_1_3_4_N122.vasp -> 3_cut_1_3_4_N122.vasp.data
+Processing: 3_cut_1_3_4_N122.vasp
+Converted: 3_cut_1_3_5_N125.vasp -> 3_cut_1_3_5_N125.vasp.data
+Processing: 3_cut_1_3_5_N125.vasp
+Converted: 3_cut_1_3_6_N126.vasp -> 3_cut_1_3_6_N126.vasp.data
+Processing: 3_cut_1_3_6_N126.vasp
+Converted: 3_cut_1_4_0_N123.vasp -> 3_cut_1_4_0_N123.vasp.data
+Processing: 3_cut_1_4_0_N123.vasp
+Converted: 3_cut_1_4_1_N130.vasp -> 3_cut_1_4_1_N130.vasp.data
+Processing: 3_cut_1_4_1_N130.vasp
+Converted: 3_cut_1_4_2_N123.vasp -> 3_cut_1_4_2_N123.vasp.data
+Processing: 3_cut_1_4_2_N123.vasp
+Converted: 3_cut_1_4_3_N118.vasp -> 3_cut_1_4_3_N118.vasp.data
+Processing: 3_cut_1_4_3_N118.vasp
+Converted: 3_cut_1_4_4_N132.vasp -> 3_cut_1_4_4_N132.vasp.data
+Processing: 3_cut_1_4_4_N132.vasp
+Converted: 3_cut_1_4_5_N122.vasp -> 3_cut_1_4_5_N122.vasp.data
+Processing: 3_cut_1_4_5_N122.vasp
+Converted: 3_cut_1_4_6_N137.vasp -> 3_cut_1_4_6_N137.vasp.data
+Processing: 3_cut_1_4_6_N137.vasp
+Converted: 3_cut_2_0_0_N124.vasp -> 3_cut_2_0_0_N124.vasp.data
+Processing: 3_cut_2_0_0_N124.vasp
+Converted: 3_cut_2_0_1_N126.vasp -> 3_cut_2_0_1_N126.vasp.data
+Processing: 3_cut_2_0_1_N126.vasp
+Converted: 3_cut_2_0_2_N121.vasp -> 3_cut_2_0_2_N121.vasp.data
+Processing: 3_cut_2_0_2_N121.vasp
+Converted: 3_cut_2_0_3_N126.vasp -> 3_cut_2_0_3_N126.vasp.data
+Processing: 3_cut_2_0_3_N126.vasp
+Converted: 3_cut_2_0_4_N127.vasp -> 3_cut_2_0_4_N127.vasp.data
+Processing: 3_cut_2_0_4_N127.vasp
+Converted: 3_cut_2_0_5_N125.vasp -> 3_cut_2_0_5_N125.vasp.data
+Processing: 3_cut_2_0_5_N125.vasp
+Converted: 3_cut_2_0_6_N113.vasp -> 3_cut_2_0_6_N113.vasp.data
+Processing: 3_cut_2_0_6_N113.vasp
+Converted: 3_cut_2_1_0_N119.vasp -> 3_cut_2_1_0_N119.vasp.data
+Processing: 3_cut_2_1_0_N119.vasp
+Converted: 3_cut_2_1_1_N136.vasp -> 3_cut_2_1_1_N136.vasp.data
+Processing: 3_cut_2_1_1_N136.vasp
+Converted: 3_cut_2_1_2_N121.vasp -> 3_cut_2_1_2_N121.vasp.data
+Processing: 3_cut_2_1_2_N121.vasp
+Converted: 3_cut_2_1_3_N129.vasp -> 3_cut_2_1_3_N129.vasp.data
+Processing: 3_cut_2_1_3_N129.vasp
+Converted: 3_cut_2_1_4_N131.vasp -> 3_cut_2_1_4_N131.vasp.data
+Processing: 3_cut_2_1_4_N131.vasp
+Converted: 3_cut_2_1_5_N126.vasp -> 3_cut_2_1_5_N126.vasp.data
+Processing: 3_cut_2_1_5_N126.vasp
+Converted: 3_cut_2_1_6_N130.vasp -> 3_cut_2_1_6_N130.vasp.data
+Processing: 3_cut_2_1_6_N130.vasp
+Converted: 3_cut_2_2_0_N117.vasp -> 3_cut_2_2_0_N117.vasp.data
+Processing: 3_cut_2_2_0_N117.vasp
+Converted: 3_cut_2_2_1_N126.vasp -> 3_cut_2_2_1_N126.vasp.data
+Processing: 3_cut_2_2_1_N126.vasp
+Converted: 3_cut_2_2_2_N130.vasp -> 3_cut_2_2_2_N130.vasp.data
+Processing: 3_cut_2_2_2_N130.vasp
+Converted: 3_cut_2_2_3_N111.vasp -> 3_cut_2_2_3_N111.vasp.data
+Processing: 3_cut_2_2_3_N111.vasp
+Converted: 3_cut_2_2_4_N124.vasp -> 3_cut_2_2_4_N124.vasp.data
+Processing: 3_cut_2_2_4_N124.vasp
+Converted: 3_cut_2_2_5_N129.vasp -> 3_cut_2_2_5_N129.vasp.data
+Processing: 3_cut_2_2_5_N129.vasp
+Converted: 3_cut_2_2_6_N118.vasp -> 3_cut_2_2_6_N118.vasp.data
+Processing: 3_cut_2_2_6_N118.vasp
+Converted: 3_cut_2_3_0_N126.vasp -> 3_cut_2_3_0_N126.vasp.data
+Processing: 3_cut_2_3_0_N126.vasp
+Converted: 3_cut_2_3_1_N143.vasp -> 3_cut_2_3_1_N143.vasp.data
+Processing: 3_cut_2_3_1_N143.vasp
+Converted: 3_cut_2_3_2_N117.vasp -> 3_cut_2_3_2_N117.vasp.data
+Processing: 3_cut_2_3_2_N117.vasp
+Converted: 3_cut_2_3_3_N119.vasp -> 3_cut_2_3_3_N119.vasp.data
+Processing: 3_cut_2_3_3_N119.vasp
+Converted: 3_cut_2_3_4_N124.vasp -> 3_cut_2_3_4_N124.vasp.data
+Processing: 3_cut_2_3_4_N124.vasp
+Converted: 3_cut_2_3_5_N128.vasp -> 3_cut_2_3_5_N128.vasp.data
+Processing: 3_cut_2_3_5_N128.vasp
+Converted: 3_cut_2_3_6_N120.vasp -> 3_cut_2_3_6_N120.vasp.data
+Processing: 3_cut_2_3_6_N120.vasp
+Converted: 3_cut_2_4_0_N122.vasp -> 3_cut_2_4_0_N122.vasp.data
+Processing: 3_cut_2_4_0_N122.vasp
+Converted: 3_cut_2_4_1_N127.vasp -> 3_cut_2_4_1_N127.vasp.data
+Processing: 3_cut_2_4_1_N127.vasp
+Converted: 3_cut_2_4_2_N123.vasp -> 3_cut_2_4_2_N123.vasp.data
+Processing: 3_cut_2_4_2_N123.vasp
+Converted: 3_cut_2_4_3_N118.vasp -> 3_cut_2_4_3_N118.vasp.data
+Processing: 3_cut_2_4_3_N118.vasp
+Converted: 3_cut_2_4_4_N131.vasp -> 3_cut_2_4_4_N131.vasp.data
+Processing: 3_cut_2_4_4_N131.vasp
+Converted: 3_cut_2_4_5_N126.vasp -> 3_cut_2_4_5_N126.vasp.data
+Processing: 3_cut_2_4_5_N126.vasp
+Converted: 3_cut_2_4_6_N136.vasp -> 3_cut_2_4_6_N136.vasp.data
+Processing: 3_cut_2_4_6_N136.vasp
+Converted: 3_cut_3_0_0_N125.vasp -> 3_cut_3_0_0_N125.vasp.data
+Processing: 3_cut_3_0_0_N125.vasp
+Converted: 3_cut_3_0_1_N121.vasp -> 3_cut_3_0_1_N121.vasp.data
+Processing: 3_cut_3_0_1_N121.vasp
+Converted: 3_cut_3_0_2_N120.vasp -> 3_cut_3_0_2_N120.vasp.data
+Processing: 3_cut_3_0_2_N120.vasp
+Converted: 3_cut_3_0_3_N125.vasp -> 3_cut_3_0_3_N125.vasp.data
+Processing: 3_cut_3_0_3_N125.vasp
+Converted: 3_cut_3_0_4_N129.vasp -> 3_cut_3_0_4_N129.vasp.data
+Processing: 3_cut_3_0_4_N129.vasp
+Converted: 3_cut_3_0_5_N125.vasp -> 3_cut_3_0_5_N125.vasp.data
+Processing: 3_cut_3_0_5_N125.vasp
+Converted: 3_cut_3_0_6_N110.vasp -> 3_cut_3_0_6_N110.vasp.data
+Processing: 3_cut_3_0_6_N110.vasp
+Converted: 3_cut_3_1_0_N122.vasp -> 3_cut_3_1_0_N122.vasp.data
+Processing: 3_cut_3_1_0_N122.vasp
+Converted: 3_cut_3_1_1_N128.vasp -> 3_cut_3_1_1_N128.vasp.data
+Processing: 3_cut_3_1_1_N128.vasp
+Converted: 3_cut_3_1_2_N121.vasp -> 3_cut_3_1_2_N121.vasp.data
+Processing: 3_cut_3_1_2_N121.vasp
+Converted: 3_cut_3_1_3_N130.vasp -> 3_cut_3_1_3_N130.vasp.data
+Processing: 3_cut_3_1_3_N130.vasp
+Converted: 3_cut_3_1_4_N130.vasp -> 3_cut_3_1_4_N130.vasp.data
+Processing: 3_cut_3_1_4_N130.vasp
+Converted: 3_cut_3_1_5_N124.vasp -> 3_cut_3_1_5_N124.vasp.data
+Processing: 3_cut_3_1_5_N124.vasp
+Converted: 3_cut_3_1_6_N133.vasp -> 3_cut_3_1_6_N133.vasp.data
+Processing: 3_cut_3_1_6_N133.vasp
+Converted: 3_cut_3_2_0_N121.vasp -> 3_cut_3_2_0_N121.vasp.data
+Processing: 3_cut_3_2_0_N121.vasp
+Converted: 3_cut_3_2_1_N129.vasp -> 3_cut_3_2_1_N129.vasp.data
+Processing: 3_cut_3_2_1_N129.vasp
+Converted: 3_cut_3_2_2_N128.vasp -> 3_cut_3_2_2_N128.vasp.data
+Processing: 3_cut_3_2_2_N128.vasp
+Converted: 3_cut_3_2_3_N116.vasp -> 3_cut_3_2_3_N116.vasp.data
+Processing: 3_cut_3_2_3_N116.vasp
+Converted: 3_cut_3_2_4_N124.vasp -> 3_cut_3_2_4_N124.vasp.data
+Processing: 3_cut_3_2_4_N124.vasp
+Converted: 3_cut_3_2_5_N121.vasp -> 3_cut_3_2_5_N121.vasp.data
+Processing: 3_cut_3_2_5_N121.vasp
+Converted: 3_cut_3_2_6_N124.vasp -> 3_cut_3_2_6_N124.vasp.data
+Processing: 3_cut_3_2_6_N124.vasp
+Converted: 3_cut_3_3_0_N123.vasp -> 3_cut_3_3_0_N123.vasp.data
+Processing: 3_cut_3_3_0_N123.vasp
+Converted: 3_cut_3_3_1_N138.vasp -> 3_cut_3_3_1_N138.vasp.data
+Processing: 3_cut_3_3_1_N138.vasp
+Converted: 3_cut_3_3_2_N119.vasp -> 3_cut_3_3_2_N119.vasp.data
+Processing: 3_cut_3_3_2_N119.vasp
+Converted: 3_cut_3_3_3_N121.vasp -> 3_cut_3_3_3_N121.vasp.data
+Processing: 3_cut_3_3_3_N121.vasp
+Converted: 3_cut_3_3_4_N124.vasp -> 3_cut_3_3_4_N124.vasp.data
+Processing: 3_cut_3_3_4_N124.vasp
+Converted: 3_cut_3_3_5_N127.vasp -> 3_cut_3_3_5_N127.vasp.data
+Processing: 3_cut_3_3_5_N127.vasp
+Converted: 3_cut_3_3_6_N121.vasp -> 3_cut_3_3_6_N121.vasp.data
+Processing: 3_cut_3_3_6_N121.vasp
+Converted: 3_cut_3_4_0_N121.vasp -> 3_cut_3_4_0_N121.vasp.data
+Processing: 3_cut_3_4_0_N121.vasp
+Converted: 3_cut_3_4_1_N128.vasp -> 3_cut_3_4_1_N128.vasp.data
+Processing: 3_cut_3_4_1_N128.vasp
+Converted: 3_cut_3_4_2_N126.vasp -> 3_cut_3_4_2_N126.vasp.data
+Processing: 3_cut_3_4_2_N126.vasp
+Converted: 3_cut_3_4_3_N119.vasp -> 3_cut_3_4_3_N119.vasp.data
+Processing: 3_cut_3_4_3_N119.vasp
+Converted: 3_cut_3_4_4_N130.vasp -> 3_cut_3_4_4_N130.vasp.data
+Processing: 3_cut_3_4_4_N130.vasp
+Converted: 3_cut_3_4_5_N129.vasp -> 3_cut_3_4_5_N129.vasp.data
+Processing: 3_cut_3_4_5_N129.vasp
+Converted: 3_cut_3_4_6_N138.vasp -> 3_cut_3_4_6_N138.vasp.data
+Processing: 3_cut_3_4_6_N138.vasp
+Converted: 3_cut_4_0_0_N126.vasp -> 3_cut_4_0_0_N126.vasp.data
+Processing: 3_cut_4_0_0_N126.vasp
+Converted: 3_cut_4_0_1_N123.vasp -> 3_cut_4_0_1_N123.vasp.data
+Processing: 3_cut_4_0_1_N123.vasp
+Converted: 3_cut_4_0_2_N122.vasp -> 3_cut_4_0_2_N122.vasp.data
+Processing: 3_cut_4_0_2_N122.vasp
+Converted: 3_cut_4_0_3_N122.vasp -> 3_cut_4_0_3_N122.vasp.data
+Processing: 3_cut_4_0_3_N122.vasp
+Converted: 3_cut_4_0_4_N125.vasp -> 3_cut_4_0_4_N125.vasp.data
+Processing: 3_cut_4_0_4_N125.vasp
+Converted: 3_cut_4_0_5_N125.vasp -> 3_cut_4_0_5_N125.vasp.data
+Processing: 3_cut_4_0_5_N125.vasp
+Converted: 3_cut_4_0_6_N113.vasp -> 3_cut_4_0_6_N113.vasp.data
+Processing: 3_cut_4_0_6_N113.vasp
+Converted: 3_cut_4_1_0_N128.vasp -> 3_cut_4_1_0_N128.vasp.data
+Processing: 3_cut_4_1_0_N128.vasp
+Converted: 3_cut_4_1_1_N122.vasp -> 3_cut_4_1_1_N122.vasp.data
+Processing: 3_cut_4_1_1_N122.vasp
+Converted: 3_cut_4_1_2_N121.vasp -> 3_cut_4_1_2_N121.vasp.data
+Processing: 3_cut_4_1_2_N121.vasp
+Converted: 3_cut_4_1_3_N132.vasp -> 3_cut_4_1_3_N132.vasp.data
+Processing: 3_cut_4_1_3_N132.vasp
+Converted: 3_cut_4_1_4_N131.vasp -> 3_cut_4_1_4_N131.vasp.data
+Processing: 3_cut_4_1_4_N131.vasp
+Converted: 3_cut_4_1_5_N130.vasp -> 3_cut_4_1_5_N130.vasp.data
+Processing: 3_cut_4_1_5_N130.vasp
+Converted: 3_cut_4_1_6_N135.vasp -> 3_cut_4_1_6_N135.vasp.data
+Processing: 3_cut_4_1_6_N135.vasp
+Converted: 3_cut_4_2_0_N119.vasp -> 3_cut_4_2_0_N119.vasp.data
+Processing: 3_cut_4_2_0_N119.vasp
+Converted: 3_cut_4_2_1_N128.vasp -> 3_cut_4_2_1_N128.vasp.data
+Processing: 3_cut_4_2_1_N128.vasp
+Converted: 3_cut_4_2_2_N134.vasp -> 3_cut_4_2_2_N134.vasp.data
+Processing: 3_cut_4_2_2_N134.vasp
+Converted: 3_cut_4_2_3_N115.vasp -> 3_cut_4_2_3_N115.vasp.data
+Processing: 3_cut_4_2_3_N115.vasp
+Converted: 3_cut_4_2_4_N125.vasp -> 3_cut_4_2_4_N125.vasp.data
+Processing: 3_cut_4_2_4_N125.vasp
+Converted: 3_cut_4_2_5_N126.vasp -> 3_cut_4_2_5_N126.vasp.data
+Processing: 3_cut_4_2_5_N126.vasp
+Converted: 3_cut_4_2_6_N121.vasp -> 3_cut_4_2_6_N121.vasp.data
+Processing: 3_cut_4_2_6_N121.vasp
+Converted: 3_cut_4_3_0_N126.vasp -> 3_cut_4_3_0_N126.vasp.data
+Processing: 3_cut_4_3_0_N126.vasp
+Converted: 3_cut_4_3_1_N143.vasp -> 3_cut_4_3_1_N143.vasp.data
+Processing: 3_cut_4_3_1_N143.vasp
+Converted: 3_cut_4_3_2_N119.vasp -> 3_cut_4_3_2_N119.vasp.data
+Processing: 3_cut_4_3_2_N119.vasp
+Converted: 3_cut_4_3_3_N116.vasp -> 3_cut_4_3_3_N116.vasp.data
+Processing: 3_cut_4_3_3_N116.vasp
+Converted: 3_cut_4_3_4_N121.vasp -> 3_cut_4_3_4_N121.vasp.data
+Processing: 3_cut_4_3_4_N121.vasp
+Converted: 3_cut_4_3_5_N127.vasp -> 3_cut_4_3_5_N127.vasp.data
+Processing: 3_cut_4_3_5_N127.vasp
+Converted: 3_cut_4_3_6_N121.vasp -> 3_cut_4_3_6_N121.vasp.data
+Processing: 3_cut_4_3_6_N121.vasp
+Converted: 3_cut_4_4_0_N122.vasp -> 3_cut_4_4_0_N122.vasp.data
+Processing: 3_cut_4_4_0_N122.vasp
+Converted: 3_cut_4_4_1_N127.vasp -> 3_cut_4_4_1_N127.vasp.data
+Processing: 3_cut_4_4_1_N127.vasp
+Converted: 3_cut_4_4_2_N127.vasp -> 3_cut_4_4_2_N127.vasp.data
+Processing: 3_cut_4_4_2_N127.vasp
+Converted: 3_cut_4_4_3_N118.vasp -> 3_cut_4_4_3_N118.vasp.data
+Processing: 3_cut_4_4_3_N118.vasp
+Converted: 3_cut_4_4_4_N132.vasp -> 3_cut_4_4_4_N132.vasp.data
+Processing: 3_cut_4_4_4_N132.vasp
+Converted: 3_cut_4_4_5_N126.vasp -> 3_cut_4_4_5_N126.vasp.data
+Processing: 3_cut_4_4_5_N126.vasp
+Converted: 3_cut_4_4_6_N134.vasp -> 3_cut_4_4_6_N134.vasp.data
+Processing: 3_cut_4_4_6_N134.vasp
+Converted: 3_cut_5_0_0_N123.vasp -> 3_cut_5_0_0_N123.vasp.data
+Processing: 3_cut_5_0_0_N123.vasp
+Converted: 3_cut_5_0_1_N121.vasp -> 3_cut_5_0_1_N121.vasp.data
+Processing: 3_cut_5_0_1_N121.vasp
+Converted: 3_cut_5_0_2_N121.vasp -> 3_cut_5_0_2_N121.vasp.data
+Processing: 3_cut_5_0_2_N121.vasp
+Converted: 3_cut_5_0_3_N127.vasp -> 3_cut_5_0_3_N127.vasp.data
+Processing: 3_cut_5_0_3_N127.vasp
+Converted: 3_cut_5_0_4_N123.vasp -> 3_cut_5_0_4_N123.vasp.data
+Processing: 3_cut_5_0_4_N123.vasp
+Converted: 3_cut_5_0_5_N128.vasp -> 3_cut_5_0_5_N128.vasp.data
+Processing: 3_cut_5_0_5_N128.vasp
+Converted: 3_cut_5_0_6_N116.vasp -> 3_cut_5_0_6_N116.vasp.data
+Processing: 3_cut_5_0_6_N116.vasp
+Converted: 3_cut_5_1_0_N119.vasp -> 3_cut_5_1_0_N119.vasp.data
+Processing: 3_cut_5_1_0_N119.vasp
+Converted: 3_cut_5_1_1_N124.vasp -> 3_cut_5_1_1_N124.vasp.data
+Processing: 3_cut_5_1_1_N124.vasp
+Converted: 3_cut_5_1_2_N122.vasp -> 3_cut_5_1_2_N122.vasp.data
+Processing: 3_cut_5_1_2_N122.vasp
+Converted: 3_cut_5_1_3_N128.vasp -> 3_cut_5_1_3_N128.vasp.data
+Processing: 3_cut_5_1_3_N128.vasp
+Converted: 3_cut_5_1_4_N130.vasp -> 3_cut_5_1_4_N130.vasp.data
+Processing: 3_cut_5_1_4_N130.vasp
+Converted: 3_cut_5_1_5_N126.vasp -> 3_cut_5_1_5_N126.vasp.data
+Processing: 3_cut_5_1_5_N126.vasp
+Converted: 3_cut_5_1_6_N128.vasp -> 3_cut_5_1_6_N128.vasp.data
+Processing: 3_cut_5_1_6_N128.vasp
+Converted: 3_cut_5_2_0_N121.vasp -> 3_cut_5_2_0_N121.vasp.data
+Processing: 3_cut_5_2_0_N121.vasp
+Converted: 3_cut_5_2_1_N132.vasp -> 3_cut_5_2_1_N132.vasp.data
+Processing: 3_cut_5_2_1_N132.vasp
+Converted: 3_cut_5_2_2_N129.vasp -> 3_cut_5_2_2_N129.vasp.data
+Processing: 3_cut_5_2_2_N129.vasp
+Converted: 3_cut_5_2_3_N121.vasp -> 3_cut_5_2_3_N121.vasp.data
+Processing: 3_cut_5_2_3_N121.vasp
+Converted: 3_cut_5_2_4_N122.vasp -> 3_cut_5_2_4_N122.vasp.data
+Processing: 3_cut_5_2_4_N122.vasp
+Converted: 3_cut_5_2_5_N120.vasp -> 3_cut_5_2_5_N120.vasp.data
+Processing: 3_cut_5_2_5_N120.vasp
+Converted: 3_cut_5_2_6_N123.vasp -> 3_cut_5_2_6_N123.vasp.data
+Processing: 3_cut_5_2_6_N123.vasp
+Converted: 3_cut_5_3_0_N122.vasp -> 3_cut_5_3_0_N122.vasp.data
+Processing: 3_cut_5_3_0_N122.vasp
+Converted: 3_cut_5_3_1_N137.vasp -> 3_cut_5_3_1_N137.vasp.data
+Processing: 3_cut_5_3_1_N137.vasp
+Converted: 3_cut_5_3_2_N121.vasp -> 3_cut_5_3_2_N121.vasp.data
+Processing: 3_cut_5_3_2_N121.vasp
+Converted: 3_cut_5_3_3_N120.vasp -> 3_cut_5_3_3_N120.vasp.data
+Processing: 3_cut_5_3_3_N120.vasp
+Converted: 3_cut_5_3_4_N125.vasp -> 3_cut_5_3_4_N125.vasp.data
+Processing: 3_cut_5_3_4_N125.vasp
+Converted: 3_cut_5_3_5_N130.vasp -> 3_cut_5_3_5_N130.vasp.data
+Processing: 3_cut_5_3_5_N130.vasp
+Converted: 3_cut_5_3_6_N124.vasp -> 3_cut_5_3_6_N124.vasp.data
+Processing: 3_cut_5_3_6_N124.vasp
+Converted: 3_cut_5_4_0_N121.vasp -> 3_cut_5_4_0_N121.vasp.data
+Processing: 3_cut_5_4_0_N121.vasp
+Converted: 3_cut_5_4_1_N129.vasp -> 3_cut_5_4_1_N129.vasp.data
+Processing: 3_cut_5_4_1_N129.vasp
+Converted: 3_cut_5_4_2_N129.vasp -> 3_cut_5_4_2_N129.vasp.data
+Processing: 3_cut_5_4_2_N129.vasp
+Converted: 3_cut_5_4_3_N115.vasp -> 3_cut_5_4_3_N115.vasp.data
+Processing: 3_cut_5_4_3_N115.vasp
+Converted: 3_cut_5_4_4_N133.vasp -> 3_cut_5_4_4_N133.vasp.data
+Processing: 3_cut_5_4_4_N133.vasp
+Converted: 3_cut_5_4_5_N129.vasp -> 3_cut_5_4_5_N129.vasp.data
+Processing: 3_cut_5_4_5_N129.vasp
+Converted: 3_cut_5_4_6_N135.vasp -> 3_cut_5_4_6_N135.vasp.data
+Processing: 3_cut_5_4_6_N135.vasp
+Converted: 4_cut_0_0_0_N146.vasp -> 4_cut_0_0_0_N146.vasp.data
+Processing: 4_cut_0_0_0_N146.vasp
+Converted: 4_cut_0_0_1_N141.vasp -> 4_cut_0_0_1_N141.vasp.data
+Processing: 4_cut_0_0_1_N141.vasp
+Converted: 4_cut_0_0_2_N136.vasp -> 4_cut_0_0_2_N136.vasp.data
+Processing: 4_cut_0_0_2_N136.vasp
+Converted: 4_cut_0_0_3_N141.vasp -> 4_cut_0_0_3_N141.vasp.data
+Processing: 4_cut_0_0_3_N141.vasp
+Converted: 4_cut_0_0_4_N158.vasp -> 4_cut_0_0_4_N158.vasp.data
+Processing: 4_cut_0_0_4_N158.vasp
+Converted: 4_cut_0_0_5_N147.vasp -> 4_cut_0_0_5_N147.vasp.data
+Processing: 4_cut_0_0_5_N147.vasp
+Converted: 4_cut_0_1_0_N148.vasp -> 4_cut_0_1_0_N148.vasp.data
+Processing: 4_cut_0_1_0_N148.vasp
+Converted: 4_cut_0_1_1_N142.vasp -> 4_cut_0_1_1_N142.vasp.data
+Processing: 4_cut_0_1_1_N142.vasp
+Converted: 4_cut_0_1_2_N144.vasp -> 4_cut_0_1_2_N144.vasp.data
+Processing: 4_cut_0_1_2_N144.vasp
+Converted: 4_cut_0_1_3_N151.vasp -> 4_cut_0_1_3_N151.vasp.data
+Processing: 4_cut_0_1_3_N151.vasp
+Converted: 4_cut_0_1_4_N157.vasp -> 4_cut_0_1_4_N157.vasp.data
+Processing: 4_cut_0_1_4_N157.vasp
+Converted: 4_cut_0_1_5_N135.vasp -> 4_cut_0_1_5_N135.vasp.data
+Processing: 4_cut_0_1_5_N135.vasp
+Converted: 4_cut_0_2_0_N150.vasp -> 4_cut_0_2_0_N150.vasp.data
+Processing: 4_cut_0_2_0_N150.vasp
+Converted: 4_cut_0_2_1_N141.vasp -> 4_cut_0_2_1_N141.vasp.data
+Processing: 4_cut_0_2_1_N141.vasp
+Converted: 4_cut_0_2_2_N145.vasp -> 4_cut_0_2_2_N145.vasp.data
+Processing: 4_cut_0_2_2_N145.vasp
+Converted: 4_cut_0_2_3_N162.vasp -> 4_cut_0_2_3_N162.vasp.data
+Processing: 4_cut_0_2_3_N162.vasp
+Converted: 4_cut_0_2_4_N145.vasp -> 4_cut_0_2_4_N145.vasp.data
+Processing: 4_cut_0_2_4_N145.vasp
+Converted: 4_cut_0_2_5_N135.vasp -> 4_cut_0_2_5_N135.vasp.data
+Processing: 4_cut_0_2_5_N135.vasp
+Converted: 4_cut_0_3_0_N149.vasp -> 4_cut_0_3_0_N149.vasp.data
+Processing: 4_cut_0_3_0_N149.vasp
+Converted: 4_cut_0_3_1_N143.vasp -> 4_cut_0_3_1_N143.vasp.data
+Processing: 4_cut_0_3_1_N143.vasp
+Converted: 4_cut_0_3_2_N147.vasp -> 4_cut_0_3_2_N147.vasp.data
+Processing: 4_cut_0_3_2_N147.vasp
+Converted: 4_cut_0_3_3_N145.vasp -> 4_cut_0_3_3_N145.vasp.data
+Processing: 4_cut_0_3_3_N145.vasp
+Converted: 4_cut_0_3_4_N141.vasp -> 4_cut_0_3_4_N141.vasp.data
+Processing: 4_cut_0_3_4_N141.vasp
+Converted: 4_cut_0_3_5_N154.vasp -> 4_cut_0_3_5_N154.vasp.data
+Processing: 4_cut_0_3_5_N154.vasp
+Converted: 4_cut_0_4_0_N150.vasp -> 4_cut_0_4_0_N150.vasp.data
+Processing: 4_cut_0_4_0_N150.vasp
+Converted: 4_cut_0_4_1_N150.vasp -> 4_cut_0_4_1_N150.vasp.data
+Processing: 4_cut_0_4_1_N150.vasp
+Converted: 4_cut_0_4_2_N146.vasp -> 4_cut_0_4_2_N146.vasp.data
+Processing: 4_cut_0_4_2_N146.vasp
+Converted: 4_cut_0_4_3_N149.vasp -> 4_cut_0_4_3_N149.vasp.data
+Processing: 4_cut_0_4_3_N149.vasp
+Converted: 4_cut_0_4_4_N141.vasp -> 4_cut_0_4_4_N141.vasp.data
+Processing: 4_cut_0_4_4_N141.vasp
+Converted: 4_cut_0_4_5_N142.vasp -> 4_cut_0_4_5_N142.vasp.data
+Processing: 4_cut_0_4_5_N142.vasp
+Converted: 4_cut_1_0_0_N148.vasp -> 4_cut_1_0_0_N148.vasp.data
+Processing: 4_cut_1_0_0_N148.vasp
+Converted: 4_cut_1_0_1_N146.vasp -> 4_cut_1_0_1_N146.vasp.data
+Processing: 4_cut_1_0_1_N146.vasp
+Converted: 4_cut_1_0_2_N135.vasp -> 4_cut_1_0_2_N135.vasp.data
+Processing: 4_cut_1_0_2_N135.vasp
+Converted: 4_cut_1_0_3_N142.vasp -> 4_cut_1_0_3_N142.vasp.data
+Processing: 4_cut_1_0_3_N142.vasp
+Converted: 4_cut_1_0_4_N145.vasp -> 4_cut_1_0_4_N145.vasp.data
+Processing: 4_cut_1_0_4_N145.vasp
+Converted: 4_cut_1_0_5_N149.vasp -> 4_cut_1_0_5_N149.vasp.data
+Processing: 4_cut_1_0_5_N149.vasp
+Converted: 4_cut_1_1_0_N149.vasp -> 4_cut_1_1_0_N149.vasp.data
+Processing: 4_cut_1_1_0_N149.vasp
+Converted: 4_cut_1_1_1_N146.vasp -> 4_cut_1_1_1_N146.vasp.data
+Processing: 4_cut_1_1_1_N146.vasp
+Converted: 4_cut_1_1_2_N140.vasp -> 4_cut_1_1_2_N140.vasp.data
+Processing: 4_cut_1_1_2_N140.vasp
+Converted: 4_cut_1_1_3_N156.vasp -> 4_cut_1_1_3_N156.vasp.data
+Processing: 4_cut_1_1_3_N156.vasp
+Converted: 4_cut_1_1_4_N156.vasp -> 4_cut_1_1_4_N156.vasp.data
+Processing: 4_cut_1_1_4_N156.vasp
+Converted: 4_cut_1_1_5_N137.vasp -> 4_cut_1_1_5_N137.vasp.data
+Processing: 4_cut_1_1_5_N137.vasp
+Converted: 4_cut_1_2_0_N157.vasp -> 4_cut_1_2_0_N157.vasp.data
+Processing: 4_cut_1_2_0_N157.vasp
+Converted: 4_cut_1_2_1_N139.vasp -> 4_cut_1_2_1_N139.vasp.data
+Processing: 4_cut_1_2_1_N139.vasp
+Converted: 4_cut_1_2_2_N147.vasp -> 4_cut_1_2_2_N147.vasp.data
+Processing: 4_cut_1_2_2_N147.vasp
+Converted: 4_cut_1_2_3_N152.vasp -> 4_cut_1_2_3_N152.vasp.data
+Processing: 4_cut_1_2_3_N152.vasp
+Converted: 4_cut_1_2_4_N146.vasp -> 4_cut_1_2_4_N146.vasp.data
+Processing: 4_cut_1_2_4_N146.vasp
+Converted: 4_cut_1_2_5_N132.vasp -> 4_cut_1_2_5_N132.vasp.data
+Processing: 4_cut_1_2_5_N132.vasp
+Converted: 4_cut_1_3_0_N145.vasp -> 4_cut_1_3_0_N145.vasp.data
+Processing: 4_cut_1_3_0_N145.vasp
+Converted: 4_cut_1_3_1_N139.vasp -> 4_cut_1_3_1_N139.vasp.data
+Processing: 4_cut_1_3_1_N139.vasp
+Converted: 4_cut_1_3_2_N141.vasp -> 4_cut_1_3_2_N141.vasp.data
+Processing: 4_cut_1_3_2_N141.vasp
+Converted: 4_cut_1_3_3_N144.vasp -> 4_cut_1_3_3_N144.vasp.data
+Processing: 4_cut_1_3_3_N144.vasp
+Converted: 4_cut_1_3_4_N140.vasp -> 4_cut_1_3_4_N140.vasp.data
+Processing: 4_cut_1_3_4_N140.vasp
+Converted: 4_cut_1_3_5_N156.vasp -> 4_cut_1_3_5_N156.vasp.data
+Processing: 4_cut_1_3_5_N156.vasp
+Converted: 4_cut_1_4_0_N157.vasp -> 4_cut_1_4_0_N157.vasp.data
+Processing: 4_cut_1_4_0_N157.vasp
+Converted: 4_cut_1_4_1_N144.vasp -> 4_cut_1_4_1_N144.vasp.data
+Processing: 4_cut_1_4_1_N144.vasp
+Converted: 4_cut_1_4_2_N143.vasp -> 4_cut_1_4_2_N143.vasp.data
+Processing: 4_cut_1_4_2_N143.vasp
+Converted: 4_cut_1_4_3_N154.vasp -> 4_cut_1_4_3_N154.vasp.data
+Processing: 4_cut_1_4_3_N154.vasp
+Converted: 4_cut_1_4_4_N145.vasp -> 4_cut_1_4_4_N145.vasp.data
+Processing: 4_cut_1_4_4_N145.vasp
+Converted: 4_cut_1_4_5_N142.vasp -> 4_cut_1_4_5_N142.vasp.data
+Processing: 4_cut_1_4_5_N142.vasp
+Converted: 4_cut_2_0_0_N147.vasp -> 4_cut_2_0_0_N147.vasp.data
+Processing: 4_cut_2_0_0_N147.vasp
+Converted: 4_cut_2_0_1_N146.vasp -> 4_cut_2_0_1_N146.vasp.data
+Processing: 4_cut_2_0_1_N146.vasp
+Converted: 4_cut_2_0_2_N138.vasp -> 4_cut_2_0_2_N138.vasp.data
+Processing: 4_cut_2_0_2_N138.vasp
+Converted: 4_cut_2_0_3_N138.vasp -> 4_cut_2_0_3_N138.vasp.data
+Processing: 4_cut_2_0_3_N138.vasp
+Converted: 4_cut_2_0_4_N155.vasp -> 4_cut_2_0_4_N155.vasp.data
+Processing: 4_cut_2_0_4_N155.vasp
+Converted: 4_cut_2_0_5_N146.vasp -> 4_cut_2_0_5_N146.vasp.data
+Processing: 4_cut_2_0_5_N146.vasp
+Converted: 4_cut_2_1_0_N147.vasp -> 4_cut_2_1_0_N147.vasp.data
+Processing: 4_cut_2_1_0_N147.vasp
+Converted: 4_cut_2_1_1_N142.vasp -> 4_cut_2_1_1_N142.vasp.data
+Processing: 4_cut_2_1_1_N142.vasp
+Converted: 4_cut_2_1_2_N146.vasp -> 4_cut_2_1_2_N146.vasp.data
+Processing: 4_cut_2_1_2_N146.vasp
+Converted: 4_cut_2_1_3_N145.vasp -> 4_cut_2_1_3_N145.vasp.data
+Processing: 4_cut_2_1_3_N145.vasp
+Converted: 4_cut_2_1_4_N162.vasp -> 4_cut_2_1_4_N162.vasp.data
+Processing: 4_cut_2_1_4_N162.vasp
+Converted: 4_cut_2_1_5_N138.vasp -> 4_cut_2_1_5_N138.vasp.data
+Processing: 4_cut_2_1_5_N138.vasp
+Converted: 4_cut_2_2_0_N148.vasp -> 4_cut_2_2_0_N148.vasp.data
+Processing: 4_cut_2_2_0_N148.vasp
+Converted: 4_cut_2_2_1_N142.vasp -> 4_cut_2_2_1_N142.vasp.data
+Processing: 4_cut_2_2_1_N142.vasp
+Converted: 4_cut_2_2_2_N147.vasp -> 4_cut_2_2_2_N147.vasp.data
+Processing: 4_cut_2_2_2_N147.vasp
+Converted: 4_cut_2_2_3_N156.vasp -> 4_cut_2_2_3_N156.vasp.data
+Processing: 4_cut_2_2_3_N156.vasp
+Converted: 4_cut_2_2_4_N141.vasp -> 4_cut_2_2_4_N141.vasp.data
+Processing: 4_cut_2_2_4_N141.vasp
+Converted: 4_cut_2_2_5_N138.vasp -> 4_cut_2_2_5_N138.vasp.data
+Processing: 4_cut_2_2_5_N138.vasp
+Converted: 4_cut_2_3_0_N146.vasp -> 4_cut_2_3_0_N146.vasp.data
+Processing: 4_cut_2_3_0_N146.vasp
+Converted: 4_cut_2_3_1_N141.vasp -> 4_cut_2_3_1_N141.vasp.data
+Processing: 4_cut_2_3_1_N141.vasp
+Converted: 4_cut_2_3_2_N143.vasp -> 4_cut_2_3_2_N143.vasp.data
+Processing: 4_cut_2_3_2_N143.vasp
+Converted: 4_cut_2_3_3_N139.vasp -> 4_cut_2_3_3_N139.vasp.data
+Processing: 4_cut_2_3_3_N139.vasp
+Converted: 4_cut_2_3_4_N146.vasp -> 4_cut_2_3_4_N146.vasp.data
+Processing: 4_cut_2_3_4_N146.vasp
+Converted: 4_cut_2_3_5_N147.vasp -> 4_cut_2_3_5_N147.vasp.data
+Processing: 4_cut_2_3_5_N147.vasp
+Converted: 4_cut_2_4_0_N153.vasp -> 4_cut_2_4_0_N153.vasp.data
+Processing: 4_cut_2_4_0_N153.vasp
+Converted: 4_cut_2_4_1_N146.vasp -> 4_cut_2_4_1_N146.vasp.data
+Processing: 4_cut_2_4_1_N146.vasp
+Converted: 4_cut_2_4_2_N147.vasp -> 4_cut_2_4_2_N147.vasp.data
+Processing: 4_cut_2_4_2_N147.vasp
+Converted: 4_cut_2_4_3_N152.vasp -> 4_cut_2_4_3_N152.vasp.data
+Processing: 4_cut_2_4_3_N152.vasp
+Converted: 4_cut_2_4_4_N146.vasp -> 4_cut_2_4_4_N146.vasp.data
+Processing: 4_cut_2_4_4_N146.vasp
+Converted: 4_cut_2_4_5_N145.vasp -> 4_cut_2_4_5_N145.vasp.data
+Processing: 4_cut_2_4_5_N145.vasp
+Converted: 4_cut_3_0_0_N148.vasp -> 4_cut_3_0_0_N148.vasp.data
+Processing: 4_cut_3_0_0_N148.vasp
+Converted: 4_cut_3_0_1_N144.vasp -> 4_cut_3_0_1_N144.vasp.data
+Processing: 4_cut_3_0_1_N144.vasp
+Converted: 4_cut_3_0_2_N136.vasp -> 4_cut_3_0_2_N136.vasp.data
+Processing: 4_cut_3_0_2_N136.vasp
+Converted: 4_cut_3_0_3_N137.vasp -> 4_cut_3_0_3_N137.vasp.data
+Processing: 4_cut_3_0_3_N137.vasp
+Converted: 4_cut_3_0_4_N150.vasp -> 4_cut_3_0_4_N150.vasp.data
+Processing: 4_cut_3_0_4_N150.vasp
+Converted: 4_cut_3_0_5_N149.vasp -> 4_cut_3_0_5_N149.vasp.data
+Processing: 4_cut_3_0_5_N149.vasp
+Converted: 4_cut_3_1_0_N150.vasp -> 4_cut_3_1_0_N150.vasp.data
+Processing: 4_cut_3_1_0_N150.vasp
+Converted: 4_cut_3_1_1_N149.vasp -> 4_cut_3_1_1_N149.vasp.data
+Processing: 4_cut_3_1_1_N149.vasp
+Converted: 4_cut_3_1_2_N143.vasp -> 4_cut_3_1_2_N143.vasp.data
+Processing: 4_cut_3_1_2_N143.vasp
+Converted: 4_cut_3_1_3_N152.vasp -> 4_cut_3_1_3_N152.vasp.data
+Processing: 4_cut_3_1_3_N152.vasp
+Converted: 4_cut_3_1_4_N158.vasp -> 4_cut_3_1_4_N158.vasp.data
+Processing: 4_cut_3_1_4_N158.vasp
+Converted: 4_cut_3_1_5_N138.vasp -> 4_cut_3_1_5_N138.vasp.data
+Processing: 4_cut_3_1_5_N138.vasp
+Converted: 4_cut_3_2_0_N153.vasp -> 4_cut_3_2_0_N153.vasp.data
+Processing: 4_cut_3_2_0_N153.vasp
+Converted: 4_cut_3_2_1_N139.vasp -> 4_cut_3_2_1_N139.vasp.data
+Processing: 4_cut_3_2_1_N139.vasp
+Converted: 4_cut_3_2_2_N148.vasp -> 4_cut_3_2_2_N148.vasp.data
+Processing: 4_cut_3_2_2_N148.vasp
+Converted: 4_cut_3_2_3_N151.vasp -> 4_cut_3_2_3_N151.vasp.data
+Processing: 4_cut_3_2_3_N151.vasp
+Converted: 4_cut_3_2_4_N144.vasp -> 4_cut_3_2_4_N144.vasp.data
+Processing: 4_cut_3_2_4_N144.vasp
+Converted: 4_cut_3_2_5_N135.vasp -> 4_cut_3_2_5_N135.vasp.data
+Processing: 4_cut_3_2_5_N135.vasp
+Converted: 4_cut_3_3_0_N144.vasp -> 4_cut_3_3_0_N144.vasp.data
+Processing: 4_cut_3_3_0_N144.vasp
+Converted: 4_cut_3_3_1_N137.vasp -> 4_cut_3_3_1_N137.vasp.data
+Processing: 4_cut_3_3_1_N137.vasp
+Converted: 4_cut_3_3_2_N141.vasp -> 4_cut_3_3_2_N141.vasp.data
+Processing: 4_cut_3_3_2_N141.vasp
+Converted: 4_cut_3_3_3_N140.vasp -> 4_cut_3_3_3_N140.vasp.data
+Processing: 4_cut_3_3_3_N140.vasp
+Converted: 4_cut_3_3_4_N143.vasp -> 4_cut_3_3_4_N143.vasp.data
+Processing: 4_cut_3_3_4_N143.vasp
+Converted: 4_cut_3_3_5_N154.vasp -> 4_cut_3_3_5_N154.vasp.data
+Processing: 4_cut_3_3_5_N154.vasp
+Converted: 4_cut_3_4_0_N159.vasp -> 4_cut_3_4_0_N159.vasp.data
+Processing: 4_cut_3_4_0_N159.vasp
+Converted: 4_cut_3_4_1_N143.vasp -> 4_cut_3_4_1_N143.vasp.data
+Processing: 4_cut_3_4_1_N143.vasp
+Converted: 4_cut_3_4_2_N143.vasp -> 4_cut_3_4_2_N143.vasp.data
+Processing: 4_cut_3_4_2_N143.vasp
+Converted: 4_cut_3_4_3_N157.vasp -> 4_cut_3_4_3_N157.vasp.data
+Processing: 4_cut_3_4_3_N157.vasp
+Converted: 4_cut_3_4_4_N143.vasp -> 4_cut_3_4_4_N143.vasp.data
+Processing: 4_cut_3_4_4_N143.vasp
+Converted: 4_cut_3_4_5_N143.vasp -> 4_cut_3_4_5_N143.vasp.data
+Processing: 4_cut_3_4_5_N143.vasp
+Converted: 4_cut_4_0_0_N147.vasp -> 4_cut_4_0_0_N147.vasp.data
+Processing: 4_cut_4_0_0_N147.vasp
+Converted: 4_cut_4_0_1_N146.vasp -> 4_cut_4_0_1_N146.vasp.data
+Processing: 4_cut_4_0_1_N146.vasp
+Converted: 4_cut_4_0_2_N136.vasp -> 4_cut_4_0_2_N136.vasp.data
+Processing: 4_cut_4_0_2_N136.vasp
+Converted: 4_cut_4_0_3_N139.vasp -> 4_cut_4_0_3_N139.vasp.data
+Processing: 4_cut_4_0_3_N139.vasp
+Converted: 4_cut_4_0_4_N156.vasp -> 4_cut_4_0_4_N156.vasp.data
+Processing: 4_cut_4_0_4_N156.vasp
+Converted: 4_cut_4_0_5_N147.vasp -> 4_cut_4_0_5_N147.vasp.data
+Processing: 4_cut_4_0_5_N147.vasp
+Converted: 4_cut_4_1_0_N147.vasp -> 4_cut_4_1_0_N147.vasp.data
+Processing: 4_cut_4_1_0_N147.vasp
+Converted: 4_cut_4_1_1_N146.vasp -> 4_cut_4_1_1_N146.vasp.data
+Processing: 4_cut_4_1_1_N146.vasp
+Converted: 4_cut_4_1_2_N149.vasp -> 4_cut_4_1_2_N149.vasp.data
+Processing: 4_cut_4_1_2_N149.vasp
+Converted: 4_cut_4_1_3_N147.vasp -> 4_cut_4_1_3_N147.vasp.data
+Processing: 4_cut_4_1_3_N147.vasp
+Converted: 4_cut_4_1_4_N160.vasp -> 4_cut_4_1_4_N160.vasp.data
+Processing: 4_cut_4_1_4_N160.vasp
+Converted: 4_cut_4_1_5_N135.vasp -> 4_cut_4_1_5_N135.vasp.data
+Processing: 4_cut_4_1_5_N135.vasp
+Converted: 4_cut_4_2_0_N142.vasp -> 4_cut_4_2_0_N142.vasp.data
+Processing: 4_cut_4_2_0_N142.vasp
+Converted: 4_cut_4_2_1_N138.vasp -> 4_cut_4_2_1_N138.vasp.data
+Processing: 4_cut_4_2_1_N138.vasp
+Converted: 4_cut_4_2_2_N144.vasp -> 4_cut_4_2_2_N144.vasp.data
+Processing: 4_cut_4_2_2_N144.vasp
+Converted: 4_cut_4_2_3_N157.vasp -> 4_cut_4_2_3_N157.vasp.data
+Processing: 4_cut_4_2_3_N157.vasp
+Converted: 4_cut_4_2_4_N145.vasp -> 4_cut_4_2_4_N145.vasp.data
+Processing: 4_cut_4_2_4_N145.vasp
+Converted: 4_cut_4_2_5_N142.vasp -> 4_cut_4_2_5_N142.vasp.data
+Processing: 4_cut_4_2_5_N142.vasp
+Converted: 4_cut_4_3_0_N146.vasp -> 4_cut_4_3_0_N146.vasp.data
+Processing: 4_cut_4_3_0_N146.vasp
+Converted: 4_cut_4_3_1_N142.vasp -> 4_cut_4_3_1_N142.vasp.data
+Processing: 4_cut_4_3_1_N142.vasp
+Converted: 4_cut_4_3_2_N141.vasp -> 4_cut_4_3_2_N141.vasp.data
+Processing: 4_cut_4_3_2_N141.vasp
+Converted: 4_cut_4_3_3_N143.vasp -> 4_cut_4_3_3_N143.vasp.data
+Processing: 4_cut_4_3_3_N143.vasp
+Converted: 4_cut_4_3_4_N144.vasp -> 4_cut_4_3_4_N144.vasp.data
+Processing: 4_cut_4_3_4_N144.vasp
+Converted: 4_cut_4_3_5_N154.vasp -> 4_cut_4_3_5_N154.vasp.data
+Processing: 4_cut_4_3_5_N154.vasp
+Converted: 4_cut_4_4_0_N151.vasp -> 4_cut_4_4_0_N151.vasp.data
+Processing: 4_cut_4_4_0_N151.vasp
+Converted: 4_cut_4_4_1_N143.vasp -> 4_cut_4_4_1_N143.vasp.data
+Processing: 4_cut_4_4_1_N143.vasp
+Converted: 4_cut_4_4_2_N149.vasp -> 4_cut_4_4_2_N149.vasp.data
+Processing: 4_cut_4_4_2_N149.vasp
+Converted: 4_cut_4_4_3_N153.vasp -> 4_cut_4_4_3_N153.vasp.data
+Processing: 4_cut_4_4_3_N153.vasp
+Converted: 4_cut_4_4_4_N140.vasp -> 4_cut_4_4_4_N140.vasp.data
+Processing: 4_cut_4_4_4_N140.vasp
+Converted: 4_cut_4_4_5_N142.vasp -> 4_cut_4_4_5_N142.vasp.data
+Processing: 4_cut_4_4_5_N142.vasp
+Converted: 4_cut_5_0_0_N149.vasp -> 4_cut_5_0_0_N149.vasp.data
+Processing: 4_cut_5_0_0_N149.vasp
+Converted: 4_cut_5_0_1_N146.vasp -> 4_cut_5_0_1_N146.vasp.data
+Processing: 4_cut_5_0_1_N146.vasp
+Converted: 4_cut_5_0_2_N139.vasp -> 4_cut_5_0_2_N139.vasp.data
+Processing: 4_cut_5_0_2_N139.vasp
+Converted: 4_cut_5_0_3_N137.vasp -> 4_cut_5_0_3_N137.vasp.data
+Processing: 4_cut_5_0_3_N137.vasp
+Converted: 4_cut_5_0_4_N161.vasp -> 4_cut_5_0_4_N161.vasp.data
+Processing: 4_cut_5_0_4_N161.vasp
+Converted: 4_cut_5_0_5_N146.vasp -> 4_cut_5_0_5_N146.vasp.data
+Processing: 4_cut_5_0_5_N146.vasp
+Converted: 4_cut_5_1_0_N149.vasp -> 4_cut_5_1_0_N149.vasp.data
+Processing: 4_cut_5_1_0_N149.vasp
+Converted: 4_cut_5_1_1_N149.vasp -> 4_cut_5_1_1_N149.vasp.data
+Processing: 4_cut_5_1_1_N149.vasp
+Converted: 4_cut_5_1_2_N146.vasp -> 4_cut_5_1_2_N146.vasp.data
+Processing: 4_cut_5_1_2_N146.vasp
+Converted: 4_cut_5_1_3_N151.vasp -> 4_cut_5_1_3_N151.vasp.data
+Processing: 4_cut_5_1_3_N151.vasp
+Converted: 4_cut_5_1_4_N151.vasp -> 4_cut_5_1_4_N151.vasp.data
+Processing: 4_cut_5_1_4_N151.vasp
+Converted: 4_cut_5_1_5_N135.vasp -> 4_cut_5_1_5_N135.vasp.data
+Processing: 4_cut_5_1_5_N135.vasp
+Converted: 4_cut_5_2_0_N156.vasp -> 4_cut_5_2_0_N156.vasp.data
+Processing: 4_cut_5_2_0_N156.vasp
+Converted: 4_cut_5_2_1_N136.vasp -> 4_cut_5_2_1_N136.vasp.data
+Processing: 4_cut_5_2_1_N136.vasp
+Converted: 4_cut_5_2_2_N142.vasp -> 4_cut_5_2_2_N142.vasp.data
+Processing: 4_cut_5_2_2_N142.vasp
+Converted: 4_cut_5_2_3_N156.vasp -> 4_cut_5_2_3_N156.vasp.data
+Processing: 4_cut_5_2_3_N156.vasp
+Converted: 4_cut_5_2_4_N147.vasp -> 4_cut_5_2_4_N147.vasp.data
+Processing: 4_cut_5_2_4_N147.vasp
+Converted: 4_cut_5_2_5_N132.vasp -> 4_cut_5_2_5_N132.vasp.data
+Processing: 4_cut_5_2_5_N132.vasp
+Converted: 4_cut_5_3_0_N151.vasp -> 4_cut_5_3_0_N151.vasp.data
+Processing: 4_cut_5_3_0_N151.vasp
+Converted: 4_cut_5_3_1_N139.vasp -> 4_cut_5_3_1_N139.vasp.data
+Processing: 4_cut_5_3_1_N139.vasp
+Converted: 4_cut_5_3_2_N145.vasp -> 4_cut_5_3_2_N145.vasp.data
+Processing: 4_cut_5_3_2_N145.vasp
+Converted: 4_cut_5_3_3_N142.vasp -> 4_cut_5_3_3_N142.vasp.data
+Processing: 4_cut_5_3_3_N142.vasp
+Converted: 4_cut_5_3_4_N138.vasp -> 4_cut_5_3_4_N138.vasp.data
+Processing: 4_cut_5_3_4_N138.vasp
+Converted: 4_cut_5_3_5_N155.vasp -> 4_cut_5_3_5_N155.vasp.data
+Processing: 4_cut_5_3_5_N155.vasp
+Converted: 4_cut_5_4_0_N156.vasp -> 4_cut_5_4_0_N156.vasp.data
+Processing: 4_cut_5_4_0_N156.vasp
+Converted: 4_cut_5_4_1_N142.vasp -> 4_cut_5_4_1_N142.vasp.data
+Processing: 4_cut_5_4_1_N142.vasp
+Converted: 4_cut_5_4_2_N144.vasp -> 4_cut_5_4_2_N144.vasp.data
+Processing: 4_cut_5_4_2_N144.vasp
+Converted: 4_cut_5_4_3_N156.vasp -> 4_cut_5_4_3_N156.vasp.data
+Processing: 4_cut_5_4_3_N156.vasp
+Converted: 4_cut_5_4_4_N141.vasp -> 4_cut_5_4_4_N141.vasp.data
+Processing: 4_cut_5_4_4_N141.vasp
+Converted: 4_cut_5_4_5_N139.vasp -> 4_cut_5_4_5_N139.vasp.data
+Processing: 4_cut_5_4_5_N139.vasp
+Converted: Cu_111_8L_00001_ABABABAB.vasp -> Cu_111_8L_00001_ABABABAB.vasp.data
+Processing: Cu_111_8L_00001_ABABABAB.vasp
+Converted: Cu_111_8L_00002_ABABABAC.vasp -> Cu_111_8L_00002_ABABABAC.vasp.data
+Processing: Cu_111_8L_00002_ABABABAC.vasp
+Converted: Cu_111_8L_00003_ABABABCB.vasp -> Cu_111_8L_00003_ABABABCB.vasp.data
+Processing: Cu_111_8L_00003_ABABABCB.vasp
+Converted: Cu_111_8L_00004_ABABACAB.vasp -> Cu_111_8L_00004_ABABACAB.vasp.data
+Processing: Cu_111_8L_00004_ABABACAB.vasp
+Converted: Cu_111_8L_00005_ABABACAC.vasp -> Cu_111_8L_00005_ABABACAC.vasp.data
+Processing: Cu_111_8L_00005_ABABACAC.vasp
+Converted: Cu_111_8L_00006_ABABACBC.vasp -> Cu_111_8L_00006_ABABACBC.vasp.data
+Processing: Cu_111_8L_00006_ABABACBC.vasp
+Converted: Cu_111_8L_00007_ABABCABC.vasp -> Cu_111_8L_00007_ABABCABC.vasp.data
+Processing: Cu_111_8L_00007_ABABCABC.vasp
+Converted: Cu_111_8L_00008_ABABCACB.vasp -> Cu_111_8L_00008_ABABCACB.vasp.data
+Processing: Cu_111_8L_00008_ABABCACB.vasp
+Converted: Cu_111_8L_00009_ABABCBAB.vasp -> Cu_111_8L_00009_ABABCBAB.vasp.data
+Processing: Cu_111_8L_00009_ABABCBAB.vasp
+Converted: Cu_111_8L_00010_ABABCBAC.vasp -> Cu_111_8L_00010_ABABCBAC.vasp.data
+Processing: Cu_111_8L_00010_ABABCBAC.vasp
+Converted: Cu_111_8L_00011_ABABCBCB.vasp -> Cu_111_8L_00011_ABABCBCB.vasp.data
+Processing: Cu_111_8L_00011_ABABCBCB.vasp
+Converted: Cu_111_8L_00012_ABACABAB.vasp -> Cu_111_8L_00012_ABACABAB.vasp.data
+Processing: Cu_111_8L_00012_ABACABAB.vasp
+Converted: Cu_111_8L_00013_ABACABAC.vasp -> Cu_111_8L_00013_ABACABAC.vasp.data
+Processing: Cu_111_8L_00013_ABACABAC.vasp
+Converted: Cu_111_8L_00014_ABACABCB.vasp -> Cu_111_8L_00014_ABACABCB.vasp.data
+Processing: Cu_111_8L_00014_ABACABCB.vasp
+Converted: Cu_111_8L_00015_ABACACAB.vasp -> Cu_111_8L_00015_ABACACAB.vasp.data
+Processing: Cu_111_8L_00015_ABACACAB.vasp
+Converted: Cu_111_8L_00016_ABACACAC.vasp -> Cu_111_8L_00016_ABACACAC.vasp.data
+Processing: Cu_111_8L_00016_ABACACAC.vasp
+Converted: Cu_111_8L_00017_ABACACBC.vasp -> Cu_111_8L_00017_ABACACBC.vasp.data
+Processing: Cu_111_8L_00017_ABACACBC.vasp
+Converted: Cu_111_8L_00018_ABACBABC.vasp -> Cu_111_8L_00018_ABACBABC.vasp.data
+Processing: Cu_111_8L_00018_ABACBABC.vasp
+Converted: Cu_111_8L_00019_ABACBACB.vasp -> Cu_111_8L_00019_ABACBACB.vasp.data
+Processing: Cu_111_8L_00019_ABACBACB.vasp
+Converted: Cu_111_8L_00020_ABACBCAB.vasp -> Cu_111_8L_00020_ABACBCAB.vasp.data
+Processing: Cu_111_8L_00020_ABACBCAB.vasp
+Converted: Cu_111_8L_00021_ABACBCAC.vasp -> Cu_111_8L_00021_ABACBCAC.vasp.data
+Processing: Cu_111_8L_00021_ABACBCAC.vasp
+Converted: Cu_111_8L_00022_ABACBCBC.vasp -> Cu_111_8L_00022_ABACBCBC.vasp.data
+Processing: Cu_111_8L_00022_ABACBCBC.vasp
+Converted: Cu_111_8L_00023_ABCABABC.vasp -> Cu_111_8L_00023_ABCABABC.vasp.data
+Processing: Cu_111_8L_00023_ABCABABC.vasp
+Converted: Cu_111_8L_00024_ABCABACB.vasp -> Cu_111_8L_00024_ABCABACB.vasp.data
+Processing: Cu_111_8L_00024_ABCABACB.vasp
+Converted: Cu_111_8L_00025_ABCABCAB.vasp -> Cu_111_8L_00025_ABCABCAB.vasp.data
+Processing: Cu_111_8L_00025_ABCABCAB.vasp
+Converted: Cu_111_8L_00026_ABCABCAC.vasp -> Cu_111_8L_00026_ABCABCAC.vasp.data
+Processing: Cu_111_8L_00026_ABCABCAC.vasp
+Converted: Cu_111_8L_00027_ABCABCBC.vasp -> Cu_111_8L_00027_ABCABCBC.vasp.data
+Processing: Cu_111_8L_00027_ABCABCBC.vasp
+Converted: Cu_111_8L_00028_ABCACABC.vasp -> Cu_111_8L_00028_ABCACABC.vasp.data
+Processing: Cu_111_8L_00028_ABCACABC.vasp
+Converted: Cu_111_8L_00029_ABCACACB.vasp -> Cu_111_8L_00029_ABCACACB.vasp.data
+Processing: Cu_111_8L_00029_ABCACACB.vasp
+Converted: Cu_111_8L_00030_ABCACBAB.vasp -> Cu_111_8L_00030_ABCACBAB.vasp.data
+Processing: Cu_111_8L_00030_ABCACBAB.vasp
+Converted: Cu_111_8L_00031_ABCACBAC.vasp -> Cu_111_8L_00031_ABCACBAC.vasp.data
+Processing: Cu_111_8L_00031_ABCACBAC.vasp
+Converted: Cu_111_8L_00032_ABCACBCB.vasp -> Cu_111_8L_00032_ABCACBCB.vasp.data
+Processing: Cu_111_8L_00032_ABCACBCB.vasp
+Converted: Cu_111_8L_00033_ABCBABAB.vasp -> Cu_111_8L_00033_ABCBABAB.vasp.data
+Processing: Cu_111_8L_00033_ABCBABAB.vasp
+Converted: Cu_111_8L_00034_ABCBABAC.vasp -> Cu_111_8L_00034_ABCBABAC.vasp.data
+Processing: Cu_111_8L_00034_ABCBABAC.vasp
+Converted: Cu_111_8L_00035_ABCBABCB.vasp -> Cu_111_8L_00035_ABCBABCB.vasp.data
+Processing: Cu_111_8L_00035_ABCBABCB.vasp
+Converted: Cu_111_8L_00036_ABCBACAB.vasp -> Cu_111_8L_00036_ABCBACAB.vasp.data
+Processing: Cu_111_8L_00036_ABCBACAB.vasp
+Converted: Cu_111_8L_00037_ABCBACAC.vasp -> Cu_111_8L_00037_ABCBACAC.vasp.data
+Processing: Cu_111_8L_00037_ABCBACAC.vasp
+Converted: Cu_111_8L_00038_ABCBACBC.vasp -> Cu_111_8L_00038_ABCBACBC.vasp.data
+Processing: Cu_111_8L_00038_ABCBACBC.vasp
+Converted: Cu_111_8L_00039_ABCBCABC.vasp -> Cu_111_8L_00039_ABCBCABC.vasp.data
+Processing: Cu_111_8L_00039_ABCBCABC.vasp
+Converted: Cu_111_8L_00040_ABCBCACB.vasp -> Cu_111_8L_00040_ABCBCACB.vasp.data
+Processing: Cu_111_8L_00040_ABCBCACB.vasp
+Converted: Cu_111_8L_00041_ABCBCBAB.vasp -> Cu_111_8L_00041_ABCBCBAB.vasp.data
+Processing: Cu_111_8L_00041_ABCBCBAB.vasp
+Converted: Cu_111_8L_00042_ABCBCBAC.vasp -> Cu_111_8L_00042_ABCBCBAC.vasp.data
+Processing: Cu_111_8L_00042_ABCBCBAC.vasp
+Converted: Cu_111_8L_00043_ABCBCBCB.vasp -> Cu_111_8L_00043_ABCBCBCB.vasp.data
+Processing: Cu_111_8L_00043_ABCBCBCB.vasp
+Converted: Cu_111_8L_00044_ACABABAB.vasp -> Cu_111_8L_00044_ACABABAB.vasp.data
+Processing: Cu_111_8L_00044_ACABABAB.vasp
+Converted: Cu_111_8L_00045_ACABABAC.vasp -> Cu_111_8L_00045_ACABABAC.vasp.data
+Processing: Cu_111_8L_00045_ACABABAC.vasp
+Converted: Cu_111_8L_00046_ACABABCB.vasp -> Cu_111_8L_00046_ACABABCB.vasp.data
+Processing: Cu_111_8L_00046_ACABABCB.vasp
+Converted: Cu_111_8L_00047_ACABACAB.vasp -> Cu_111_8L_00047_ACABACAB.vasp.data
+Processing: Cu_111_8L_00047_ACABACAB.vasp
+Converted: Cu_111_8L_00048_ACABACAC.vasp -> Cu_111_8L_00048_ACABACAC.vasp.data
+Processing: Cu_111_8L_00048_ACABACAC.vasp
+Converted: Cu_111_8L_00049_ACABACBC.vasp -> Cu_111_8L_00049_ACABACBC.vasp.data
+Processing: Cu_111_8L_00049_ACABACBC.vasp
+Converted: Cu_111_8L_00050_ACABCABC.vasp -> Cu_111_8L_00050_ACABCABC.vasp.data
+Processing: Cu_111_8L_00050_ACABCABC.vasp
+Converted: Cu_111_8L_00051_ACABCACB.vasp -> Cu_111_8L_00051_ACABCACB.vasp.data
+Processing: Cu_111_8L_00051_ACABCACB.vasp
+Converted: Cu_111_8L_00052_ACABCBAB.vasp -> Cu_111_8L_00052_ACABCBAB.vasp.data
+Processing: Cu_111_8L_00052_ACABCBAB.vasp
+Converted: Cu_111_8L_00053_ACABCBAC.vasp -> Cu_111_8L_00053_ACABCBAC.vasp.data
+Processing: Cu_111_8L_00053_ACABCBAC.vasp
+Converted: Cu_111_8L_00054_ACABCBCB.vasp -> Cu_111_8L_00054_ACABCBCB.vasp.data
+Processing: Cu_111_8L_00054_ACABCBCB.vasp
+Converted: Cu_111_8L_00055_ACACABAB.vasp -> Cu_111_8L_00055_ACACABAB.vasp.data
+Processing: Cu_111_8L_00055_ACACABAB.vasp
+Converted: Cu_111_8L_00056_ACACABAC.vasp -> Cu_111_8L_00056_ACACABAC.vasp.data
+Processing: Cu_111_8L_00056_ACACABAC.vasp
+Converted: Cu_111_8L_00057_ACACABCB.vasp -> Cu_111_8L_00057_ACACABCB.vasp.data
+Processing: Cu_111_8L_00057_ACACABCB.vasp
+Converted: Cu_111_8L_00058_ACACACAB.vasp -> Cu_111_8L_00058_ACACACAB.vasp.data
+Processing: Cu_111_8L_00058_ACACACAB.vasp
+Converted: Cu_111_8L_00059_ACACACAC.vasp -> Cu_111_8L_00059_ACACACAC.vasp.data
+Processing: Cu_111_8L_00059_ACACACAC.vasp
+Converted: Cu_111_8L_00060_ACACACBC.vasp -> Cu_111_8L_00060_ACACACBC.vasp.data
+Processing: Cu_111_8L_00060_ACACACBC.vasp
+Converted: Cu_111_8L_00061_ACACBABC.vasp -> Cu_111_8L_00061_ACACBABC.vasp.data
+Processing: Cu_111_8L_00061_ACACBABC.vasp
+Converted: Cu_111_8L_00062_ACACBACB.vasp -> Cu_111_8L_00062_ACACBACB.vasp.data
+Processing: Cu_111_8L_00062_ACACBACB.vasp
+Converted: Cu_111_8L_00063_ACACBCAB.vasp -> Cu_111_8L_00063_ACACBCAB.vasp.data
+Processing: Cu_111_8L_00063_ACACBCAB.vasp
+Converted: Cu_111_8L_00064_ACACBCAC.vasp -> Cu_111_8L_00064_ACACBCAC.vasp.data
+Processing: Cu_111_8L_00064_ACACBCAC.vasp
+Converted: Cu_111_8L_00065_ACACBCBC.vasp -> Cu_111_8L_00065_ACACBCBC.vasp.data
+Processing: Cu_111_8L_00065_ACACBCBC.vasp
+Converted: Cu_111_8L_00066_ACBABABC.vasp -> Cu_111_8L_00066_ACBABABC.vasp.data
+Processing: Cu_111_8L_00066_ACBABABC.vasp
+Converted: Cu_111_8L_00067_ACBABACB.vasp -> Cu_111_8L_00067_ACBABACB.vasp.data
+Processing: Cu_111_8L_00067_ACBABACB.vasp
+Converted: Cu_111_8L_00068_ACBABCAB.vasp -> Cu_111_8L_00068_ACBABCAB.vasp.data
+Processing: Cu_111_8L_00068_ACBABCAB.vasp
+Converted: Cu_111_8L_00069_ACBABCAC.vasp -> Cu_111_8L_00069_ACBABCAC.vasp.data
+Processing: Cu_111_8L_00069_ACBABCAC.vasp
+Converted: Cu_111_8L_00070_ACBABCBC.vasp -> Cu_111_8L_00070_ACBABCBC.vasp.data
+Processing: Cu_111_8L_00070_ACBABCBC.vasp
+Converted: Cu_111_8L_00071_ACBACABC.vasp -> Cu_111_8L_00071_ACBACABC.vasp.data
+Processing: Cu_111_8L_00071_ACBACABC.vasp
+Converted: Cu_111_8L_00072_ACBACACB.vasp -> Cu_111_8L_00072_ACBACACB.vasp.data
+Processing: Cu_111_8L_00072_ACBACACB.vasp
+Converted: Cu_111_8L_00073_ACBACBAB.vasp -> Cu_111_8L_00073_ACBACBAB.vasp.data
+Processing: Cu_111_8L_00073_ACBACBAB.vasp
+Converted: Cu_111_8L_00074_ACBACBAC.vasp -> Cu_111_8L_00074_ACBACBAC.vasp.data
+Processing: Cu_111_8L_00074_ACBACBAC.vasp
+Converted: Cu_111_8L_00075_ACBACBCB.vasp -> Cu_111_8L_00075_ACBACBCB.vasp.data
+Processing: Cu_111_8L_00075_ACBACBCB.vasp
+Converted: Cu_111_8L_00076_ACBCABAB.vasp -> Cu_111_8L_00076_ACBCABAB.vasp.data
+Processing: Cu_111_8L_00076_ACBCABAB.vasp
+Converted: Cu_111_8L_00077_ACBCABAC.vasp -> Cu_111_8L_00077_ACBCABAC.vasp.data
+Processing: Cu_111_8L_00077_ACBCABAC.vasp
+Converted: Cu_111_8L_00078_ACBCABCB.vasp -> Cu_111_8L_00078_ACBCABCB.vasp.data
+Processing: Cu_111_8L_00078_ACBCABCB.vasp
+Converted: Cu_111_8L_00079_ACBCACAB.vasp -> Cu_111_8L_00079_ACBCACAB.vasp.data
+Processing: Cu_111_8L_00079_ACBCACAB.vasp
+Converted: Cu_111_8L_00080_ACBCACAC.vasp -> Cu_111_8L_00080_ACBCACAC.vasp.data
+Processing: Cu_111_8L_00080_ACBCACAC.vasp
+Converted: Cu_111_8L_00081_ACBCACBC.vasp -> Cu_111_8L_00081_ACBCACBC.vasp.data
+Processing: Cu_111_8L_00081_ACBCACBC.vasp
+Converted: Cu_111_8L_00082_ACBCBABC.vasp -> Cu_111_8L_00082_ACBCBABC.vasp.data
+Processing: Cu_111_8L_00082_ACBCBABC.vasp
+Converted: Cu_111_8L_00083_ACBCBACB.vasp -> Cu_111_8L_00083_ACBCBACB.vasp.data
+Processing: Cu_111_8L_00083_ACBCBACB.vasp
+Converted: Cu_111_8L_00084_ACBCBCAB.vasp -> Cu_111_8L_00084_ACBCBCAB.vasp.data
+Processing: Cu_111_8L_00084_ACBCBCAB.vasp
+Converted: Cu_111_8L_00085_ACBCBCAC.vasp -> Cu_111_8L_00085_ACBCBCAC.vasp.data
+Processing: Cu_111_8L_00085_ACBCBCAC.vasp
+Converted: Cu_111_8L_00086_ACBCBCBC.vasp -> Cu_111_8L_00086_ACBCBCBC.vasp.data
+Processing: Cu_111_8L_00086_ACBCBCBC.vasp
+Converted: Cu_111_8L_00087_BABABABA.vasp -> Cu_111_8L_00087_BABABABA.vasp.data
+Processing: Cu_111_8L_00087_BABABABA.vasp
+Converted: Cu_111_8L_00088_BABABABC.vasp -> Cu_111_8L_00088_BABABABC.vasp.data
+Processing: Cu_111_8L_00088_BABABABC.vasp
+Converted: Cu_111_8L_00089_BABABACA.vasp -> Cu_111_8L_00089_BABABACA.vasp.data
+Processing: Cu_111_8L_00089_BABABACA.vasp
+Converted: Cu_111_8L_00090_BABABCAC.vasp -> Cu_111_8L_00090_BABABCAC.vasp.data
+Processing: Cu_111_8L_00090_BABABCAC.vasp
+Converted: Cu_111_8L_00091_BABABCBA.vasp -> Cu_111_8L_00091_BABABCBA.vasp.data
+Processing: Cu_111_8L_00091_BABABCBA.vasp
+Converted: Cu_111_8L_00092_BABABCBC.vasp -> Cu_111_8L_00092_BABABCBC.vasp.data
+Processing: Cu_111_8L_00092_BABABCBC.vasp
+Converted: Cu_111_8L_00093_BABACABA.vasp -> Cu_111_8L_00093_BABACABA.vasp.data
+Processing: Cu_111_8L_00093_BABACABA.vasp
+Converted: Cu_111_8L_00094_BABACABC.vasp -> Cu_111_8L_00094_BABACABC.vasp.data
+Processing: Cu_111_8L_00094_BABACABC.vasp
+Converted: Cu_111_8L_00095_BABACACA.vasp -> Cu_111_8L_00095_BABACACA.vasp.data
+Processing: Cu_111_8L_00095_BABACACA.vasp
+Converted: Cu_111_8L_00096_BABACBAC.vasp -> Cu_111_8L_00096_BABACBAC.vasp.data
+Processing: Cu_111_8L_00096_BABACBAC.vasp
+Converted: Cu_111_8L_00097_BABACBCA.vasp -> Cu_111_8L_00097_BABACBCA.vasp.data
+Processing: Cu_111_8L_00097_BABACBCA.vasp
+Converted: Cu_111_8L_00098_BABCABAC.vasp -> Cu_111_8L_00098_BABCABAC.vasp.data
+Processing: Cu_111_8L_00098_BABCABAC.vasp
+Converted: Cu_111_8L_00099_BABCABCA.vasp -> Cu_111_8L_00099_BABCABCA.vasp.data
+Processing: Cu_111_8L_00099_BABCABCA.vasp
+Converted: Cu_111_8L_00100_BABCACAC.vasp -> Cu_111_8L_00100_BABCACAC.vasp.data
+Processing: Cu_111_8L_00100_BABCACAC.vasp
+Converted: Cu_111_8L_00101_BABCACBA.vasp -> Cu_111_8L_00101_BABCACBA.vasp.data
+Processing: Cu_111_8L_00101_BABCACBA.vasp
+Converted: Cu_111_8L_00102_BABCACBC.vasp -> Cu_111_8L_00102_BABCACBC.vasp.data
+Processing: Cu_111_8L_00102_BABCACBC.vasp
+Converted: Cu_111_8L_00103_BABCBABA.vasp -> Cu_111_8L_00103_BABCBABA.vasp.data
+Processing: Cu_111_8L_00103_BABCBABA.vasp
+Converted: Cu_111_8L_00104_BABCBABC.vasp -> Cu_111_8L_00104_BABCBABC.vasp.data
+Processing: Cu_111_8L_00104_BABCBABC.vasp
+Converted: Cu_111_8L_00105_BABCBACA.vasp -> Cu_111_8L_00105_BABCBACA.vasp.data
+Processing: Cu_111_8L_00105_BABCBACA.vasp
+Converted: Cu_111_8L_00106_BABCBCAC.vasp -> Cu_111_8L_00106_BABCBCAC.vasp.data
+Processing: Cu_111_8L_00106_BABCBCAC.vasp
+Converted: Cu_111_8L_00107_BABCBCBA.vasp -> Cu_111_8L_00107_BABCBCBA.vasp.data
+Processing: Cu_111_8L_00107_BABCBCBA.vasp
+Converted: Cu_111_8L_00108_BABCBCBC.vasp -> Cu_111_8L_00108_BABCBCBC.vasp.data
+Processing: Cu_111_8L_00108_BABCBCBC.vasp
+Converted: Cu_111_8L_00109_BACABABA.vasp -> Cu_111_8L_00109_BACABABA.vasp.data
+Processing: Cu_111_8L_00109_BACABABA.vasp
+Converted: Cu_111_8L_00110_BACABABC.vasp -> Cu_111_8L_00110_BACABABC.vasp.data
+Processing: Cu_111_8L_00110_BACABABC.vasp
+Converted: Cu_111_8L_00111_BACABACA.vasp -> Cu_111_8L_00111_BACABACA.vasp.data
+Processing: Cu_111_8L_00111_BACABACA.vasp
+Converted: Cu_111_8L_00112_BACABCAC.vasp -> Cu_111_8L_00112_BACABCAC.vasp.data
+Processing: Cu_111_8L_00112_BACABCAC.vasp
+Converted: Cu_111_8L_00113_BACABCBA.vasp -> Cu_111_8L_00113_BACABCBA.vasp.data
+Processing: Cu_111_8L_00113_BACABCBA.vasp
+Converted: Cu_111_8L_00114_BACABCBC.vasp -> Cu_111_8L_00114_BACABCBC.vasp.data
+Processing: Cu_111_8L_00114_BACABCBC.vasp
+Converted: Cu_111_8L_00115_BACACABA.vasp -> Cu_111_8L_00115_BACACABA.vasp.data
+Processing: Cu_111_8L_00115_BACACABA.vasp
+Converted: Cu_111_8L_00116_BACACABC.vasp -> Cu_111_8L_00116_BACACABC.vasp.data
+Processing: Cu_111_8L_00116_BACACABC.vasp
+Converted: Cu_111_8L_00117_BACACACA.vasp -> Cu_111_8L_00117_BACACACA.vasp.data
+Processing: Cu_111_8L_00117_BACACACA.vasp
+Converted: Cu_111_8L_00118_BACACBAC.vasp -> Cu_111_8L_00118_BACACBAC.vasp.data
+Processing: Cu_111_8L_00118_BACACBAC.vasp
+Converted: Cu_111_8L_00119_BACACBCA.vasp -> Cu_111_8L_00119_BACACBCA.vasp.data
+Processing: Cu_111_8L_00119_BACACBCA.vasp
+Converted: Cu_111_8L_00120_BACBABAC.vasp -> Cu_111_8L_00120_BACBABAC.vasp.data
+Processing: Cu_111_8L_00120_BACBABAC.vasp
+Converted: Cu_111_8L_00121_BACBABCA.vasp -> Cu_111_8L_00121_BACBABCA.vasp.data
+Processing: Cu_111_8L_00121_BACBABCA.vasp
+Converted: Cu_111_8L_00122_BACBACAC.vasp -> Cu_111_8L_00122_BACBACAC.vasp.data
+Processing: Cu_111_8L_00122_BACBACAC.vasp
+Converted: Cu_111_8L_00123_BACBACBA.vasp -> Cu_111_8L_00123_BACBACBA.vasp.data
+Processing: Cu_111_8L_00123_BACBACBA.vasp
+Converted: Cu_111_8L_00124_BACBACBC.vasp -> Cu_111_8L_00124_BACBACBC.vasp.data
+Processing: Cu_111_8L_00124_BACBACBC.vasp
+Converted: Cu_111_8L_00125_BACBCABA.vasp -> Cu_111_8L_00125_BACBCABA.vasp.data
+Processing: Cu_111_8L_00125_BACBCABA.vasp
+Converted: Cu_111_8L_00126_BACBCABC.vasp -> Cu_111_8L_00126_BACBCABC.vasp.data
+Processing: Cu_111_8L_00126_BACBCABC.vasp
+Converted: Cu_111_8L_00127_BACBCACA.vasp -> Cu_111_8L_00127_BACBCACA.vasp.data
+Processing: Cu_111_8L_00127_BACBCACA.vasp
+Converted: Cu_111_8L_00128_BACBCBAC.vasp -> Cu_111_8L_00128_BACBCBAC.vasp.data
+Processing: Cu_111_8L_00128_BACBCBAC.vasp
+Converted: Cu_111_8L_00129_BACBCBCA.vasp -> Cu_111_8L_00129_BACBCBCA.vasp.data
+Processing: Cu_111_8L_00129_BACBCBCA.vasp
+Converted: Cu_111_8L_00130_BCABABAC.vasp -> Cu_111_8L_00130_BCABABAC.vasp.data
+Processing: Cu_111_8L_00130_BCABABAC.vasp
+Converted: Cu_111_8L_00131_BCABABCA.vasp -> Cu_111_8L_00131_BCABABCA.vasp.data
+Processing: Cu_111_8L_00131_BCABABCA.vasp
+Converted: Cu_111_8L_00132_BCABACAC.vasp -> Cu_111_8L_00132_BCABACAC.vasp.data
+Processing: Cu_111_8L_00132_BCABACAC.vasp
+Converted: Cu_111_8L_00133_BCABACBA.vasp -> Cu_111_8L_00133_BCABACBA.vasp.data
+Processing: Cu_111_8L_00133_BCABACBA.vasp
+Converted: Cu_111_8L_00134_BCABACBC.vasp -> Cu_111_8L_00134_BCABACBC.vasp.data
+Processing: Cu_111_8L_00134_BCABACBC.vasp
+Converted: Cu_111_8L_00135_BCABCABA.vasp -> Cu_111_8L_00135_BCABCABA.vasp.data
+Processing: Cu_111_8L_00135_BCABCABA.vasp
+Converted: Cu_111_8L_00136_BCABCABC.vasp -> Cu_111_8L_00136_BCABCABC.vasp.data
+Processing: Cu_111_8L_00136_BCABCABC.vasp
+Converted: Cu_111_8L_00137_BCABCACA.vasp -> Cu_111_8L_00137_BCABCACA.vasp.data
+Processing: Cu_111_8L_00137_BCABCACA.vasp
+Converted: Cu_111_8L_00138_BCABCBAC.vasp -> Cu_111_8L_00138_BCABCBAC.vasp.data
+Processing: Cu_111_8L_00138_BCABCBAC.vasp
+Converted: Cu_111_8L_00139_BCABCBCA.vasp -> Cu_111_8L_00139_BCABCBCA.vasp.data
+Processing: Cu_111_8L_00139_BCABCBCA.vasp
+Converted: Cu_111_8L_00140_BCACABAC.vasp -> Cu_111_8L_00140_BCACABAC.vasp.data
+Processing: Cu_111_8L_00140_BCACABAC.vasp
+Converted: Cu_111_8L_00141_BCACABCA.vasp -> Cu_111_8L_00141_BCACABCA.vasp.data
+Processing: Cu_111_8L_00141_BCACABCA.vasp
+Converted: Cu_111_8L_00142_BCACACAC.vasp -> Cu_111_8L_00142_BCACACAC.vasp.data
+Processing: Cu_111_8L_00142_BCACACAC.vasp
+Converted: Cu_111_8L_00143_BCACACBA.vasp -> Cu_111_8L_00143_BCACACBA.vasp.data
+Processing: Cu_111_8L_00143_BCACACBA.vasp
+Converted: Cu_111_8L_00144_BCACACBC.vasp -> Cu_111_8L_00144_BCACACBC.vasp.data
+Processing: Cu_111_8L_00144_BCACACBC.vasp
+Converted: Cu_111_8L_00145_BCACBABA.vasp -> Cu_111_8L_00145_BCACBABA.vasp.data
+Processing: Cu_111_8L_00145_BCACBABA.vasp
+Converted: Cu_111_8L_00146_BCACBABC.vasp -> Cu_111_8L_00146_BCACBABC.vasp.data
+Processing: Cu_111_8L_00146_BCACBABC.vasp
+Converted: Cu_111_8L_00147_BCACBACA.vasp -> Cu_111_8L_00147_BCACBACA.vasp.data
+Processing: Cu_111_8L_00147_BCACBACA.vasp
+Converted: Cu_111_8L_00148_BCACBCAC.vasp -> Cu_111_8L_00148_BCACBCAC.vasp.data
+Processing: Cu_111_8L_00148_BCACBCAC.vasp
+Converted: Cu_111_8L_00149_BCACBCBA.vasp -> Cu_111_8L_00149_BCACBCBA.vasp.data
+Processing: Cu_111_8L_00149_BCACBCBA.vasp
+Converted: Cu_111_8L_00150_BCACBCBC.vasp -> Cu_111_8L_00150_BCACBCBC.vasp.data
+Processing: Cu_111_8L_00150_BCACBCBC.vasp
+Converted: Cu_111_8L_00151_BCBABABA.vasp -> Cu_111_8L_00151_BCBABABA.vasp.data
+Processing: Cu_111_8L_00151_BCBABABA.vasp
+Converted: Cu_111_8L_00152_BCBABABC.vasp -> Cu_111_8L_00152_BCBABABC.vasp.data
+Processing: Cu_111_8L_00152_BCBABABC.vasp
+Converted: Cu_111_8L_00153_BCBABACA.vasp -> Cu_111_8L_00153_BCBABACA.vasp.data
+Processing: Cu_111_8L_00153_BCBABACA.vasp
+Converted: Cu_111_8L_00154_BCBABCAC.vasp -> Cu_111_8L_00154_BCBABCAC.vasp.data
+Processing: Cu_111_8L_00154_BCBABCAC.vasp
+Converted: Cu_111_8L_00155_BCBABCBA.vasp -> Cu_111_8L_00155_BCBABCBA.vasp.data
+Processing: Cu_111_8L_00155_BCBABCBA.vasp
+Converted: Cu_111_8L_00156_BCBABCBC.vasp -> Cu_111_8L_00156_BCBABCBC.vasp.data
+Processing: Cu_111_8L_00156_BCBABCBC.vasp
+Converted: Cu_111_8L_00157_BCBACABA.vasp -> Cu_111_8L_00157_BCBACABA.vasp.data
+Processing: Cu_111_8L_00157_BCBACABA.vasp
+Converted: Cu_111_8L_00158_BCBACABC.vasp -> Cu_111_8L_00158_BCBACABC.vasp.data
+Processing: Cu_111_8L_00158_BCBACABC.vasp
+Converted: Cu_111_8L_00159_BCBACACA.vasp -> Cu_111_8L_00159_BCBACACA.vasp.data
+Processing: Cu_111_8L_00159_BCBACACA.vasp
+Converted: Cu_111_8L_00160_BCBACBAC.vasp -> Cu_111_8L_00160_BCBACBAC.vasp.data
+Processing: Cu_111_8L_00160_BCBACBAC.vasp
+Converted: Cu_111_8L_00161_BCBACBCA.vasp -> Cu_111_8L_00161_BCBACBCA.vasp.data
+Processing: Cu_111_8L_00161_BCBACBCA.vasp
+Converted: Cu_111_8L_00162_BCBCABAC.vasp -> Cu_111_8L_00162_BCBCABAC.vasp.data
+Processing: Cu_111_8L_00162_BCBCABAC.vasp
+Converted: Cu_111_8L_00163_BCBCABCA.vasp -> Cu_111_8L_00163_BCBCABCA.vasp.data
+Processing: Cu_111_8L_00163_BCBCABCA.vasp
+Converted: Cu_111_8L_00164_BCBCACAC.vasp -> Cu_111_8L_00164_BCBCACAC.vasp.data
+Processing: Cu_111_8L_00164_BCBCACAC.vasp
+Converted: Cu_111_8L_00165_BCBCACBA.vasp -> Cu_111_8L_00165_BCBCACBA.vasp.data
+Processing: Cu_111_8L_00165_BCBCACBA.vasp
+Converted: Cu_111_8L_00166_BCBCACBC.vasp -> Cu_111_8L_00166_BCBCACBC.vasp.data
+Processing: Cu_111_8L_00166_BCBCACBC.vasp
+Converted: Cu_111_8L_00167_BCBCBABA.vasp -> Cu_111_8L_00167_BCBCBABA.vasp.data
+Processing: Cu_111_8L_00167_BCBCBABA.vasp
+Converted: Cu_111_8L_00168_BCBCBABC.vasp -> Cu_111_8L_00168_BCBCBABC.vasp.data
+Processing: Cu_111_8L_00168_BCBCBABC.vasp
+Converted: Cu_111_8L_00169_BCBCBACA.vasp -> Cu_111_8L_00169_BCBCBACA.vasp.data
+Processing: Cu_111_8L_00169_BCBCBACA.vasp
+Converted: Cu_111_8L_00170_BCBCBCAC.vasp -> Cu_111_8L_00170_BCBCBCAC.vasp.data
+Processing: Cu_111_8L_00170_BCBCBCAC.vasp
+Converted: Cu_111_8L_00171_BCBCBCBA.vasp -> Cu_111_8L_00171_BCBCBCBA.vasp.data
+Processing: Cu_111_8L_00171_BCBCBCBA.vasp
+Converted: Cu_111_8L_00172_BCBCBCBC.vasp -> Cu_111_8L_00172_BCBCBCBC.vasp.data
+Processing: Cu_111_8L_00172_BCBCBCBC.vasp
+Converted: Cu_111_8L_00173_CABABABA.vasp -> Cu_111_8L_00173_CABABABA.vasp.data
+Processing: Cu_111_8L_00173_CABABABA.vasp
+Converted: Cu_111_8L_00174_CABABACA.vasp -> Cu_111_8L_00174_CABABACA.vasp.data
+Processing: Cu_111_8L_00174_CABABACA.vasp
+Converted: Cu_111_8L_00175_CABABACB.vasp -> Cu_111_8L_00175_CABABACB.vasp.data
+Processing: Cu_111_8L_00175_CABABACB.vasp
+Converted: Cu_111_8L_00176_CABABCAB.vasp -> Cu_111_8L_00176_CABABCAB.vasp.data
+Processing: Cu_111_8L_00176_CABABCAB.vasp
+Converted: Cu_111_8L_00177_CABABCBA.vasp -> Cu_111_8L_00177_CABABCBA.vasp.data
+Processing: Cu_111_8L_00177_CABABCBA.vasp
+Converted: Cu_111_8L_00178_CABACABA.vasp -> Cu_111_8L_00178_CABACABA.vasp.data
+Processing: Cu_111_8L_00178_CABACABA.vasp
+Converted: Cu_111_8L_00179_CABACACA.vasp -> Cu_111_8L_00179_CABACACA.vasp.data
+Processing: Cu_111_8L_00179_CABACACA.vasp
+Converted: Cu_111_8L_00180_CABACACB.vasp -> Cu_111_8L_00180_CABACACB.vasp.data
+Processing: Cu_111_8L_00180_CABACACB.vasp
+Converted: Cu_111_8L_00181_CABACBAB.vasp -> Cu_111_8L_00181_CABACBAB.vasp.data
+Processing: Cu_111_8L_00181_CABACBAB.vasp
+Converted: Cu_111_8L_00182_CABACBCA.vasp -> Cu_111_8L_00182_CABACBCA.vasp.data
+Processing: Cu_111_8L_00182_CABACBCA.vasp
+Converted: Cu_111_8L_00183_CABACBCB.vasp -> Cu_111_8L_00183_CABACBCB.vasp.data
+Processing: Cu_111_8L_00183_CABACBCB.vasp
+Converted: Cu_111_8L_00184_CABCABAB.vasp -> Cu_111_8L_00184_CABCABAB.vasp.data
+Processing: Cu_111_8L_00184_CABCABAB.vasp
+Converted: Cu_111_8L_00185_CABCABCA.vasp -> Cu_111_8L_00185_CABCABCA.vasp.data
+Processing: Cu_111_8L_00185_CABCABCA.vasp
+Converted: Cu_111_8L_00186_CABCABCB.vasp -> Cu_111_8L_00186_CABCABCB.vasp.data
+Processing: Cu_111_8L_00186_CABCABCB.vasp
+Converted: Cu_111_8L_00187_CABCACAB.vasp -> Cu_111_8L_00187_CABCACAB.vasp.data
+Processing: Cu_111_8L_00187_CABCACAB.vasp
+Converted: Cu_111_8L_00188_CABCACBA.vasp -> Cu_111_8L_00188_CABCACBA.vasp.data
+Processing: Cu_111_8L_00188_CABCACBA.vasp
+Converted: Cu_111_8L_00189_CABCBABA.vasp -> Cu_111_8L_00189_CABCBABA.vasp.data
+Processing: Cu_111_8L_00189_CABCBABA.vasp
+Converted: Cu_111_8L_00190_CABCBACA.vasp -> Cu_111_8L_00190_CABCBACA.vasp.data
+Processing: Cu_111_8L_00190_CABCBACA.vasp
+Converted: Cu_111_8L_00191_CABCBACB.vasp -> Cu_111_8L_00191_CABCBACB.vasp.data
+Processing: Cu_111_8L_00191_CABCBACB.vasp
+Converted: Cu_111_8L_00192_CABCBCAB.vasp -> Cu_111_8L_00192_CABCBCAB.vasp.data
+Processing: Cu_111_8L_00192_CABCBCAB.vasp
+Converted: Cu_111_8L_00193_CABCBCBA.vasp -> Cu_111_8L_00193_CABCBCBA.vasp.data
+Processing: Cu_111_8L_00193_CABCBCBA.vasp
+Converted: Cu_111_8L_00194_CACABABA.vasp -> Cu_111_8L_00194_CACABABA.vasp.data
+Processing: Cu_111_8L_00194_CACABABA.vasp
+Converted: Cu_111_8L_00195_CACABACA.vasp -> Cu_111_8L_00195_CACABACA.vasp.data
+Processing: Cu_111_8L_00195_CACABACA.vasp
+Converted: Cu_111_8L_00196_CACABACB.vasp -> Cu_111_8L_00196_CACABACB.vasp.data
+Processing: Cu_111_8L_00196_CACABACB.vasp
+Converted: Cu_111_8L_00197_CACABCAB.vasp -> Cu_111_8L_00197_CACABCAB.vasp.data
+Processing: Cu_111_8L_00197_CACABCAB.vasp
+Converted: Cu_111_8L_00198_CACABCBA.vasp -> Cu_111_8L_00198_CACABCBA.vasp.data
+Processing: Cu_111_8L_00198_CACABCBA.vasp
+Converted: Cu_111_8L_00199_CACACABA.vasp -> Cu_111_8L_00199_CACACABA.vasp.data
+Processing: Cu_111_8L_00199_CACACABA.vasp
+Converted: Cu_111_8L_00200_CACACACA.vasp -> Cu_111_8L_00200_CACACACA.vasp.data
+Processing: Cu_111_8L_00200_CACACACA.vasp
+Converted: Cu_111_8L_00201_CACACACB.vasp -> Cu_111_8L_00201_CACACACB.vasp.data
+Processing: Cu_111_8L_00201_CACACACB.vasp
+Converted: Cu_111_8L_00202_CACACBAB.vasp -> Cu_111_8L_00202_CACACBAB.vasp.data
+Processing: Cu_111_8L_00202_CACACBAB.vasp
+Converted: Cu_111_8L_00203_CACACBCA.vasp -> Cu_111_8L_00203_CACACBCA.vasp.data
+Processing: Cu_111_8L_00203_CACACBCA.vasp
+Converted: Cu_111_8L_00204_CACACBCB.vasp -> Cu_111_8L_00204_CACACBCB.vasp.data
+Processing: Cu_111_8L_00204_CACACBCB.vasp
+Converted: Cu_111_8L_00205_CACBABAB.vasp -> Cu_111_8L_00205_CACBABAB.vasp.data
+Processing: Cu_111_8L_00205_CACBABAB.vasp
+Converted: Cu_111_8L_00206_CACBABCA.vasp -> Cu_111_8L_00206_CACBABCA.vasp.data
+Processing: Cu_111_8L_00206_CACBABCA.vasp
+Converted: Cu_111_8L_00207_CACBABCB.vasp -> Cu_111_8L_00207_CACBABCB.vasp.data
+Processing: Cu_111_8L_00207_CACBABCB.vasp
+Converted: Cu_111_8L_00208_CACBACAB.vasp -> Cu_111_8L_00208_CACBACAB.vasp.data
+Processing: Cu_111_8L_00208_CACBACAB.vasp
+Converted: Cu_111_8L_00209_CACBACBA.vasp -> Cu_111_8L_00209_CACBACBA.vasp.data
+Processing: Cu_111_8L_00209_CACBACBA.vasp
+Converted: Cu_111_8L_00210_CACBCABA.vasp -> Cu_111_8L_00210_CACBCABA.vasp.data
+Processing: Cu_111_8L_00210_CACBCABA.vasp
+Converted: Cu_111_8L_00211_CACBCACA.vasp -> Cu_111_8L_00211_CACBCACA.vasp.data
+Processing: Cu_111_8L_00211_CACBCACA.vasp
+Converted: Cu_111_8L_00212_CACBCACB.vasp -> Cu_111_8L_00212_CACBCACB.vasp.data
+Processing: Cu_111_8L_00212_CACBCACB.vasp
+Converted: Cu_111_8L_00213_CACBCBAB.vasp -> Cu_111_8L_00213_CACBCBAB.vasp.data
+Processing: Cu_111_8L_00213_CACBCBAB.vasp
+Converted: Cu_111_8L_00214_CACBCBCA.vasp -> Cu_111_8L_00214_CACBCBCA.vasp.data
+Processing: Cu_111_8L_00214_CACBCBCA.vasp
+Converted: Cu_111_8L_00215_CACBCBCB.vasp -> Cu_111_8L_00215_CACBCBCB.vasp.data
+Processing: Cu_111_8L_00215_CACBCBCB.vasp
+Converted: Cu_111_8L_00216_CBABABAB.vasp -> Cu_111_8L_00216_CBABABAB.vasp.data
+Processing: Cu_111_8L_00216_CBABABAB.vasp
+Converted: Cu_111_8L_00217_CBABABCA.vasp -> Cu_111_8L_00217_CBABABCA.vasp.data
+Processing: Cu_111_8L_00217_CBABABCA.vasp
+Converted: Cu_111_8L_00218_CBABABCB.vasp -> Cu_111_8L_00218_CBABABCB.vasp.data
+Processing: Cu_111_8L_00218_CBABABCB.vasp
+Converted: Cu_111_8L_00219_CBABACAB.vasp -> Cu_111_8L_00219_CBABACAB.vasp.data
+Processing: Cu_111_8L_00219_CBABACAB.vasp
+Converted: Cu_111_8L_00220_CBABACBA.vasp -> Cu_111_8L_00220_CBABACBA.vasp.data
+Processing: Cu_111_8L_00220_CBABACBA.vasp
+Converted: Cu_111_8L_00221_CBABCABA.vasp -> Cu_111_8L_00221_CBABCABA.vasp.data
+Processing: Cu_111_8L_00221_CBABCABA.vasp
+Converted: Cu_111_8L_00222_CBABCACA.vasp -> Cu_111_8L_00222_CBABCACA.vasp.data
+Processing: Cu_111_8L_00222_CBABCACA.vasp
+Converted: Cu_111_8L_00223_CBABCACB.vasp -> Cu_111_8L_00223_CBABCACB.vasp.data
+Processing: Cu_111_8L_00223_CBABCACB.vasp
+Converted: Cu_111_8L_00224_CBABCBAB.vasp -> Cu_111_8L_00224_CBABCBAB.vasp.data
+Processing: Cu_111_8L_00224_CBABCBAB.vasp
+Converted: Cu_111_8L_00225_CBABCBCA.vasp -> Cu_111_8L_00225_CBABCBCA.vasp.data
+Processing: Cu_111_8L_00225_CBABCBCA.vasp
+Converted: Cu_111_8L_00226_CBABCBCB.vasp -> Cu_111_8L_00226_CBABCBCB.vasp.data
+Processing: Cu_111_8L_00226_CBABCBCB.vasp
+Converted: Cu_111_8L_00227_CBACABAB.vasp -> Cu_111_8L_00227_CBACABAB.vasp.data
+Processing: Cu_111_8L_00227_CBACABAB.vasp
+Converted: Cu_111_8L_00228_CBACABCA.vasp -> Cu_111_8L_00228_CBACABCA.vasp.data
+Processing: Cu_111_8L_00228_CBACABCA.vasp
+Converted: Cu_111_8L_00229_CBACABCB.vasp -> Cu_111_8L_00229_CBACABCB.vasp.data
+Processing: Cu_111_8L_00229_CBACABCB.vasp
+Converted: Cu_111_8L_00230_CBACACAB.vasp -> Cu_111_8L_00230_CBACACAB.vasp.data
+Processing: Cu_111_8L_00230_CBACACAB.vasp
+Converted: Cu_111_8L_00231_CBACACBA.vasp -> Cu_111_8L_00231_CBACACBA.vasp.data
+Processing: Cu_111_8L_00231_CBACACBA.vasp
+Converted: Cu_111_8L_00232_CBACBABA.vasp -> Cu_111_8L_00232_CBACBABA.vasp.data
+Processing: Cu_111_8L_00232_CBACBABA.vasp
+Converted: Cu_111_8L_00233_CBACBACA.vasp -> Cu_111_8L_00233_CBACBACA.vasp.data
+Processing: Cu_111_8L_00233_CBACBACA.vasp
+Converted: Cu_111_8L_00234_CBACBACB.vasp -> Cu_111_8L_00234_CBACBACB.vasp.data
+Processing: Cu_111_8L_00234_CBACBACB.vasp
+Converted: Cu_111_8L_00235_CBACBCAB.vasp -> Cu_111_8L_00235_CBACBCAB.vasp.data
+Processing: Cu_111_8L_00235_CBACBCAB.vasp
+Converted: Cu_111_8L_00236_CBACBCBA.vasp -> Cu_111_8L_00236_CBACBCBA.vasp.data
+Processing: Cu_111_8L_00236_CBACBCBA.vasp
+Converted: Cu_111_8L_00237_CBCABABA.vasp -> Cu_111_8L_00237_CBCABABA.vasp.data
+Processing: Cu_111_8L_00237_CBCABABA.vasp
+Converted: Cu_111_8L_00238_CBCABACA.vasp -> Cu_111_8L_00238_CBCABACA.vasp.data
+Processing: Cu_111_8L_00238_CBCABACA.vasp
+Converted: Cu_111_8L_00239_CBCABACB.vasp -> Cu_111_8L_00239_CBCABACB.vasp.data
+Processing: Cu_111_8L_00239_CBCABACB.vasp
+Converted: Cu_111_8L_00240_CBCABCAB.vasp -> Cu_111_8L_00240_CBCABCAB.vasp.data
+Processing: Cu_111_8L_00240_CBCABCAB.vasp
+Converted: Cu_111_8L_00241_CBCABCBA.vasp -> Cu_111_8L_00241_CBCABCBA.vasp.data
+Processing: Cu_111_8L_00241_CBCABCBA.vasp
+Converted: Cu_111_8L_00242_CBCACABA.vasp -> Cu_111_8L_00242_CBCACABA.vasp.data
+Processing: Cu_111_8L_00242_CBCACABA.vasp
+Converted: Cu_111_8L_00243_CBCACACA.vasp -> Cu_111_8L_00243_CBCACACA.vasp.data
+Processing: Cu_111_8L_00243_CBCACACA.vasp
+Converted: Cu_111_8L_00244_CBCACACB.vasp -> Cu_111_8L_00244_CBCACACB.vasp.data
+Processing: Cu_111_8L_00244_CBCACACB.vasp
+Converted: Cu_111_8L_00245_CBCACBAB.vasp -> Cu_111_8L_00245_CBCACBAB.vasp.data
+Processing: Cu_111_8L_00245_CBCACBAB.vasp
+Converted: Cu_111_8L_00246_CBCACBCA.vasp -> Cu_111_8L_00246_CBCACBCA.vasp.data
+Processing: Cu_111_8L_00246_CBCACBCA.vasp
+Converted: Cu_111_8L_00247_CBCACBCB.vasp -> Cu_111_8L_00247_CBCACBCB.vasp.data
+Processing: Cu_111_8L_00247_CBCACBCB.vasp
+Converted: Cu_111_8L_00248_CBCBABAB.vasp -> Cu_111_8L_00248_CBCBABAB.vasp.data
+Processing: Cu_111_8L_00248_CBCBABAB.vasp
+Converted: Cu_111_8L_00249_CBCBABCA.vasp -> Cu_111_8L_00249_CBCBABCA.vasp.data
+Processing: Cu_111_8L_00249_CBCBABCA.vasp
+Converted: Cu_111_8L_00250_CBCBABCB.vasp -> Cu_111_8L_00250_CBCBABCB.vasp.data
+Processing: Cu_111_8L_00250_CBCBABCB.vasp
+Converted: Cu_111_8L_00251_CBCBACAB.vasp -> Cu_111_8L_00251_CBCBACAB.vasp.data
+Processing: Cu_111_8L_00251_CBCBACAB.vasp
+Converted: Cu_111_8L_00252_CBCBACBA.vasp -> Cu_111_8L_00252_CBCBACBA.vasp.data
+Processing: Cu_111_8L_00252_CBCBACBA.vasp
+Converted: Cu_111_8L_00253_CBCBCABA.vasp -> Cu_111_8L_00253_CBCBCABA.vasp.data
+Processing: Cu_111_8L_00253_CBCBCABA.vasp
+Converted: Cu_111_8L_00254_CBCBCACA.vasp -> Cu_111_8L_00254_CBCBCACA.vasp.data
+Processing: Cu_111_8L_00254_CBCBCACA.vasp
+Converted: Cu_111_8L_00255_CBCBCACB.vasp -> Cu_111_8L_00255_CBCBCACB.vasp.data
+Processing: Cu_111_8L_00255_CBCBCACB.vasp
+Converted: Cu_111_8L_00256_CBCBCBAB.vasp -> Cu_111_8L_00256_CBCBCBAB.vasp.data
+Processing: Cu_111_8L_00256_CBCBCBAB.vasp
+Converted: Cu_111_8L_00257_CBCBCBCA.vasp -> Cu_111_8L_00257_CBCBCBCA.vasp.data
+Processing: Cu_111_8L_00257_CBCBCBCA.vasp
+Converted: Cu_111_8L_00258_CBCBCBCB.vasp -> Cu_111_8L_00258_CBCBCBCB.vasp.data
+Processing: Cu_111_8L_00258_CBCBCBCB.vasp
+TTT Batch Finished.
+===================================
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@be1u33a>
+Subject: Job 2999296: <Cu_TTT> in cluster <qmhpc> Done
+
+Job <Cu_TTT> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Mon Jan 12 15:59:20 2026
+Job was executed on host(s) <96*be1u33a>, in queue <1t88c>, as user <phy-luoyf> in cluster <qmhpc> at Mon Jan 12 16:26:59 2026
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/relax_fixed_all_with_EAM> was used as the working directory.
+Started at Mon Jan 12 16:26:59 2026
+Terminated at Mon Jan 12 16:36:53 2026
+Results reported at Mon Jan 12 16:36:53 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Cu_TTT
+#BSUB -q 1t88c
+#BSUB -n 96
+#BSUB -R "span[ptile=96]"
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+# --- 设置 LAMMPS 路径 (请确认路径正确) ---
+LMP_EXEC="/work/phy-luoyf/apps/lammps2025/lammps-22Jul2025/build/lmp"
+
+# 创建文件夹
+mkdir -p datattt
+mkdir -p relaxed_ttt
+
+echo "==================================="
+echo "Starting TTT (Full Relax) Batch..."
+
+for vasp_file in struttt/*; do
+    # 确保是文件
+    [ -f "$vasp_file" ] || continue
+    
+    filename=$(basename "$vasp_file")
+    data_file="datattt/${filename}.data"
+    result_file="relaxed_ttt/${filename}_relaxed.data"
+
+    # 1. 转换格式
+    python vasp2data.py "$vasp_file" "$data_file"
+
+    # 2. 运行 LAMMPS
+    echo "Processing: $filename"
+    $LMP_EXEC -in in.relax_ttt -var fname "$data_file" -var oname "$result_file" > /dev/null
+done
+
+echo "TTT Batch Finished."
+echo "==================================="
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   193.44 sec.
+    Max Memory :                                 46 MB
+    Average Memory :                             24.06 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                6
+    Run time :                                   601 sec.
+    Turnaround time :                            2253 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <2999296.err> for stderr output of this job.
+

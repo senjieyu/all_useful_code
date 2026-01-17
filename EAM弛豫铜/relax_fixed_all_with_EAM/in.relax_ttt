@@ -1,0 +1,28 @@
+# ==========================================
+# TTT Relaxation (Full Relaxation)
+# ==========================================
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# 读取数据
+read_data       ${fname}
+
+# 势函数设置：将 Type 1, 2, 3 全部指派为 Cu
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu Cu Cu
+
+# 设置：普通能量最小化 (ISIF=2 效果)
+# 如果你需要优化晶胞 (ISIF=3)，请取消下面这行的注释
+# fix 1 all box/relax iso 0.0 vmax 0.001
+
+thermo          100
+thermo_style    custom step pe lx ly lz pxx pyy pzz
+min_style       cg
+minimize        1.0e-10 1.0e-10 10000 100000
+
+# 保存结果
+write_data      ${oname}
+

@@ -1,0 +1,33 @@
+# ==========================================
+# FFT Relaxation (Constrained Relaxation)
+# ==========================================
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# 读取数据
+read_data       ${fname}
+
+# 势函数设置：Type 1, 2, 3 全部为 Cu
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu Cu Cu
+
+# 定义原子组
+group g_fixed  type 2  # FFF (全固定)
+group g_zonly  type 3  # FFT (Z轴自由)
+
+# --- 施加约束 ---
+# 如果组内有原子，则施加力为0的约束
+if "$(count(g_fixed)) > 0" then "fix freeze_all g_fixed setforce 0.0 0.0 0.0"
+if "$(count(g_zonly)) > 0" then "fix freeze_xy  g_zonly setforce 0.0 0.0 NULL"
+
+thermo          100
+thermo_style    custom step pe lx ly lz pxx pyy pzz
+min_style       cg
+minimize        1.0e-10 1.0e-10 10000 100000
+
+# 保存结果
+write_data      ${oname}
+

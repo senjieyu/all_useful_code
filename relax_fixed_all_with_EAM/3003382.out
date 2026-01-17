@@ -1,0 +1,86 @@
+===================================
+Starting TTT (Full Relax) Batch...
+Converted: 1.vasp -> 1.vasp.data
+Processing: 1.vasp
+TTT Batch Finished.
+===================================
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@b07u35a>
+Subject: Job 3003382: <Cu_TTT> in cluster <qmhpc> Done
+
+Job <Cu_TTT> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Mon Jan 12 18:25:38 2026
+Job was executed on host(s) <40*b07u35a>, in queue <33>, as user <phy-luoyf> in cluster <qmhpc> at Mon Jan 12 18:25:38 2026
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/relax_fixed_all_with_EAM> was used as the working directory.
+Started at Mon Jan 12 18:25:38 2026
+Terminated at Mon Jan 12 18:25:51 2026
+Results reported at Mon Jan 12 18:25:51 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Cu_TTT
+#BSUB -q 33
+#BSUB -n 40
+#BSUB -R "span[ptile=40]"
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+# --- 设置 LAMMPS 路径 (请确认路径正确) ---
+LMP_EXEC="/work/phy-luoyf/apps/lammps2025/lammps-22Jul2025/build/lmp"
+
+# 创建文件夹
+mkdir -p datattt
+mkdir -p relaxed_ttt
+
+echo "==================================="
+echo "Starting TTT (Full Relax) Batch..."
+
+for vasp_file in struttt/*; do
+    # 确保是文件
+    [ -f "$vasp_file" ] || continue
+    
+    filename=$(basename "$vasp_file")
+    data_file="datattt/${filename}.data"
+    result_file="relaxed_ttt/${filename}_relaxed.data"
+
+    # 1. 转换格式
+    python vasp2data.py "$vasp_file" "$data_file"
+
+    # 2. 运行 LAMMPS
+    echo "Processing: $filename"
+    $LMP_EXEC -in in.relax_ttt -var fname "$data_file" -var oname "$result_file" > /dev/null
+done
+
+echo "TTT Batch Finished."
+echo "==================================="
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.45 sec.
+    Max Memory :                                 20 MB
+    Average Memory :                             17.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   12 sec.
+    Turnaround time :                            13 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <3003382.err> for stderr output of this job.
+

@@ -1,0 +1,93 @@
+LAMMPS (22 Jul 2025 - Update 2)
+  using 1 OpenMP thread(s) per MPI task
+# ==========================================
+# TTT Relaxation (Full Relaxation)
+# ==========================================
+clear
+  using 1 OpenMP thread(s) per MPI task
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# 读取数据
+read_data       ${fname}
+read_data       datattt/1.vasp.data
+Reading data file ...
+  triclinic box = (0 0 0) to (10.224764 8.854905 16.69697) with tilt (5.112382 0 0)
+WARNING: Triclinic box skew is large. LAMMPS will run inefficiently. (src/domain.cpp:221)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  128 atoms
+  read_data CPU = 0.002 seconds
+
+# 势函数设置：将 Type 1, 2, 3 全部指派为 Cu
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu Cu Cu
+Reading eam/alloy potential file Cu_mishin1.eam.alloy with DATE: 2007-10-12
+
+# 设置：普通能量最小化 (ISIF=2 效果)
+# 如果你需要优化晶胞 (ISIF=3)，请取消下面这行的注释
+# fix 1 all box/relax iso 0.0 vmax 0.001
+
+thermo          100
+thermo_style    custom step pe lx ly lz pxx pyy pzz
+min_style       cg
+minimize        1.0e-10 1.0e-10 10000 100000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.50679
+  ghost atom cutoff = 7.50679
+  binsize = 3.753395, bins = 5 3 5
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton/tri
+      stencil: half/bin/3d/tri
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 4.49 | 4.49 | 4.49 Mbytes
+   Step         PotEng           Lx             Ly             Lz            Pxx            Pyy            Pzz      
+         0  -452.64322      10.224764      8.854905       16.69697      -1321.0729     -1321.0084     -3124.9391    
+         5  -452.64421      10.224764      8.854905       16.69697      -1337.2272     -1337.1934     -3222.6872    
+Loop time of 0.00320697 on 1 procs for 5 steps with 128 atoms
+
+99.8% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -452.643215175467  -452.644210854939  -452.644210888407
+  Force two-norm initial, final = 0.10646308 0.00014022488
+  Force max component initial, final = 0.010931527 2.1652647e-05
+  Final line search alpha, max atom move = 1 2.1652647e-05
+  Iterations, force evaluations = 5 10
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.0030793  | 0.0030793  | 0.0030793  |   0.0 | 96.02
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 7.1292e-05 | 7.1292e-05 | 7.1292e-05 |   0.0 |  2.22
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 5.634e-05  |            |       |  1.76
+
+Nlocal:            128 ave         128 max         128 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           1687 ave        1687 max        1687 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:           9312 ave        9312 max        9312 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 9312
+Ave neighs/atom = 72.75
+Neighbor list builds = 0
+Dangerous builds = 0
+
+# 保存结果
+write_data      ${oname}
+write_data      relaxed_ttt/1.vasp_relaxed.data
+System init for write_data ...
+
+Total wall time: 0:00:00

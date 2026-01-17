@@ -1,0 +1,12 @@
+#!/bin/bash
+#BSUB -J hj-sleep_10d
+#BSUB -q v3-64
+#BSUB -n 12
+#BSUB -e %J.err
+#BSUB -o %J.out
+#BSUB -R "span[ptile=24]"
+hostfile=`echo $LSB_DJOB_HOSTFILE`
+NP=`cat $hostfile | wc -l`
+cd $LS_SUBCWD
+
+sleep 10d

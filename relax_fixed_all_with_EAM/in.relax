@@ -1,0 +1,44 @@
+# ==========================================
+# LAMMPS 铜 EAM 结构弛豫 (支持 TTT/FFF/FFT)
+# ==========================================
+
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# --- 1. 读取结构 ---
+# 这里的 fname 变量由命令行传入，例如 stru_data/xxx.data
+read_data       ${fname}
+
+# --- 2. 设置势函数 ---
+pair_style      eam/alloy
+# 必须映射所有3种原子类型到 Cu
+pair_coeff      * * Cu_mishin1.eam.alloy Cu Cu Cu
+
+# --- 3. 定义分组 (基于 vasp2data.py 的规则) ---
+group g_mobile type 1  # 对应 TTT
+group g_fixed  type 2  # 对应 FFF
+group g_zonly  type 3  # 对应 FFT
+
+# --- 4. 施加约束 (关键) ---
+# Type 2 (FFF): 力设为0，完全不动
+fix freeze_all g_fixed setforce 0.0 0.0 0.0
+
+# Type 3 (FFT): XY力设为0，Z力允许 (NULL)，只沿Z轴动
+fix freeze_xy  g_zonly setforce 0.0 0.0 NULL
+
+# --- 5. 设置输出 ---
+thermo          100
+thermo_style    custom step pe lx ly lz pxx pyy pzz
+
+# --- 6. 运行优化 ---
+min_style       cg
+# 能量公差 1e-10, 力公差 1e-10
+minimize        1.0e-10 1.0e-10 10000 100000
+
+# --- 7. 保存结果 ---
+# 这里的 oname 变量由命令行传入
+write_data      ${oname}
+
