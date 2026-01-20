@@ -1,0 +1,27 @@
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       ${fname}
+
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu
+
+# 单点：不积分、不最小化，只计算一次能量/力
+run 0
+
+# 每原子力模长
+variable fmag atom sqrt(fx*fx+fy*fy+fz*fz)
+compute fmax all reduce max v_fmag
+
+thermo          1
+thermo_style    custom step pe c_fmax lx ly lz pxx pyy pzz
+
+# 输出一帧（用于后处理统计F95等）
+dump            1 all custom 1 ${oname}.force.dump id type x y z fx fy fz v_fmag
+dump_modify     1 sort id
+run 0
+undump          1
+

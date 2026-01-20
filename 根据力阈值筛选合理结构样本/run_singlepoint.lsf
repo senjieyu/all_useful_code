@@ -1,0 +1,46 @@
+#!/bin/bash
+#BSUB -J eam_singlepoint
+#BSUB -q 33
+#BSUB -n 40
+#BSUB -R "span[ptile=40]"
+#BSUB -o %J.out
+#BSUB -e %J.err
+
+LAMMPS=~/.local/bin/lmp
+INPUT=$PWD/in_eam_singlepoint
+
+DATA_DIR=structures_data
+OUT_DIR=relaxed
+
+echo "Job started at: $(date)"
+echo "Host: $(hostname)"
+echo "LAMMPS: ${LAMMPS}"
+echo "Input script: ${INPUT}"
+echo "Data dir: ${DATA_DIR}"
+echo "Output dir: ${OUT_DIR}"
+echo "----------------------------------------"
+
+mkdir -p ${OUT_DIR}
+
+count=0
+for f in ${DATA_DIR}/*.data; do
+    base=$(basename "$f" .data)
+    echo "[$(date)] Running ${base}"
+
+    ${LAMMPS} \
+        -in ${INPUT} \
+        -var fname ${f} \
+        -var oname ${OUT_DIR}/${base}
+
+    if [ $? -ne 0 ]; then
+        echo "ERROR on ${base}, stop job"
+        exit 1
+    fi
+
+    count=$((count + 1))
+done
+
+echo "----------------------------------------"
+echo "Total structures processed: ${count}"
+echo "Job finished at: $(date)"
+

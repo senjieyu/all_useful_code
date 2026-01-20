@@ -1,0 +1,104 @@
+Job started at: Fri Jan 16 15:53:29 CST 2026
+Host: b08u29a
+LAMMPS: /work/phy-luoyf/.local/bin/lmp
+Input script: /work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/5_complex_stru_filter_and_single/filter/in_eam_singlepoint
+Data dir: structures_data
+Output dir: relaxed
+----------------------------------------
+[Fri Jan 16 15:53:29 CST 2026] Running str_000
+ERROR on proc 0: Cannot open input script /work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/5_complex_stru_filter_and_single/filter/in_eam_singlepoint: No such file or directory (src/lammps.cpp:565)
+ERROR on str_000, stop job
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@b08u29a>
+Subject: Job 3095696: <eam_singlepoint> in cluster <qmhpc> Exited
+
+Job <eam_singlepoint> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Fri Jan 16 15:53:27 2026
+Job was executed on host(s) <40*b08u29a>, in queue <33>, as user <phy-luoyf> in cluster <qmhpc> at Fri Jan 16 15:53:27 2026
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/5_complex_stru_filter_and_single/filter> was used as the working directory.
+Started at Fri Jan 16 15:53:27 2026
+Terminated at Fri Jan 16 15:53:31 2026
+Results reported at Fri Jan 16 15:53:31 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J eam_singlepoint
+#BSUB -q 33
+#BSUB -n 40
+#BSUB -R "span[ptile=40]"
+#BSUB -o %J.out
+#BSUB -e %J.err
+
+# =========================================
+# 基本设置
+# =========================================
+LAMMPS=~/.local/bin/lmp
+INPUT=$PWD/in_eam_singlepoint
+
+DATA_DIR=structures_data
+OUT_DIR=relaxed
+
+# =========================================
+# 环境检查
+# =========================================
+echo "Job started at: $(date)"
+echo "Host: $(hostname)"
+echo "LAMMPS: ${LAMMPS}"
+echo "Input script: ${INPUT}"
+echo "Data dir: ${DATA_DIR}"
+echo "Output dir: ${OUT_DIR}"
+echo "----------------------------------------"
+
+# 确保输出目录存在
+mkdir -p ${OUT_DIR}
+
+# =========================================
+# 串行跑所有结构（单点算力）
+# =========================================
+count=0
+for f in ${DATA_DIR}/*.data; do
+    base=$(basename "$f" .data)
+    echo "[$(date)] Running ${base}"
+
+    ${LAMMPS} \
+        -in ${INPUT} \
+        -var fname ${f} \
+        -var oname ${OUT_DIR}/${base}
+
+    # 如果某个结构失败，立刻停止（方便你排查）
+    if [ $? -ne 0 ]; then
+        echo "ERROR on ${base}, stop job"
+        exit 1
+    fi
+
+
+(... more ...)
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.12 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            4 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <3095696.err> for stderr output of this job.
+

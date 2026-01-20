@@ -1,0 +1,161 @@
+Job started at: Fri Jan 16 16:34:50 CST 2026
+Host: b07u09a
+LAMMPS: /work/phy-luoyf/.local/bin/lmp
+Input script: /work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/5_complex_stru_filter_and_single/filter/in_eam_singlepoint
+Data dir: structures_data
+Output dir: relaxed
+----------------------------------------
+[Fri Jan 16 16:34:50 CST 2026] Running str_000
+LAMMPS (22 Jul 2025 - Update 2)
+  using 1 OpenMP thread(s) per MPI task
+  using 1 OpenMP thread(s) per MPI task
+Reading data file ...
+  orthogonal box = (0 0 0) to (11.400361 12.098904 12.816801)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  158 atoms
+  read_data CPU = 0.068 seconds
+Reading eam/alloy potential file Cu_mishin1.eam.alloy with DATE: 2007-10-12
+WARNING: No fixes with time integration, atoms won't move
+For more information see https://docs.lammps.org/err0028 (src/verlet.cpp:60)
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.50679
+  ghost atom cutoff = 7.50679
+  binsize = 3.753395, bins = 4 4 4
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.372 | 3.372 | 3.372 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   0             -547.689        0             -547.689        106152.74    
+Loop time of 1.471e-06 on 1 procs for 0 steps with 158 atoms
+
+68.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 1.471e-06  |            |       |100.00
+
+Nlocal:            158 ave         158 max         158 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           1612 ave        1612 max        1612 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:          12352 ave       12352 max       12352 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 12352
+Ave neighs/atom = 78.177215
+Neighbor list builds = 0
+Dangerous builds = 0
+ERROR on proc 0: Substitution for illegal variable out
+For more information see https://docs.lammps.org/err0013 (src/input.cpp:665)
+ERROR on str_000, stop job
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@b07u09a>
+Subject: Job 3095859: <eam_singlepoint> in cluster <qmhpc> Exited
+
+Job <eam_singlepoint> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Fri Jan 16 16:08:00 2026
+Job was executed on host(s) <40*b07u09a>, in queue <33>, as user <phy-luoyf> in cluster <qmhpc> at Fri Jan 16 16:34:49 2026
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/5_complex_stru_filter_and_single/filter> was used as the working directory.
+Started at Fri Jan 16 16:34:49 2026
+Terminated at Fri Jan 16 16:34:54 2026
+Results reported at Fri Jan 16 16:34:54 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J eam_singlepoint
+#BSUB -q 33
+#BSUB -n 40
+#BSUB -R "span[ptile=40]"
+#BSUB -o %J.out
+#BSUB -e %J.err
+
+# =========================================
+# 基本设置
+# =========================================
+LAMMPS=~/.local/bin/lmp
+INPUT=$PWD/in_eam_singlepoint
+
+DATA_DIR=structures_data
+OUT_DIR=relaxed
+
+# =========================================
+# 环境检查
+# =========================================
+echo "Job started at: $(date)"
+echo "Host: $(hostname)"
+echo "LAMMPS: ${LAMMPS}"
+echo "Input script: ${INPUT}"
+echo "Data dir: ${DATA_DIR}"
+echo "Output dir: ${OUT_DIR}"
+echo "----------------------------------------"
+
+# 确保输出目录存在
+mkdir -p ${OUT_DIR}
+
+# =========================================
+# 串行跑所有结构（单点算力）
+# =========================================
+count=0
+for f in ${DATA_DIR}/*.data; do
+    base=$(basename "$f" .data)
+    echo "[$(date)] Running ${base}"
+
+    ${LAMMPS} \
+        -in ${INPUT} \
+        -var fname ${f} \
+        -var oname ${OUT_DIR}/${base}
+
+    # 如果某个结构失败，立刻停止（方便你排查）
+    if [ $? -ne 0 ]; then
+        echo "ERROR on ${base}, stop job"
+        exit 1
+    fi
+
+
+(... more ...)
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.18 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   10 sec.
+    Turnaround time :                            1614 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <3095859.err> for stderr output of this job.
+

@@ -1,0 +1,120 @@
+#BSUB -J Cu_kspacing
+#BSUB -q 33
+#BSUB -n 40
+#BSUB -R "span[ptile=40]"
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+#!/bin/bash
+
+set -e
+
+#================= VASP Executable ===================
+hostfile="$LSB_DJOB_HOSTFILE"
+NP=$(wc -l < "$hostfile")
+
+cd "$LS_SUBCWD"
+
+# VASP 5.4.4 路径（确保 vasp_std 可被找到）
+export PATH=/work/phy-huangj/app/vasp.5.4.4/bin:$PATH
+
+# 检查 vasp_std 是否可用
+if ! command -v vasp_std >/dev/null 2>&1; then
+    echo "ERROR: 找不到 vasp_std。请检查 PATH=/work/phy-huangj/app/vasp.5.4.4/bin 是否正确。"
+    exit 1
+fi
+
+MPI_CMD="mpirun -machinefile $hostfile -np $NP vasp_std"
+
+echo "========================================="
+echo "Job started at: $(date)"
+echo "Workdir: $LS_SUBCWD"
+echo "Hostfile: $hostfile"
+echo "MPI ranks (NP): $NP"
+echo "VASP: $(command -v vasp_std)"
+echo "MPI_CMD: $MPI_CMD"
+echo "========================================="
+
+#================= Settings ==========================
+KSP_LIST=(0.12 0.14 0.16 0.18 0.20 0.22 0.24 0.26)
+SUMMARY="kspacing_energy_summary.dat"
+
+#================= Check inputs ======================
+if [ ! -f INCAR ] || [ ! -f POSCAR ] || [ ! -f POTCAR ]; then
+    echo "ERROR: INCAR / POSCAR / POTCAR 缺失，请确认当前目录包含这些文件。"
+    exit 1
+fi
+
+#================= Init summary ======================
+{
+  echo "========================================="
+  echo "# KSPACING    TOTEN(eV)         Folder"
+  echo "# Started at: $(date)"
+  echo "# NP: $NP"
+  echo "========================================="
+  echo ""
+} > "$SUMMARY"
+
+#================= Loop over KSPACING =================
+for ksp in "${KSP_LIST[@]}"; do
+    workdir="kspacing_${ksp}"
+    echo ">>> Running KSPACING = $ksp in $workdir"
+
+    rm -rf "$workdir"
+    mkdir -p "$workdir"
+
+    # copy inputs
+    cp INCAR POSCAR POTCAR "$workdir"/
+
+    cd "$workdir"
+
+    #--------------- Edit INCAR -----------------------
+    # 1) 替换或追加 KSPACING
+    if grep -qi "^[[:space:]]*KSPACING" INCAR; then
+        sed -i "s/^[[:space:]]*KSPACING.*/KSPACING = ${ksp}/I" INCAR
+    else
+        echo "KSPACING = ${ksp}" >> INCAR
+    fi
+
+    # 2) 固定 KGAMMA（你原来是 .FALSE.）
+    if grep -qi "^[[:space:]]*KGAMMA" INCAR; then
+        sed -i "s/^[[:space:]]*KGAMMA.*/KGAMMA = .FALSE./I" INCAR
+    else
+        echo "KGAMMA = .FALSE." >> INCAR
+    fi
+
+    # （可选）如果你确实想强制 NCORE=4，取消下面注释
+    # if grep -qi "^[[:space:]]*NCORE" INCAR; then
+    #     sed -i "s/^[[:space:]]*NCORE.*/NCORE = 4/I" INCAR
+    # else
+    #     echo "NCORE = 4" >> INCAR
+    # fi
+
+    #--------------- Run VASP -------------------------
+    echo "    Running: $MPI_CMD"
+    $MPI_CMD > vasp.log 2>&1
+
+    #--------------- Extract Energy -------------------
+    if [ -f OUTCAR ]; then
+        energy=$(grep "free  energy   TOTEN" OUTCAR | tail -n 1 | awk '{print $5}')
+    else
+        energy="NaN"
+    fi
+
+    #--------------- Write summary --------------------
+    printf "%-10s   %-16s   %s\n" "$ksp" "$energy" "$workdir" >> "../$SUMMARY"
+    echo "    KSPACING=$ksp  TOTEN=$energy eV"
+
+    cd ..
+    echo ""
+done
+
+{
+  echo ""
+  echo "# Finished at: $(date)"
+} >> "$SUMMARY"
+
+echo "========================================="
+echo "Done. Summary saved to: $SUMMARY"
+echo "========================================="
+
