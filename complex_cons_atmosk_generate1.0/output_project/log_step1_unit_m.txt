@@ -1,0 +1,14 @@
+ ___________________________________________________
+|              ___________                          |
+|     o---o    A T O M S K                          |
+|    o---o|    Version Beta 0.13.1                  |
+|    |   |o    (C) 2010 Pierre Hirel                |
+|    o---o     https://atomsk.univ-lille.fr         |
+|___________________________________________________|
+>>> Creating system:
+..> Fcc Cu oriented X=[1-10], Y=[11-2], Z=[111].
+..> System was successfully created.
+>>> Writing output file(s) (6 atoms):
+..> Successfully wrote XSF file: C:\Users\senji\AppData\Local\Temp\tmporgddrj1\unit_matrix.xsf
+\o/ Program terminated successfully!
+    Total time: 0.010 s.; CPU time: 0.000 s.

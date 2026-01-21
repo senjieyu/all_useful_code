@@ -1,0 +1,21 @@
+ ___________________________________________________
+|              ___________                          |
+|     o---o    A T O M S K                          |
+|    o---o|    Version Beta 0.13.1                  |
+|    |   |o    (C) 2010 Pierre Hirel                |
+|    o---o     https://atomsk.univ-lille.fr         |
+|___________________________________________________|
+>>> Stacking the systems along Y...
+>>> Opening the input file: layer_000.xsf
+..> Input file was read successfully (18 atoms).
+>>> Opening the input file: layer_001.xsf
+..> Input file was read successfully (18 atoms).
+>>> Opening the input file: layer_002.xsf
+..> Input file was read successfully (18 atoms).
+>>> Opening the input file: layer_003.xsf
+..> Input file was read successfully (18 atoms).
+..> 4 systems were merged.
+>>> Writing output file(s) (72 atoms):
+..> Successfully wrote XSF file: C:\Users\senji\AppData\Local\Temp\tmp_033a_of\layered_seed.xsf
+\o/ Program terminated successfully!
+    Total time: 0.024 s.; CPU time: 0.016 s.

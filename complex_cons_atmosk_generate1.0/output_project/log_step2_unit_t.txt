@@ -1,0 +1,15 @@
+ ___________________________________________________
+|              ___________                          |
+|     o---o    A T O M S K                          |
+|    o---o|    Version Beta 0.13.1                  |
+|    |   |o    (C) 2010 Pierre Hirel                |
+|    o---o     https://atomsk.univ-lille.fr         |
+|___________________________________________________|
+>>> Opening the input file: C:\Users\senji\AppData\Local\Temp\tmporgddrj1\unit_matrix.xsf
+..> Input file was read successfully (6 atoms).
+>>> Applying a mirror plane at 0.000 A along Z.
+..> System was successfully mirrored.
+>>> Writing output file(s) (6 atoms):
+..> Successfully wrote XSF file: C:\Users\senji\AppData\Local\Temp\tmporgddrj1\unit_twin.xsf
+\o/ Program terminated successfully!
+    Total time: 0.011 s.; CPU time: 0.000 s.
