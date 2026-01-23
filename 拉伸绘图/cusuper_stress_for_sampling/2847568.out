@@ -1,0 +1,116 @@
+Loading compiler version 2022.1.0
+Loading tbb version 2021.7.0
+Loading compiler-rt version 2022.2.0
+Loading oclfpga version 2022.2.0
+  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
+  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
+
+Loading compiler/2022.1.0
+  Loading requirement: tbb/latest compiler-rt/latest oclfpga/latest
+
+Loading mkl version 2022.2.0
+LAMMPS: /work/phy-luoyf/apps/lammps2025/lammps-22Jul2025/build/lmp
+NP=96
+Input: in_cu_nanocube_bulk.in
+OutputDir: ./output_bulk
+LAMMPS (22 Jul 2025 - Update 2)
+  using 1 OpenMP thread(s) per MPI task
+ERROR: Cannot open file cu_nanocube.data: No such file or directory (src/read_data.cpp:380)
+Last input line: read_data cu_nanocube.data 
+                           ^^^^^^^^^^^^^^^^
+total_runtime: 8.812473712 s
+LAMMPS exited with non-zero status: 1
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@be1u38a>
+Subject: Job 2847568: <Cu_bulk_uniaxial> in cluster <qmhpc> Exited
+
+Job <Cu_bulk_uniaxial> was submitted from host <a04u28l> by user <phy-luoyf> in cluster <qmhpc> at Thu Dec 25 17:23:19 2025
+Job was executed on host(s) <96*be1u38a>, in queue <1t88c>, as user <phy-luoyf> in cluster <qmhpc> at Thu Dec 25 17:23:21 2025
+</work/phy-luoyf> was used as the home directory.
+</work/phy-luoyf/WORK/cu_sample_construct_after_wyb_meeting25.12.25/cusuper> was used as the working directory.
+Started at Thu Dec 25 17:23:21 2025
+Terminated at Thu Dec 25 17:23:37 2025
+Results reported at Thu Dec 25 17:23:37 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J Cu_bulk_uniaxial
+#BSUB -q 1t88c
+#BSUB -n 96
+#BSUB -R "span[ptile=96]"
+#BSUB -e %J.err
+#BSUB -o %J.out
+
+# ---- environment ----
+hostfile="$LSB_DJOB_HOSTFILE"
+NP=$(wc -l < "$hostfile")
+cd "$LS_SUBCWD"
+
+module load mpi/2021.6.0 compiler/2022.1.0 mkl/2022.2.0
+
+# === your LAMMPS (absolute path, no ~)
+LAMMPS_EXE="/work/phy-luoyf/apps/lammps2025/lammps-22Jul2025/build/lmp"
+
+# Input & potential
+INPUT="in_cu_nanocube_bulk.in"
+POT="Cu_mishin1.eam.alloy"
+
+OUTDIR="./output_bulk"
+mkdir -p "$OUTDIR"
+
+export OMP_NUM_THREADS=1
+
+# ---- sanity checks ----
+[[ -x "$LAMMPS_EXE" ]] || { echo "LAMMPS binary NOT found"; exit 1; }
+[[ -f "$INPUT" ]] || { echo "Input file NOT found"; exit 2; }
+grep -q "$POT" "$INPUT" && [[ ! -f "$POT" ]] && { echo "Potential missing"; exit 3; }
+
+echo "LAMMPS: $LAMMPS_EXE"
+echo "NP=$NP"
+echo "Input: $INPUT"
+echo "OutputDir: $OUTDIR"
+
+# ---- run ----
+start_time=$(date +%s.%N)
+
+mpirun -machinefile "$hostfile" -np "$NP" "$LAMMPS_EXE" -in "$INPUT" \
+  | tee "$OUTDIR/lammps.log"
+
+rc=${PIPESTATUS[0]}
+
+end_time=$(date +%s.%N)
+runtime=$(echo "$end_time - $start_time" | bc)
+echo "total_runtime: $runtime s" | tee -a "$OUTDIR/time.txt"
+
+[[ $rc -ne 0 ]] && { echo "LAMMPS exited with non-zero status: $rc"; exit $rc; }
+
+(... more ...)
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   757.00 sec.
+    Max Memory :                                 4288 MB
+    Average Memory :                             3426.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                10
+    Run time :                                   11 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <2847568.err> for stderr output of this job.
+

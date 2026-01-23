@@ -1,0 +1,5 @@
+total_runtime: 32.960821542 s
+total_runtime: 8.812473712 s
+total_runtime: 8.265419822 s
+total_runtime: 36.064776576 s
+total_runtime: 35.584628737 s

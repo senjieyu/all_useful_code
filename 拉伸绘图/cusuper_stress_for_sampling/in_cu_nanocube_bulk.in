@@ -1,0 +1,79 @@
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# ---------- 结构 ----------
+read_data       cu333.data
+
+# ---------- 势函数 ----------
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu
+mass            1 63.546
+
+# ---------- 邻居表 ----------
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+# ---------- (可选) 缺陷分析，用于 OVITO ----------
+compute         csp  all centro/atom 12
+compute         cna  all cna/atom 3.3
+
+# ---------- 应力 (单位 GPa，拉伸为正) ----------
+# pxx/pyy/pzz 为正表示压缩，取负号得到“拉伸为正”的应力
+# pxx, pyy, pzz 单位 bar，1 bar = 1e-4 GPa
+variable        sigma_xx equal -pxx*1.0e-4
+variable        sigma_yy equal -pyy*1.0e-4
+variable        sigma_zz equal -pzz*1.0e-4
+
+# ---------- 初始平衡 ----------
+timestep        0.002                # 2 fs
+
+velocity        all create 300.0 12345 mom yes rot yes dist gaussian
+
+thermo          100
+thermo_style    custom step time temp pe ke etotal press
+
+# 300 K, 0 bar, 各向同性 NPT 预平衡
+fix             feq  all npt temp 300 300 0.1 x 0 0 1.0 y 0 0 1.0 z 0 0 1.0
+run             20000               # 40 ps
+unfix           feq
+
+# ---------- 定义参考长度和工程应变（z 方向） ----------
+variable        Lz0 equal lz
+variable        strain equal (lz - ${Lz0})/${Lz0}
+
+# 更新 thermo 输出
+thermo_style    custom step time temp pe ke etotal press v_strain v_sigma_xx v_sigma_yy v_sigma_zz
+
+# ---------- z 方向单轴拉伸 ----------
+# 真应变率：5e-4 1/ps ≈ 5×10^8 s^-1
+variable        erate equal 5.0e-4
+
+# x/y 保持 0 压，z 随盒子变形；couple none 防止各向耦合
+fix             fnpt  all npt temp 300 300 0.1 x 0 0 1.0 y 0 0 1.0 couple none
+
+# 对 z 方向施加真应变速率
+fix             fdef  all deform 1 z erate ${erate} units box remap x
+
+# ---------- 输出 ----------
+# stress_strain.dat: strain  sigma_xx  sigma_yy  sigma_zz  (单位 GPa)
+# 间隔 200 步，既不太稀也不太密
+fix             out   all print 200 "${strain} ${sigma_xx} ${sigma_yy} ${sigma_zz}" file stress_strain.dat screen no
+
+
+# 间隔 500 步输出一帧，可以看到变形全过程
+dump            d1 all custom 250 dump_cu_nanocube.lammpstrj id type x y z c_csp c_cna
+dump_modify     d1 sort id
+
+# ---------- 变形过程 ----------
+# 总时间 = 250000 * 0.002 ps = 500 ps
+# 真应变 ≈ erate * 500 ps ≈ 0.25
+run             250000
+
+# ---------- 收尾 ----------
+unfix           out
+unfix           fdef
+unfix           fnpt
+
+write_data      cu_nanocube_final.data
