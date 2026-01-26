@@ -16,6 +16,186 @@ from typing import Optional, Union, List
 from multiprocessing import Pool
 from ase import Atoms
 import time
+# =============================================================================
+# 使用说明（把这段复制到脚本开头即可）
+# =============================================================================
+# 这个脚本做什么：
+#   1) 批量读取结构文件：stru/*.vasp
+#   2) 用 MTP 机器学习势（.mtp）+ ASE 做结构弛豫（可含晶胞自由度）
+#   3) 调用 vaspkit 的 201 功能生成应变结构（strain_*），并对每个应变结构做离子弛豫
+#   4) vaspkit 后处理输出 ELASTIC_TENSOR（6×6 Cij）
+#   5) 用 mechelastic 从 Cij 计算 B_vrh（体积模量）和 G_vrh（剪切模量）
+#   6) 输出 results.csv 和 pre_BG.pkl
+#
+# -----------------------------------------------------------------------------
+# 一、运行前的环境要求
+# -----------------------------------------------------------------------------
+# 1) Python 包：
+#   - ase
+#   - numpy
+#   - pandas（脚本里会用来写 results.csv）
+#   - pymlip（提供 MTPCalactor / PyConfiguration，用于加载 .mtp 势）
+#   - mechelastic（ElasticProperties，用于从 Cij 求 B/G）
+#
+# 2) 外部程序：
+#   - vaspkit 必须能在命令行直接运行（脚本使用：echo 201 | vaspkit）
+#   - 脚本会在每个应变目录里运行：python opt_ion.py
+#
+# 3) 文件/目录准备：
+#   - 必须存在目录：stru/
+#   - 结构文件放在：stru/*.vasp
+#     （每个文件名会作为结构标签，例如 stru/xxx.vasp -> 标签 xxx）
+#   - 需要一个 MTP 势文件：current_0.mtp（或你自己的 .mtp）
+#
+# -----------------------------------------------------------------------------
+# 二、你需要改哪些参数（脚本末尾 __main__ 区域）
+# -----------------------------------------------------------------------------
+# 下面这些变量是你最常改的：
+#
+# (1) 结构路径（默认不改）：
+#     structures = glob.glob(os.path.join('stru','*.vasp'))
+#
+# (2) 并行进程数：
+#     num_processes = 1
+#     - 想并行就改成 CPU 核数，例如 4/8/16
+#
+# (3) 体系维度：
+#     dim = 3
+#     - 3：块体（bulk）
+#     - 2：二维材料/薄膜（slab），脚本里会在 relax 阶段设 constant_volume=True
+#
+# (4) 输出目录：
+#     output_base_dir = 'sus2_BG'
+#     - 每个结构会在 sus2_BG/<结构名>/ 下生成计算目录
+#
+# (5) 元素列表（用于 unique_numbers 给 MTP）：
+#     ele = ['Cu']
+#     - 如果是多元体系，例如 Cu-Zn：ele = ['Cu','Zn']
+#     - 注意：这些元素必须与 .mtp 势训练时支持的元素一致
+#
+# (6) MTP 势文件路径（最重要）：
+#     sus2mlip_path = r'/work/.../current_0.mtp'
+#     - 这里必须是你机器上的真实路径
+#     - 脚本会检查该文件是否存在，不存在会直接报错退出
+#
+# (7) 应变幅度（7 个值，对应 vaspkit.in 的 strain 行）：
+#     strain_str = '-0.015 -0.010 -0.005 0.000 0.005 0.010 0.015'
+#     - 必须是 7 个数（脚本写死：number of strain = 7）
+#     - 典型小应变：±0.005 或 ±0.01；你可以按需要改
+#
+# -----------------------------------------------------------------------------
+# 三、目录与文件输出说明（脚本运行后会生成什么）
+# -----------------------------------------------------------------------------
+# 顶层输出目录（output_base_dir，例如 sus2_BG）：
+#   sus2_BG/
+#     results.csv              # 汇总表（每个结构一行）
+#     <结构名1>/
+#       POSCAR                 # 初始结构弛豫后的结构（如果弛豫成功才写）
+#       ELASTIC_TENSOR         # vaspkit 后处理输出（如果流程走完才有）
+#       ...（中间会产生 C*/ strain_* 等目录，最后脚本会 rm -r 清理部分文件）
+#     <结构名2>/
+#       ...
+#
+# 另外脚本最后还会保存：
+#   pre_BG.pkl                 # Python pickle，保存 results 列表（包含 Cij/B/G）
+#
+# -----------------------------------------------------------------------------
+# 四、运行方式（最常用）
+# -----------------------------------------------------------------------------
+# 1) 进入脚本所在目录（要求下面这个结构）：
+#    .
+#    ├── your_script.py
+#    └── stru/
+#        ├── a.vasp
+#        ├── b.vasp
+#        └── ...
+#
+# 2) 修改 __main__ 区域的参数（至少改 MTP 势路径 sus2mlip_path）
+#
+# 3) 运行：
+#    python your_script.py
+#
+# 4) 查看结果：
+#    - 汇总：sus2_BG/results.csv
+#    - 单个结构：sus2_BG/<结构名>/ELASTIC_TENSOR
+#    - pickle：pre_BG.pkl
+#
+# -----------------------------------------------------------------------------
+# 五、这个脚本的计算流程细节（你想知道它到底在每一步干啥）
+# -----------------------------------------------------------------------------
+# 对每个结构文件（例如 stru/a.vasp），会做：
+#
+# Step A：结构弛豫（main_relax -> relax）
+#   - ASE + BFGS + ExpCellFilter
+#   - fmax = 0.001（力收敛阈值）
+#   - max_step = 1000
+#   - dim=3 时：constant_volume=False（允许晶胞变化）
+#   - dim=2 时：constant_volume=True（固定体积）
+#   - 成功后写出：sus2_BG/a/POSCAR
+#
+# Step B：调用 vaspkit 201 生成应变任务（VPKIT.in + vaspkit）
+#   - 写 VPKIT.in（signal=1：预处理）
+#   - 运行：echo 201 | vaspkit
+#   - vaspkit 会创建类似 Cij/strain_* 的目录结构（取决于 vaspkit版本/设置）
+#
+# Step C：对每个应变结构做离子弛豫（sub.sh + opt_ion.py）
+#   - 生成 sub.sh，循环进入每个 strain_* 目录
+#   - 在每个 strain_* 目录里：
+#       ln -s ${root_path}/opt_ion.py ./
+#       python opt_ion.py > OUTCAR
+#   - opt_ion.py 内部：
+#       * 读 POSCAR
+#       * 用同一个 MTP 势算力
+#       * BFGS 弛豫离子（cell 不动：mask 全 False）
+#       * 输出 CONTCAR
+#
+# Step D：vaspkit 后处理得到弹性张量（再次 vaspkit 201）
+#   - 写 VPKIT.in（signal=2：后处理）
+#   - 运行：echo 201 | vaspkit
+#   - 得到：ELASTIC_TENSOR
+#
+# Step E：读取 Cij 并计算 B、G（read_Cij_BG）
+#   - 从 ELASTIC_TENSOR 读出 6×6 Cij（GPa）
+#   - mechelastic 计算：
+#       B_vrh = elastic_props.K_vrh
+#       G_vrh = elastic_props.G_vrh
+#
+# -----------------------------------------------------------------------------
+# 六、常见问题与排错建议（非常实用）
+# -----------------------------------------------------------------------------
+# 1) 找不到 vaspkit / 运行失败：
+#   - 终端里先测试：vaspkit 是否能运行
+#   - 再测试：echo 201 | vaspkit 是否会卡住/报错
+#
+# 2) MTP 势文件不匹配元素：
+#   - ele 列表必须和势支持的元素一致
+#   - 多元素一定要把所有元素都写进 ele
+#
+# 3) stru/*.vasp 读不进来：
+#   - 确认文件确实是 VASP 格式且 ASE 能读
+#   - 可以单独测试：python -c "from ase.io import read; read('stru/a.vasp')"
+#
+# 4) 结果全是 None：
+#   - 表示弛豫失败或 vaspkit/后处理失败
+#   - 去对应目录看日志：
+#       sus2_BG/<结构名>/OUTCAR（opt_ion.py 输出）
+#       以及 vaspkit 产生的文件是否存在
+#
+# 5) 应变幅度太大导致不稳定：
+#   - 先用小应变（例如 ±0.005）验证流程通了再加大
+#
+# -----------------------------------------------------------------------------
+# 七、重要提示（脚本里一个容易误判的地方）
+# -----------------------------------------------------------------------------
+# main_relax 里判断收敛的代码：
+#     if (np.max(atom_force <= f_max)):
+# 这在逻辑上容易误判（它对每个分量比较，而不是比较力的模长/绝对值）。
+# 更稳的写法通常是：
+#     if np.max(np.linalg.norm(atom_force, axis=1)) <= f_max:
+# 或：
+#     if np.max(np.abs(atom_force)) <= f_max:
+# 如果你发现明明没收敛也被当成收敛，建议改这里。
+# =============================================================================
 
 class MTPCalculator(Calculator):
     """

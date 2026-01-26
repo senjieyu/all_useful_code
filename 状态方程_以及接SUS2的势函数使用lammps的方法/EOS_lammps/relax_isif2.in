@@ -1,0 +1,32 @@
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       ${fname}
+
+# 必须设置质量（否则 minimize 会报 Type 1 missing）
+mass            1 63.546
+
+pair_style      mlip ${mlip_ini}
+pair_coeff      * *
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe etotal fmax press pxx pyy pzz lx ly lz
+
+min_style       cg
+min_modify      line quadratic
+reset_timestep  0
+
+minimize        1.0e-8 1.0e-10 5000 100000
+
+write_data      ${oname}
+
+variable        myPE  equal pe
+variable        myV   equal vol
+print           "${myPE} ${myV}" file ${outfile} screen no
+

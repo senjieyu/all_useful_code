@@ -1,0 +1,40 @@
+ISTART = 0
+ISPIN  = 1
+LREAL  = Auto
+ENCUT  = 500
+
+LWAVE  = .FALSE.
+LCHARG = .FALSE.
+
+# Electronic Structure
+ISMEAR = 1
+SIGMA  = 0.1
+NELM   = 120
+NELMIN = 6
+EDIFF  = 1E-7
+EDIFFG = -0.002
+
+GGA    = PE
+
+# Ionic / Static
+IBRION = 6     # Elastic constants calculation
+ISIF   = 3     # Relax cell and ions before or during?
+               # IBRION=6 requires ISIF>=3 for tensor?
+               # Actually, IBRION=6 calculates elastic tensor.
+               # ISIF=3 allows cell volume and shape change.
+               # For elastic constants, usually:
+               # 1. Relax structure (IBRION=2, ISIF=3)
+               # 2. Static IBRION=6, ISIF=3
+               
+# Elastic Calculation Specifics
+NFREE  = 2     # Finite difference displacements (2 or 4)
+POTIM  = 0.015 # Step size for deformation
+
+NSW    = 1     # One ionic step for IBRION=6
+
+# K-points
+KSPACING = 0.20
+KGAMMA   = .FALSE.
+
+# Parallel
+NCORE  = 4

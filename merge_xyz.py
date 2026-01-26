@@ -1,15 +1,17 @@
 from pathlib import Path
 
-def merge_xyz_simple(folder: str = ".", out_name: str = "all_out_pure.xyz"):
+def merge_xyz(folder=".", out_name="all.xyz"):
     folder_path = Path(folder).resolve()
     out_path = folder_path / out_name
 
-    # 找到当前目录下所有 .xyz（大小写不敏感），排除输出文件本身
+    # 只选 .xyz / .extxyz（大小写不敏感），并排除输出文件
     xyz_files = sorted(
-        [p for p in folder_path.iterdir()
-         if p.is_file()
-         and p.suffix.lower() == ".xyz"
-         and p.name != out_name],
+        [
+            p for p in folder_path.iterdir()
+            if p.is_file()
+            and p.name != out_name
+            and p.suffix.lower() in {".xyz", ".extxyz"}
+        ],
         key=lambda p: p.name.lower()
     )
 
@@ -20,17 +22,19 @@ def merge_xyz_simple(folder: str = ".", out_name: str = "all_out_pure.xyz"):
         print("  -", p.name)
 
     if not xyz_files:
-        print("没找到 .xyz 文件")
+        print("没找到 .xyz/.extxyz 文件")
         return
 
-    # 纯拼接：原样追加，不改任何内容
     with out_path.open("wb") as out:
         for p in xyz_files:
-            out.write(p.read_bytes())
+            data = p.read_bytes()
+            out.write(data)
+            # 保险：确保文件之间至少有一个换行
+            if not data.endswith(b"\n"):
+                out.write(b"\n")
 
-    print(f"✅ 完成：合并 {len(xyz_files)} 个文件")
+    print(f"✅ 完成：合并 {len(xyz_files)} 个文件 -> {out_path}")
 
 if __name__ == "__main__":
-    # 默认合并脚本所在目录（避免运行目录不对）
     script_dir = Path(__file__).resolve().parent
-    merge_xyz_simple(str(script_dir))
+    merge_xyz(str(script_dir), out_name="all.xyz")

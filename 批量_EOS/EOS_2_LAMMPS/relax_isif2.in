@@ -1,0 +1,50 @@
+clear
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       ${fname}
+
+# 必须设置质量（否则 minimize 会报 Type 1 missing）
+mass            1 63.546
+
+pair_style      mlip ${mlip_ini}
+pair_coeff      * *
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+thermo          100
+thermo_style    custom step pe etotal fmax press pxx pyy pzz pxy pxz pyz lx ly lz
+
+min_style       cg
+min_modify      line quadratic
+reset_timestep  0
+
+minimize        1.0e-8 1.0e-10 5000 100000
+
+# 写 relax 后 data
+write_data      ${oname}
+
+# --- 写一个包含 forces 的 dump（用于后处理生成 extended xyz）---
+# dumpname 由提交脚本通过 -var dumpname 传入
+# 注意：custom dump 带 ITEM 头，后处理会解析并转换成 ASE extended xyz
+write_dump      all custom ${dumpname} id type x y z fx fy fz
+
+# --- 把需要的标量输出到 outfile（第一列pe 第二列vol，后面是盒子和压力张量）---
+variable        myPE  equal pe
+variable        myV   equal vol
+variable        myLx  equal lx
+variable        myLy  equal ly
+variable        myLz  equal lz
+variable        myPxx equal pxx
+variable        myPyy equal pyy
+variable        myPzz equal pzz
+variable        myPxy equal pxy
+variable        myPxz equal pxz
+variable        myPyz equal pyz
+
+# 格式：pe vol lx ly lz pxx pyy pzz pxy pxz pyz   （压力单位：bar）
+print           "${myPE} ${myV} ${myLx} ${myLy} ${myLz} ${myPxx} ${myPyy} ${myPzz} ${myPxy} ${myPxz} ${myPyz}" file ${outfile} screen no
+
