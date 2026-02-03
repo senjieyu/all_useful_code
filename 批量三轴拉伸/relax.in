@@ -1,0 +1,26 @@
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# 变量由命令行传入
+# variable        struct_file string "placeholder.data"
+
+read_data       ${struct_file}
+
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+# 1. 固定晶胞优化原子位置
+minimize 1.0e-6 1.0e-8 1000 10000
+
+# 2. 全弛豫 (ISIF=3)
+# 使用 tri 允许晶胞形状和体积变化
+fix 1 all box/relax tri 0.0 vmax 0.001
+minimize 1.0e-6 1.0e-8 1000 10000
+unfix 1
+
+write_data      relaxed.data

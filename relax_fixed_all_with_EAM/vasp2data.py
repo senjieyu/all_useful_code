@@ -1,9 +1,128 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+vasp2data.py
+Convert VASP POSCAR/CONTCAR -> LAMMPS data (triclinic prism) for Cu
+- Supports VASP4/VASP5
+- Supports Selective Dynamics (assigns atom types by flags)
+- KEY FIX: rotate/project atomic Cartesian coordinates into the same prism basis
+  used to define (lx,ly,lz,xy,xz,yz), so box/coords are consistent.
+
+Usage:
+  python vasp2data.py input.vasp output.data
+  python vasp2data.py input_folder output_folder
+"""
+
 import sys
 import os
 import numpy as np
 
-# --- 铜原子质量 ---
-ATOM_MASS = 63.546
+ATOM_MASS = 63.546  # Cu
+
+
+def _parse_poscar(lines):
+    if len(lines) < 8:
+        raise ValueError("POSCAR too short")
+
+    # scale
+    try:
+        scale = float(lines[1].strip())
+    except ValueError as e:
+        raise ValueError("Failed to read scale on line 2") from e
+
+    # lattice (3x3)
+    lattice = []
+    for i in range(2, 5):
+        lattice.append([float(x) for x in lines[i].split()])
+    lattice = np.array(lattice, dtype=float) * scale  # rows: a,b,c
+
+    # VASP4/5 detection for natoms line
+    # VASP5 has element symbols on line 6, counts on line 7
+    # VASP4 has counts on line 6
+    def _is_int_list(s):
+        try:
+            _ = [int(x) for x in s.split()]
+            return True
+        except Exception:
+            return False
+
+    if _is_int_list(lines[5]):
+        natoms_line_idx = 5
+        start_idx = 6
+    else:
+        natoms_line_idx = 6
+        start_idx = 7
+
+    natoms_list = [int(x) for x in lines[natoms_line_idx].split()]
+    total_atoms = int(sum(natoms_list))
+
+    # Selective Dynamics?
+    selective = False
+    if start_idx < len(lines) and lines[start_idx].strip().upper().startswith("S"):
+        selective = True
+        start_idx += 1
+
+    # coord type line
+    if start_idx >= len(lines):
+        raise ValueError("Missing coordinate type line (Direct/Cartesian)")
+    coord_type = lines[start_idx].strip().lower()
+    start_idx += 1
+
+    return lattice, scale, natoms_list, total_atoms, selective, coord_type, start_idx
+
+
+def _build_lammps_prism_from_lattice(lattice):
+    """
+    Build LAMMPS triclinic prism parameters and the orthonormal basis (e1,e2,e3)
+    consistent with those parameters.
+
+    lattice rows: a,b,c in Cartesian coordinates
+    Returns: (lx,ly,lz,xy,xz,yz,e1,e2,e3)
+    """
+    a = lattice[0].astype(float)
+    b = lattice[1].astype(float)
+    c = lattice[2].astype(float)
+
+    lx = np.linalg.norm(a)
+    if lx < 1e-12:
+        raise ValueError("Lattice vector a has near-zero length")
+
+    e1 = a / lx  # x-axis along a
+
+    # b projected onto e1 gives xy; remaining part defines y-axis
+    xy = float(np.dot(b, e1))
+    b_perp = b - xy * e1
+    ly = float(np.linalg.norm(b_perp))
+    if ly < 1e-12:
+        # Degenerate (a || b). Still define some e2 orthogonal to e1.
+        tmp = np.array([0.0, 1.0, 0.0])
+        if np.linalg.norm(np.cross(tmp, e1)) < 1e-8:
+            tmp = np.array([0.0, 0.0, 1.0])
+        e2 = tmp - np.dot(tmp, e1) * e1
+        e2 = e2 / (np.linalg.norm(e2) + 1e-12)
+        ly = 0.0
+    else:
+        e2 = b_perp / ly
+
+    # Right-handed z-axis
+    e3 = np.cross(e1, e2)
+    e3 = e3 / (np.linalg.norm(e3) + 1e-12)
+
+    # c components in this basis => xz, yz, lz
+    xz = float(np.dot(c, e1))
+    yz = float(np.dot(c, e2))
+    c_perp = c - xz * e1 - yz * e2
+    lz = float(np.linalg.norm(c_perp))
+
+    # lz can be 0 for 2D slabs; that's allowed but be aware in LAMMPS
+    return lx, ly, lz, xy, xz, yz, e1, e2, e3
+
+
+def _cart_from_direct(frac, lattice):
+    # frac: (3,) , lattice rows are a,b,c
+    # Direct coords: r = f1*a + f2*b + f3*c
+    return frac @ lattice
+
 
 def convert_poscar_to_data(poscar_file, output_file):
     if not os.path.exists(poscar_file):
@@ -11,122 +130,82 @@ def convert_poscar_to_data(poscar_file, output_file):
         return
 
     try:
-        with open(poscar_file, 'r') as f:
+        with open(poscar_file, "r") as f:
             lines = f.readlines()
-            
-        if len(lines) < 7:
-            print(f"Warning: {os.path.basename(poscar_file)} looks too short, skipping.")
-            return
 
-        # 1. 读取缩放系数
-        try:
-            scale = float(lines[1].strip())
-        except ValueError:
-            print(f"Error reading scale in {poscar_file}")
-            return
+        lattice, scale, natoms_list, total_atoms, selective, coord_type, start_idx = _parse_poscar(lines)
 
-        # 2. 读取晶格矩阵
-        lattice = []
-        for i in range(2, 5):
-            lattice.append([float(x) for x in lines[i].split()])
-        lattice = np.array(lattice) * scale
-
-        # --- 核心修正：计算 LAMMPS 斜盒子参数 (Triclinic Box) ---
-        a = lattice[0]
-        b = lattice[1]
-        c = lattice[2]
-        
-        lx = np.linalg.norm(a)
-        unit_a = a / lx if lx > 1e-8 else np.array([1.0, 0.0, 0.0])
-        
-        xy = np.dot(b, unit_a)
-        ly = np.sqrt(max(0.0, np.linalg.norm(b)**2 - xy**2))
-        
-        xz = np.dot(c, unit_a)
-        yz = (np.dot(b, c) - xy*xz) / ly if ly > 1e-8 else 0.0
-        lz = np.sqrt(max(0.0, np.linalg.norm(c)**2 - xz**2 - yz**2))
-
-        # 3. 确定原子数行 (兼容 VASP 4/5)
-        try:
-            [int(x) for x in lines[5].split()]
-            natoms_line_idx = 5
-            start_idx = 6
-        except ValueError:
-            natoms_line_idx = 6
-            start_idx = 7
-        
-        natoms_list = [int(x) for x in lines[natoms_line_idx].split()]
-        total_atoms = sum(natoms_list)
-        
-        # 4. 检测 Selective Dynamics
-        selective = False
-        if lines[start_idx].strip().upper().startswith('S'):
-            selective = True
-            start_idx += 1
-        
-        coord_type = lines[start_idx].strip().lower()
-        start_idx += 1
+        # Build prism and basis
+        lx, ly, lz, xy, xz, yz, e1, e2, e3 = _build_lammps_prism_from_lattice(lattice)
 
         atoms_data = []
         atom_id = 1
         current_line = start_idx
-        
-        # 5. 读取坐标
+
+        # Read coords
         for n in natoms_list:
             for _ in range(n):
-                if current_line >= len(lines): break
-                line_content = lines[current_line].split()
-                
-                # --- 类型分配逻辑 ---
-                atom_type = 1 
-                if selective and len(line_content) >= 6:
-                    flags = [f.upper() for f in line_content[3:6]]
-                    if flags == ['F', 'F', 'F']:
-                        atom_type = 2 # FFF
-                    elif flags == ['F', 'F', 'T']:
-                        atom_type = 3 # FFT
-                
-                # 坐标转换：Direct -> Cartesian
-                vals = [float(v) for v in line_content[0:3]]
-                if coord_type.startswith('d'): # Direct
-                    vec = np.array(vals)
-                    cart_coords = np.dot(vec, lattice)
-                    x, y, z = cart_coords
-                else: # Cartesian
-                    x = vals[0] * scale
-                    y = vals[1] * scale
-                    z = vals[2] * scale
+                if current_line >= len(lines):
+                    break
+                parts = lines[current_line].split()
+                if len(parts) < 3:
+                    current_line += 1
+                    continue
+
+                # type assignment based on selective flags
+                atom_type = 1
+                if selective and len(parts) >= 6:
+                    flags = [p.upper() for p in parts[3:6]]
+                    if flags == ["F", "F", "F"]:
+                        atom_type = 2  # FFF
+                    elif flags == ["F", "F", "T"]:
+                        atom_type = 3  # FFT
+
+                vals = np.array([float(parts[0]), float(parts[1]), float(parts[2])], dtype=float)
+
+                # Convert to Cartesian in the original POSCAR frame
+                if coord_type.startswith("d"):  # Direct
+                    r_cart = _cart_from_direct(vals, lattice)
+                else:  # Cartesian
+                    # In VASP, if coord_type is Cartesian, positions are also scaled by 'scale'
+                    r_cart = vals * scale
+
+                # === KEY FIX: project into the same prism basis used for lx,ly,lz,xy,xz,yz ===
+                x = float(np.dot(r_cart, e1))
+                y = float(np.dot(r_cart, e2))
+                z = float(np.dot(r_cart, e3))
 
                 atoms_data.append((atom_id, atom_type, x, y, z))
                 atom_id += 1
                 current_line += 1
 
-        # 6. 写入 LAMMPS Data
-        with open(output_file, 'w') as f:
+        # Write LAMMPS data
+        with open(output_file, "w") as f:
             f.write(f"Converted from {os.path.basename(poscar_file)} (Triclinic/Cu)\n\n")
             f.write(f"{total_atoms} atoms\n")
-            f.write("3 atom types\n")
-            
+            f.write("3 atom types\n\n")
+
             f.write(f"0.0 {lx:.6f} xlo xhi\n")
             f.write(f"0.0 {ly:.6f} ylo yhi\n")
             f.write(f"0.0 {lz:.6f} zlo zhi\n")
-            f.write(f"{xy:.6f} {xz:.6f} {yz:.6f} xy xz yz\n")
-            
-            f.write("\nMasses\n\n")
+            f.write(f"{xy:.6f} {xz:.6f} {yz:.6f} xy xz yz\n\n")
+
+            f.write("Masses\n\n")
             f.write(f"1 {ATOM_MASS}\n")
             f.write(f"2 {ATOM_MASS}\n")
-            f.write(f"3 {ATOM_MASS}\n")
-            
-            f.write("\nAtoms # atomic\n\n")
-            for data in atoms_data:
-                f.write(f"{data[0]} {data[1]} {data[2]:.6f} {data[3]:.6f} {data[4]:.6f}\n")
-        
+            f.write(f"3 {ATOM_MASS}\n\n")
+
+            f.write("Atoms # atomic\n\n")
+            for atom_id, atom_type, x, y, z in atoms_data:
+                f.write(f"{atom_id} {atom_type} {x:.6f} {y:.6f} {z:.6f}\n")
+
         print(f"Converted: {os.path.basename(poscar_file)} -> {os.path.basename(output_file)}")
 
     except Exception as e:
         print(f"Error converting {os.path.basename(poscar_file)}: {e}")
 
-if __name__ == "__main__":
+
+def main():
     if len(sys.argv) != 3:
         print("Usage: python vasp2data.py <input_folder_or_file> <output_folder_or_file>")
         print("Example: python vasp2data.py struttt datattt")
@@ -135,39 +214,36 @@ if __name__ == "__main__":
     input_arg = sys.argv[1]
     output_arg = sys.argv[2]
 
-    # --- 文件夹模式 (Batch Processing) ---
+    # Batch mode
     if os.path.isdir(input_arg):
-        # 如果输出目录不存在，自动创建
         if not os.path.exists(output_arg):
             os.makedirs(output_arg)
             print(f"Created output directory: {output_arg}")
-        
+
         print(f"Processing directory: {input_arg} -> {output_arg}")
-        
+
         file_list = sorted(os.listdir(input_arg))
         count = 0
         for filename in file_list:
             src_file = os.path.join(input_arg, filename)
-            
-            # 跳过子文件夹和隐藏文件
-            if not os.path.isfile(src_file) or filename.startswith('.'):
+            if not os.path.isfile(src_file) or filename.startswith("."):
                 continue
-            
-            # 构造输出文件名: 去掉后缀，加上 .data
-            # 例如: structure.vasp -> structure.data
+
             base_name = os.path.splitext(filename)[0]
             dst_file = os.path.join(output_arg, base_name + ".data")
-            
+
             convert_poscar_to_data(src_file, dst_file)
             count += 1
-            
+
         print(f"Done! Processed {count} files.")
 
-    # --- 单文件模式 (Single File) ---
+    # Single file mode
     else:
-        # 如果输出路径包含文件夹且不存在，尝试创建
         out_dir = os.path.dirname(output_arg)
         if out_dir and not os.path.exists(out_dir):
             os.makedirs(out_dir)
         convert_poscar_to_data(input_arg, output_arg)
 
+
+if __name__ == "__main__":
+    main()

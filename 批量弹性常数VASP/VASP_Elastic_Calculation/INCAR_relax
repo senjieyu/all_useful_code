@@ -25,4 +25,4 @@ KSPACING = 0.20
 KGAMMA   = .FALSE.
 
 # Parallel
-NCORE  = 4
+# NCORE  = 4

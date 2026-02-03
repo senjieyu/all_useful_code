@@ -1,0 +1,1 @@
+atomsk --merge Y 2 111.cfg 222.cfg Al_210_001.cfg

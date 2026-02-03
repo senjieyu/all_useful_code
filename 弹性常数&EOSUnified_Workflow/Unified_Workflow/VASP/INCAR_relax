@@ -1,0 +1,21 @@
+ISTART = 0
+ISPIN  = 1
+LREAL  = Auto
+ENCUT  = 500
+LWAVE  = .FALSE.
+LCHARG = .FALSE.
+
+ISMEAR = 1
+SIGMA  = 0.1
+NELM   = 120
+EDIFF  = 1E-6
+EDIFFG = -0.01
+GGA    = PE
+
+# Relaxation
+IBRION = 2
+ISIF   = 3
+NSW    = 100
+
+KSPACING = 0.20
+KGAMMA   = .FALSE.

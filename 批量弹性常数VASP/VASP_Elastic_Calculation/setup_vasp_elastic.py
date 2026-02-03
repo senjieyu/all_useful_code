@@ -21,8 +21,8 @@ def main():
     incar_relax = os.path.join(script_dir, "INCAR_relax")
     incar_elastic = os.path.join(script_dir, "INCAR_elastic")
     
+    # Fallback checks for INCAR files
     if not os.path.exists(incar_relax) or not os.path.exists(incar_elastic):
-        # Fallback to current dir
         if os.path.exists("INCAR_relax"): incar_relax = "INCAR_relax"
         if os.path.exists("INCAR_elastic"): incar_elastic = "INCAR_elastic"
         
@@ -42,7 +42,9 @@ def main():
     scripts_dir = os.path.join(output_folder, "submission_scripts")
     os.makedirs(scripts_dir, exist_ok=True)
     
-    # VASP submit template (LSF)
+    # ==========================================
+    # FIXED SUBMIT TEMPLATE (Corrected Environment)
+    # ==========================================
     submit_template = """#!/bin/bash
 #BSUB -J vasp_elas_{idx}
 #BSUB -q 33
@@ -53,26 +55,34 @@ def main():
 
 set -euo pipefail
 
-# Environment
-# Adjust these paths for your cluster
+# Environment Setup
 export I_MPI_HYDRA_BOOTSTRAP=lsf
-module load vasp/5.4.4 2>/dev/null || true
-# Or export PATH directly if module not available
-# export PATH=/path/to/vasp_std:$PATH
+
+# 1. Load Intel Compiler and MPI (Matches your .bashrc)
+module purge
+module load mpi/2021.6.0 compiler/2022.1.0 mkl/2022.2.0
+
+# 2. Set VASP 5.4.4 Path (Manually specified)
+export PATH=/work/phy-huangj/app/vasp.5.4.4/bin:$PATH
 
 echo "Host: $(hostname)"
 echo "Start: $(date)"
+
+# Debug: check if vasp_std is found
+which vasp_std || echo "WARNING: vasp_std not found in PATH"
 
 # 1. Relaxation Step
 if [ ! -f "RELAX_DONE" ]; then
     echo "Starting Relaxation..."
     cp INCAR_relax INCAR
-    # Ensure POTCAR exists (user must provide POTCAR in setup or link it)
+    
+    # Check if POTCAR exists (Vaspkit should have generated it)
     if [ ! -f "POTCAR" ]; then
-        echo "Error: POTCAR missing!"
+        echo "Error: POTCAR missing! Vaspkit generation failed or file not copied."
         exit 1
     fi
     
+    # Run vasp_std
     mpirun -np 40 vasp_std > vasp_relax.log
     
     cp CONTCAR POSCAR
@@ -88,10 +98,6 @@ mpirun -np 40 vasp_std > vasp_elastic.log
 echo "End: $(date)"
 """
 
-    # POTCAR warning
-    print("WARNING: You must manually place or link a POTCAR file into the output folders,")
-    print("         or modify this script to copy a POTCAR from a known location.")
-    
     for i, atoms in enumerate(frames):
         folder_name = f"struct_{i}"
         work_dir = os.path.join(output_folder, folder_name)
@@ -104,14 +110,16 @@ echo "End: $(date)"
         shutil.copy(incar_relax, os.path.join(work_dir, "INCAR_relax"))
         shutil.copy(incar_elastic, os.path.join(work_dir, "INCAR_elastic"))
         
-        # 3. Generate POTCAR using vaspkit (User confirmed they have license/vaspkit installed)
-        # Using the logic provided by user: (echo 103) | vaspkit
+        # 3. Generate POTCAR using vaspkit
         try:
-            cwd = os.getcwd()
+            cwd_temp = os.getcwd()
             os.chdir(work_dir)
-            # Suppress output to keep terminal clean
-            os.system(r'(echo 103) | vaspkit > /dev/null 2>&1')
-            os.chdir(cwd)
+            # Run vaspkit option 103 (Generate POTCAR)
+            # Redirect output to prevent clutter
+            ret = os.system(r'(echo 103) | vaspkit > /dev/null 2>&1')
+            if ret != 0:
+                print(f"Warning: vaspkit returned error code in {folder_name}")
+            os.chdir(cwd_temp)
         except Exception as e:
             print(f"Warning: Failed to run vaspkit in {work_dir}: {e}")
 
@@ -120,7 +128,7 @@ echo "End: $(date)"
         with open(os.path.join(work_dir, "submit.sh"), 'w') as f:
             f.write(submit_content)
             
-        # 4. Write wrapper script
+        # 5. Write wrapper script (for easy bulk submission)
         wrapper_path = os.path.join(scripts_dir, f"submit_{folder_name}.sh")
         abs_work_dir = work_dir.replace(os.sep, '/') 
         
@@ -132,8 +140,9 @@ echo "End: $(date)"
             
     print(f"Setup complete. {len(frames)} folders created in {output_folder}.")
     print(f"Submission scripts in {scripts_dir}.")
-    print("IMPORTANT: Copy your POTCAR to all subfolders before submitting!")
-    print("Example: for d in " + output_folder + "/struct_*; do cp /path/to/POTCAR $d/; done")
+    print("NOTE: Vaspkit was run to generate POTCARs.")
+    print("      Please verify that 'POTCAR' exists in the subfolders before submitting.")
 
 if __name__ == "__main__":
     main()
+

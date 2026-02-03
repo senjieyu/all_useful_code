@@ -1,0 +1,27 @@
+{
+    "project_name": "Unified_EOS_Elastic_Calculation",
+    "elements": ["Cu"],
+    "masses": {
+        "Cu": 63.546
+    },
+    "eos_scale_factors": [0.94, 0.96, 0.98, 1.00, 1.02, 1.04, 1.06, 1.08],
+    "lammps": {
+        "binary": "/work/phy-luoyf/apps/lammps_sus2/interface-lammps-mlip-2/lmp_intel_cpu_intelmpi",
+        "potential_files": {
+            "mlip_ini": "mlip.ini",
+            "mtp_file": "current.mtp"
+        }
+    },
+    "vasp": {
+        "binary": "/work/phy-huangj/app/vasp.5.4.4/bin/vasp_std",
+        "module_load": "# No module load required, using absolute path"
+    },
+    "vaspkit": {
+        "binary": "~/apps/VASPKIT/vaspkit.1.5.1/bin/vaspkit"
+    },
+    "queue": {
+        "queue_name": "33",
+        "nproc": 40,
+        "ptile": 40
+    }
+}

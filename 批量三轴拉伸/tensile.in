@@ -1,0 +1,83 @@
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+# 变量定义
+# variable        struct_file string relaxed.data
+# variable        tensile_dir string z
+
+# ---------- 结构 ----------
+read_data       ${struct_file}
+
+# ---------- 势函数 ----------
+pair_style      eam/alloy
+pair_coeff      * * Cu_mishin1.eam.alloy Cu
+mass            1 63.546
+
+# ---------- 邻居表 ----------
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1 check yes
+
+# ---------- (可选) 缺陷分析 ----------
+compute         csp  all centro/atom 12
+compute         cna  all cna/atom 3.3
+
+# ---------- 应力 (单位 GPa) ----------
+variable        sigma_xx equal -pxx*1.0e-4
+variable        sigma_yy equal -pyy*1.0e-4
+variable        sigma_zz equal -pzz*1.0e-4
+
+# ---------- 初始平衡 ----------
+timestep        0.002                # 2 fs
+velocity        all create 300.0 12345 mom yes rot yes dist gaussian
+
+thermo          100
+thermo_style    custom step time temp pe ke etotal press
+
+# NPT 预平衡 (各向同性)
+fix             feq  all npt temp 300 300 0.1 iso 0 0 1.0
+run             20000               # 40 ps
+unfix           feq
+
+# ---------- 定义参考长度和工程应变 ----------
+# 根据拉伸方向定义 strain 变量
+if "${tensile_dir} == x" then &
+  "variable L0 equal lx" &
+  "variable strain equal (lx-${L0})/${L0}" &
+  "variable npt_cmd string 'temp 300 300 0.1 y 0 0 1.0 z 0 0 1.0 couple none'"
+
+if "${tensile_dir} == y" then &
+  "variable L0 equal ly" &
+  "variable strain equal (ly-${L0})/${L0}" &
+  "variable npt_cmd string 'temp 300 300 0.1 x 0 0 1.0 z 0 0 1.0 couple none'"
+
+if "${tensile_dir} == z" then &
+  "variable L0 equal lz" &
+  "variable strain equal (lz-${L0})/${L0}" &
+  "variable npt_cmd string 'temp 300 300 0.1 x 0 0 1.0 y 0 0 1.0 couple none'"
+
+thermo_style    custom step time temp pe ke etotal press v_strain v_sigma_xx v_sigma_yy v_sigma_zz
+
+# ---------- 单轴拉伸 ----------
+variable        erate equal 5.0e-4
+
+# 使用动态定义的 npt_cmd
+fix             fnpt  all npt ${npt_cmd}
+fix             fdef  all deform 1 ${tensile_dir} erate ${erate} units box remap x
+
+# ---------- 输出 ----------
+fix             out   all print 200 "${strain} ${sigma_xx} ${sigma_yy} ${sigma_zz}" file stress_strain_${tensile_dir}.dat screen no
+
+dump            d1 all custom 250 dump_${tensile_dir}.lammpstrj id type x y z c_csp c_cna
+dump_modify     d1 sort id
+
+# ---------- 变形过程 ----------
+run             250000
+
+# ---------- 收尾 ----------
+unfix           out
+unfix           fdef
+unfix           fnpt
+
+write_data      final_structure_${tensile_dir}.data

@@ -1,0 +1,32 @@
+# ---------- 基本 ----------
+ISTART = 1
+ISPIN  = 1
+LREAL  = Auto
+ENCUT  = 500
+
+LWAVE  = .FALSE.
+LCHARG = .FALSE.
+
+# ---------- 电子结构（关键） ----------
+ISMEAR = 1
+SIGMA  = 0.1
+NELM   = 120
+NELMIN = 6
+EDIFF  = 1E-7
+EDIFFG=-0.002
+
+GGA    = PE        # PBE
+# 如果你明确要 PBEsol → 改成 GGA = PS
+
+# ---------- 离子 / 静态 ----------
+IBRION = -1
+NSW    = 0
+
+# ---------- k 点 ----------
+KSPACING = 0.20
+KGAMMA   = .FALSE.
+
+
+# ---------- 并行 ----------
+NCORE  = 4
+
