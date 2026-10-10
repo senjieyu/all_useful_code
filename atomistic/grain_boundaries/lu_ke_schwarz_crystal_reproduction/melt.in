@@ -1,0 +1,46 @@
+units        metal
+dimension        3
+boundary        p  p  p
+atom_style     atomic
+
+variable          initial_temp equal 1
+variable          final_temp equal 1401
+
+read_data      final.lmp
+#change_box all triclinic
+pair_style    eam/fs
+pair_coeff       * * MCu3.eam.fs Cu
+
+#voronoi-temp
+compute 1 all voronoi/atom
+compute 2 all reduce sum c_1[1]
+variable t equal temp
+variable  N equal count(all)
+variable    atomvol equal c_2/${N}
+##########
+minimize 1.0e-8 1.0e-10 5000 5000
+write_data initial.lammpstrj
+reset_timestep 0
+timestep    0.0025
+change_box all triclinic
+thermo 1000
+thermo_style custom step lx ly lz press pxx pyy pzz pe ke temp spcpu
+
+velocity all create ${initial_temp} 156 dist gaussian mom yes rot yes
+
+#fix 1 all nvt temp ${initial_temp} ${initial_temp} 0.25
+#dump  1 all custom/gz 10000 nvt.gz id type x y z       #每1ns输出一次
+#run 50000
+#unfix 1
+#undump 1
+#reset_timestep 0
+
+#fix         1 all npt temp ${initial_temp} ${final_temp} 0.25 x 0 0 1 y 0 0 1 z 0 0 1 yz 0 0 1 xz 0 0 1 xy 0 0 1 couple xyz
+#fix   1 all nvt temp ${initial_temp} ${final_temp} 0.25
+fix 1 all temp/rescale 1 ${initial_temp} ${final_temp} 0.05 1.0
+#fix 1 all langevin ${initial_temp} ${final_temp} 50000 4251
+fix        01 all momentum 1 linear 1 1 1 angular  #防止模型平移或旋转
+fix      02 all nph x 0 0 1 y 0 0 1 z 0 0 1 yz 0 0 1 xz 0 0 1 xy 0 0 1 nreset 1
+dump  1 all custom/gz 10000 schwraz.*.gz id type x y z       #每1ns输出一次
+fix 2 all print 10000 "${t} ${atomvol}" file vorinoi.txt screen no
+run 80000000

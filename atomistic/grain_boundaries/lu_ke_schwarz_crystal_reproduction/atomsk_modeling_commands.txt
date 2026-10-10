@@ -1,0 +1,23 @@
+atomsk --create fcc 3.639 Cu orient [100] [010] [001] O1O2.xsf
+atomsk --create fcc 3.639 Cu orient [-122] [2-12] [22-1] A1A2.xsf
+atomsk --create fcc 3.639 Cu orient [-1-2-2] [-2-12] [-22-1] B1B2.xsf
+atomsk --create fcc 3.639 Cu orient [-1-22] [-2-1-2] [2-2-1] C1C2.xsf
+atomsk --create fcc 3.639 Cu orient [-12-2] [2-1-2] [-2-2-1] D1D2.xsf
+atomsk --create fcc 3.639 Cu orient [-184] [8-14] [44-7] E1E2.xsf
+atomsk --create fcc 3.639 Cu orient [-7-44] [-4-1-8] [4-8-1] F1F2.xsf
+atomsk --create fcc 3.639 Cu orient [184] [81-4] [-44-7] I1I2.xsf
+#atomsk --create fcc 3.639 Cu orient [1-10] [110] [001] I1I2.xsf
+#
+atomsk --polycrystal A1A2.xsf  poly-K.txt poly-A1A2.xsf -select prop grainID 3:16 -rmatom select
+atomsk --polycrystal B1B2.xsf poly-K.txt poly-B1B2.xsf -select prop grainID 1:2 -rmatom select -select prop grainID 5:16 -rmatom select
+atomsk --polycrystal C1C2.xsf poly-K.txt poly-C1C2.xsf -select prop grainID 1:4 -rmatom select -select prop grainID 7:16 -rmatom select
+atomsk --polycrystal D1D2.xsf poly-K.txt poly-D1D2.xsf -select prop grainID 1:6 -rmatom select -select prop grainID 9:16 -rmatom select
+atomsk --polycrystal E1E2.xsf poly-K.txt poly-E1E2.xsf -select prop grainID 1:8 -rmatom select -select prop grainID 11:16 -rmatom select
+atomsk --polycrystal F1F2.xsf poly-K.txt poly-F1F2.xsf -select prop grainID 1:10 -rmatom select -select prop grainID 13:16 -rmatom select
+atomsk --polycrystal I1I2.xsf poly-K.txt poly-I1I2.xsf -select prop grainID 1:12 -rmatom select -select prop grainID 15:16 -rmatom select
+atomsk --polycrystal O1O2.xsf poly-K.txt poly-O1O2.xsf -select prop grainID 1:14 -rmatom select
+
+#
+atomsk --merge 8 poly-A1A2.xsf poly-B1B2.xsf poly-C1C2.xsf poly-D1D2.xsf poly-E1E2.xsf poly-F1F2.xsf poly-I1I2.xsf poly-O1O2.xsf final.cfg
+
+atomsk -wrap final.cfg lmp

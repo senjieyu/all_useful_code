@@ -1,0 +1,17 @@
+box 130.1 130.1 130.1
+node 0.5*box 0.5*box 0.5*box 0 0 0 #grain7-A1
+node 0*box 0*box 0*box 0 0 0 #grain10-A2
+node 0.5*box 0*box  0*box 0 0 0 #grain8-B1
+node 0*box 0.5*box 0.5*box 0 0 0 #grain4-B2
+node 0*box 0.5*box 0*box 0 0 0 #grain9-C1
+node 0.5*box 0*box 0.5*box 0 0 0 #grain6-C2
+node 0.5*box 0.5*box 0*box 0 0 0 #grain5-D1
+node 0*box 0*box 0.50*box 0 0 0 #grain3-D2
+node 0.25*box 0.75*box 0.25*box 0 0 0 #grain12-E1
+node 0.75*box 0.25*box 0.75*box 0 0 0 #grain11-E2
+node 0.25*box 0.75*box 0.75*box 0 0 0 #grain14-F1
+node 0.75*box 0.25*box 0.25*box 0 0 0 #grain16-F2
+node 0.25*box 0.25*box 0.75*box 0 0 0 #grain15-I1
+node 0.75*box 0.75*box 0.25*box 0 0 0 #grain13-I2
+node 0.75*box 0.75*box 0.75*box 0 0 0     #grain1-O1
+node 0.25*box 0.25*box 0.25*box 0 0 0     #grain2-O2
