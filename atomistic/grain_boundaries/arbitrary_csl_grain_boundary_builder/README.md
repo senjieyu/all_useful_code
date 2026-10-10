@@ -1,9 +1,11 @@
-# Σ17{223}[110] 铜晶界：Atomsk、LAMMPS 与 aimsgb
+# 任意 CSL 参数晶界：Atomsk、LAMMPS 与 aimsgb
 
 本目录包含两套可配合使用的晶界建模代码：
 
-- `wechat_article_code/`：根据微信推文正文整理的 Atomsk + LAMMPS 工作流。它建立 FCC Cu 的 Σ17{223}[110] 对称倾侧晶界，通过刚体平移和能量最小化筛选低能构型。
-- `github_code/`：aimsgb 上游源码快照与基于 JSON 配置的一键晶界生成器。
+- `wechat_article_code/`：根据微信推文正文整理的 Atomsk + LAMMPS 工作流。它是 FCC Cu 的 Σ17{223}[110] 对称倾侧晶界示例，通过刚体平移和能量最小化筛选低能构型。
+- `github_code/`：aimsgb 上游源码快照与基于 JSON 配置的一键晶界生成器。修改配置可建立不同的 CSL 参数晶界。
+
+Σ17 仅是已经实际验证的示例，不是生成器的固定限制。修改 JSON 中的 `sigma`、`rotation_axis`、`plane`、`uc_a`、`uc_b`、元素和晶格常数即可请求不同晶界。需要注意：严格意义上的 CSL 晶界只存在于旋转轴允许的离散 Σ/旋转角组合；若输入的 Σ、旋转轴和晶面不兼容，aimsgb 会报错，而不是生成物理上错误的结构。
 
 ## 已验证的环境与范围
 
@@ -52,7 +54,7 @@ python -m csl_gb_builder.cli build configs/sigma17_110_223_cu.json --dry-run
 python -m csl_gb_builder.cli build configs/sigma17_110_223_cu.json
 ```
 
-可修改 `configs/sigma17_110_223_cu.json` 中的元素、晶格常数、Σ 值、旋转轴、晶界面、超胞大小、真空层和输出格式。图形入口为 `run_builder.py`；安装 PyInstaller 后，在 Windows 双击 `build_exe.bat` 可打包 EXE，配置文件保持在 EXE 旁边，后续修改参数不必重新打包。
+可修改 `configs/sigma17_110_223_cu.json` 中的元素、晶格常数、Σ 值、旋转轴、晶界面、超胞大小、真空层和输出格式。建议复制它并改名为自己的配置，例如 `configs/my_gb.json`，再执行相同命令。图形入口为 `run_builder.py`；安装 PyInstaller 后，在 Windows 双击 `build_exe.bat` 可打包 EXE，配置文件保持在 EXE 旁边，后续修改参数不必重新打包。
 
 ## 来源与许可证
 
