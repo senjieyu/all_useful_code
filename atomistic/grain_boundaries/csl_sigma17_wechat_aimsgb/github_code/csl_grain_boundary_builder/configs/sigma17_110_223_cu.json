@@ -1,0 +1,22 @@
+{
+  "material": {
+    "element": "Cu",
+    "lattice_constant_angstrom": 3.597
+  },
+  "grain_boundary": {
+    "sigma": 17,
+    "rotation_axis": [1, 1, 0],
+    "plane": [2, 2, 3],
+    "uc_a": 2,
+    "uc_b": 2,
+    "vacuum_angstrom": 0.0,
+    "gap_angstrom": 0.0,
+    "delete_layer": "0b0t0b0t",
+    "layer_tolerance_angstrom": 0.25,
+    "to_primitive": false
+  },
+  "output": {
+    "path": "../outputs/sigma17_110_223_cu.vasp",
+    "format": "poscar"
+  }
+}

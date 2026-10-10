@@ -1,0 +1,23 @@
+# Calculate the cohesive energy of a defect-free FCC Cu reference crystal.
+# Provide bulk_cu.lmp and use the same potential as in.optimize_stgb.lmp.
+
+variable input_file string bulk_cu.lmp
+variable potential_file string Cu_u3.eam
+
+clear
+units metal
+dimension 3
+boundary p p p
+atom_style atomic
+
+read_data ${input_file}
+pair_style eam
+pair_coeff * * ${potential_file}
+
+min_style cg
+fix relax_box all box/relax aniso 0.0 vmax 0.001
+minimize 1.0e-10 1.0e-10 5000 5000
+unfix relax_box
+
+variable cohesive_energy equal "pe/count(all)"
+print "Cohesive energy = ${cohesive_energy} eV/atom"

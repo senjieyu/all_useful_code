@@ -1,0 +1,345 @@
+import copy
+import re
+import warnings
+import numpy as np
+from numpy import sin, radians
+from functools import reduce, wraps
+from itertools import groupby
+from aimsgb.utils import reduce_vector
+from pymatgen.core.structure import Structure, Lattice, PeriodicSite
+from pymatgen.transformations.advanced_transformations import CubicSupercellTransformation
+from pymatgen.analysis.structure_matcher import StructureMatcher
+
+__author__ = "Jianli CHENG and Kesong YANG"
+__copyright__ = "Copyright 2018 University of California San Diego"
+__maintainer__ = "Jianli CHENG"
+__email__ = "jic198@ucsd.edu"
+__status__ = "Production"
+__date__ = "January 26, 2018"
+
+
+class Grain(Structure):
+    """
+    We use the Structure class from pymatgen and add several new functions.
+    """
+    @wraps(Structure.__init__)
+    def __init__(self, *args, **kwargs):
+        super(Structure, self).__init__(*args, **kwargs)
+        self._sites = list(self._sites)
+
+    @staticmethod
+    def get_b_from_a(grain_a):
+        """
+        Generate grain_b structure from a grain_a structure by rotating the sites in 
+        grain_a by 180 degree.
+        """
+        for i in range(3):
+            grain_b = grain_a.copy()
+            anchor = grain_b.lattice.get_cartesian_coords(np.array([.0, .0, .0]))
+            axis = [0, 0]
+            axis.insert(i, 1)
+            grain_b.rotate_sites(theta=np.radians(180), axis=axis, anchor=anchor)
+            if grain_a != grain_b:
+                break
+        # grain_b = grain_a.copy()
+        # csl_t = csl.transpose()
+        # if sum(abs(csl_t[0]) - abs(csl_t[1])) > 0:
+        #     axis = (0, 1, 0)
+        # else:
+        #     axis = (1, 0, 0)
+        # anchor = grain_b.lattice.get_cartesian_coords(np.array([.0, .0, .0]))
+        # # print(axis, anchor)
+        # # exit()
+        # grain_b.rotate_sites(theta=np.radians(180), axis=axis, anchor=anchor)
+        return grain_b
+
+    @classmethod
+    def from_mp_id(cls, mp_id):
+        """
+        Get a structure from Materials Project database.
+
+        Args:
+            mp_id (str): Materials Project ID.
+
+        Returns:
+            A structure object.
+        """
+        from mp_api.client import MPRester
+
+        mpr = MPRester()
+        s = mpr.get_structure_by_material_id(mp_id, conventional_unit_cell=True)
+        return cls.from_dict(s.as_dict())
+    
+    def get_orthogonal_matrix(self):
+        warnings.warn("The lattice system of the grain is not orthogonal. "
+                          "aimsgb will find a supercell of the grain structure "
+                          "that is orthogonalized. This may take a while. ")
+        cst = CubicSupercellTransformation(force_90_degrees=True,
+                                           min_length=min(self.lattice.abc))
+        _s = self.copy()
+        _s = cst.apply_transformation(_s)
+        matrix = [reduce_vector(i) for i in cst.transformation_matrix]
+        _s = self.copy()
+        _s.make_supercell(matrix)
+        sm = StructureMatcher(attempt_supercell=True, primitive_cell=False)
+        matrix = sm.get_supercell_matrix(_s, self)
+        return np.array([reduce_vector(i) for i in matrix])
+    
+    def fix_sites_in_layers(self, layer_indices, tol=0.25, direction=2):
+        """
+        Fix sites in certain layers. The layer by layer direction is given by direction.
+        This function is useful for selective dynamics calculations in VASP.
+
+        Args:
+            layer_indices (list): A list of layer indices.
+            tol (float): Tolerance factor in Angstrom to determnine if sites are 
+                in the same layer. Default to 0.25.
+            direction (int): Direction to sort the sites by layers. 0: a, 1: b, 2: c
+        """
+        layers = self.sort_sites_in_layers(tol=tol, direction=direction)
+        sd_sites = []
+        for i, l in enumerate(layers):
+            if i in layer_indices:
+                sd_sites.extend(zip([[False, False, False]] * len(l), [_i[1] for _i in l]))
+            else:
+                sd_sites.extend(zip([[True, True, True]] * len(l), [_i[1] for _i in l]))
+        values = [i[0] for i in sorted(sd_sites, key=lambda x: x[1])]
+        self.add_site_property("selective_dynamics", values)
+
+    def make_supercell(self, scaling_matrix):
+        """
+        Create a supercell. Very similar to pymatgen's Structure.make_supercell
+        However, we need to make sure that all fractional coordinates that equal
+        to 1 will become 0 and the lattice are redefined so that x_c = [0, 0, c]
+    
+        Args:
+            scaling_matrix (3x3 matrix): The scaling matrix to make supercell.
+        """
+        s = self * scaling_matrix
+        for i, site in enumerate(s):
+            f_coords = np.mod(site.frac_coords, 1)
+            # The following for loop is probably not necessary. But I will leave
+            # it here for now.
+            for j, v in enumerate(f_coords):
+                if abs(v - 1) < 1e-6:
+                    f_coords[j] = 0
+            s[i] = PeriodicSite(site.specie, f_coords, site.lattice,
+                                properties=site.properties)
+        self._sites = s.sites
+        self._lattice = s.lattice
+        new_lat = Lattice.from_parameters(*s.lattice.parameters)
+        self.lattice = new_lat
+
+    def delete_bt_layer(self, bt, tol=0.25, direction=2):
+        """
+        Delete bottom or top layer of the structure.
+
+        Args:
+            bt (str): Specify whether it's a top or bottom layer delete. "b"
+                means bottom layer and "t" means top layer.
+            tol (float): Tolerance factor in Angstrom to determnine if sites are 
+                in the same layer. Default to 0.25.
+            direction (int): Direction to sort the sites by layers. 0: a, 1: b, 2: c
+        """
+        if bt == "t":
+            l1, l2 = (-1, -2)
+        else:
+            l1, l2 = (0, 1)
+
+        l = self.lattice.abc[direction]
+        layers = self.sort_sites_in_layers(tol=tol, direction=direction)
+        l_dist = abs(layers[l1][0][0].coords[direction] - layers[l2][0][0].coords[direction])
+        l_vector = [1, 1]
+        l_vector.insert(direction, (l - l_dist) / l)
+        new_lat = Lattice(self.lattice.matrix * np.array(l_vector)[:, None])
+
+        layers.pop(l1)
+        sites = reduce(lambda x, y: np.concatenate((x, y), axis=0), layers)
+        new_sites = []
+        l_dist = 0 if bt == "t" else l_dist
+        l_vector = [0, 0]
+        l_vector.insert(direction, l_dist)
+        for site, _ in sites:
+            new_sites.append(PeriodicSite(site.specie, site.coords - l_vector,
+                                          new_lat, coords_are_cartesian=True))
+        self._sites = new_sites
+        self._lattice = new_lat
+
+    def sort_sites_in_layers(self, tol=0.25, direction=2):
+        """
+        Sort the sites in a structure by layers.
+
+        Args:
+            tol (float): Tolerance factor in Angstrom to determnine if sites are 
+                in the same layer. Default to 0.25.
+            direction (int): Direction to sort the sites by layers. 0: a, 1: b, 2: c
+
+        Returns:
+            Lists with a list of (site, index) in the same plane as one list.
+        """
+        sites_indices = sorted(zip(self.sites, range(len(self))), 
+                               key=lambda x: x[0].frac_coords[direction])
+        layers = []
+        for k, g in groupby(sites_indices, key=lambda x: x[0].frac_coords[direction]):
+            layers.append(list(g))
+        new_layers = []
+        k = -1
+        for i in range(len(layers)):
+            if i > k:
+                tmp = layers[i]
+                for j in range(i + 1, len(layers)):
+                    if self.lattice.abc[direction] * abs(
+                                    layers[j][0][0].frac_coords[direction] -
+                                    layers[i][0][0].frac_coords[direction]) < tol:
+                        tmp.extend(layers[j])
+                        k = j
+                    else:
+                        break
+                new_layers.append(sorted(tmp))
+        # check if the 1st layer and last layer are actually the same layer
+        # use the fractional as cartesian doesn't work for unorthonormal
+        if self.lattice.abc[direction] * abs(
+                                new_layers[0][0][0].frac_coords[direction] + 1 -
+                                new_layers[-1][0][0].frac_coords[direction]) < tol:
+            tmp = new_layers[0] + new_layers[-1]
+            new_layers = new_layers[1:-1]
+            new_layers.append(sorted(tmp))
+        return new_layers
+
+    # def set_orthogonal_grain(self):
+    #     a, b, c = self.lattice.abc
+    #     self.lattice = Lattice.orthorhombic(a, b, c)
+
+    def set_orthogonal_grain(self, direction=2):
+        """This method was adopted from pymatgen.surface.Slab.get_orthogonal_c_slab.
+        **Note that this breaks inherent symmetries in the grain structure.**
+
+        Args:
+            direction (int): The lattice vector that is forced to be orthogonal. 0: a, 1: b, 2: c
+
+        Returns:
+            (Grain) An orthogonalized grain structure.
+        """
+        abc = list(self.lattice.matrix)
+        _abc = copy.deepcopy(abc)
+        _abc.pop(direction)
+        new_c = np.cross(*_abc)
+        new_c /= np.linalg.norm(new_c)
+        new_c = np.dot(abc[direction], new_c) * new_c
+        _abc.insert(direction, new_c)
+        new_latt = Lattice(_abc)
+        return Grain(
+            lattice=new_latt, 
+            species=self.species_and_occu, 
+            coords=self.cart_coords,
+            coords_are_cartesian=True,
+            site_properties=self.site_properties
+        )
+
+
+    def build_grains(self, csl, direction, uc_a=1, uc_b=1):
+        """
+        Build structures for grain A and B from the coincidnet site lattice (CSL) matrix, 
+        number of unit cell of grain A and number of unit cell of grain B. Each grain
+        is essentially a supercell of the initial structure.
+
+        Args:
+            csl (3x3 matrix): CSL matrix (scaling matrix)
+            direction (int): Stacking direction of GB. 0: a, 1: b, 2: c
+            uc_a (int): Number of unit cell of grain A. Default to 1.
+            uc_b (int): Number of unit cell of grain B. Default to 1.
+
+        Returns:
+            Grain objects for grain A and B.
+        """
+        csl_t = csl.transpose()
+        # rotate along a longer axis between a and b
+        grain_a = self.copy()
+        grain_a.make_supercell(csl_t)
+        # grain_a.to(filename='POSCAR_a')
+        # exit()
+
+        if not grain_a.lattice.is_orthogonal:
+            warnings.warn("The lattice system of the grain is not orthogonal. The lattice "
+                          "will be forced to be orthogonal. **Note that this breaks inherent symmetries of the grain.**")
+            grain_a = grain_a.set_orthogonal_grain(direction)
+
+        # grain_a.to(filename='POSCAR_a')
+        # exit()
+        temp_a = grain_a.copy()
+        scale_vector = [1, 1]
+        scale_vector.insert(direction, uc_b)
+        temp_a.make_supercell(scale_vector)
+        grain_b = self.get_b_from_a(temp_a)
+        # make sure that all fractional coordinates that equal to 1 will become 0
+        grain_b.make_supercell([1, 1, 1])
+
+        scale_vector = [1, 1]
+        scale_vector.insert(direction, uc_a)
+        grain_a.make_supercell(scale_vector)
+
+        # grain_b.to(filename='POSCAR_b')
+        # exit()
+        return grain_a, grain_b
+
+    @classmethod
+    def stack_grains(cls, grain_a, grain_b, vacuum=0.0, gap=0.0, direction=2,
+                     delete_layer="0b0t0b0t", tol=0.25, to_primitive=True):
+        """
+        Build an interface structure by stacking two grains along a given direction.
+        The grain_b a- and b-vectors will be forced to be the grain_a's
+        a- and b-vectors.
+
+        Args:
+            grain_a (Grain): Substrate for the interface structure
+            grain_b (Grain): Film for the interface structure
+            vacuum (float): Vacuum space above the film in Angstroms. Default to 0.0
+            gap (float): Gap between substrate and film in Angstroms. Default to 0.0
+            direction (int): Stacking direction of the interface structure. 0: a, 1: b, 2: c.
+            delete_layer (str): Delete top and bottom layers of the substrate and film.
+                8 characters in total. The first 4 characters is for the substrate and
+                the other 4 is for the film. "b" means bottom layer and "t" means
+                top layer. Integer represents the number of layers to be deleted.
+                Default to "0b0t0b0t", which means no deletion of layers. The
+                direction of top and bottom layers is based on the given direction.
+            tol (float): Tolerance factor in Angstrom to determnine if sites are 
+                in the same layer. Default to 0.25.
+            to_primitive (bool): Whether to get primitive structure of GB. Default to true.
+
+        Returns:
+             GB structure (Grain)
+        """
+        delete_layer = delete_layer.lower()
+        delete = re.findall('(\d+)(\w)', delete_layer)
+        if len(delete) != 4:
+            raise ValueError(f"'{delete_layer}' is not supported. Please make sure the format "
+                             "is 0b0t0b0t.")
+        for i, v in enumerate(delete):
+            for _ in range(int(v[0])):
+                if i <= 1:
+                    grain_a.delete_bt_layer(v[1], tol, direction)
+                else:
+                    grain_b.delete_bt_layer(v[1], tol, direction)
+        abc_a = list(grain_a.lattice.abc)
+        abc_b, angles = np.reshape(grain_b.lattice.parameters, (2, 3))
+        if direction == 1:
+            l = (abc_a[direction] + gap) * sin(radians(angles[2]))
+        else:
+            l = abc_a[direction] + gap
+        abc_a[direction] += abc_b[direction] + 2 * gap + vacuum
+        new_lat = Lattice.from_parameters(*abc_a, *angles)
+        a_fcoords = new_lat.get_fractional_coords(grain_a.cart_coords)
+
+        grain_a = Grain(new_lat, grain_a.species, a_fcoords, site_properties=grain_a.site_properties)
+        l_vector = [0, 0]
+        l_vector.insert(direction, l)
+        b_fcoords = new_lat.get_fractional_coords(
+            grain_b.cart_coords + l_vector)
+        grain_b = Grain(new_lat, grain_b.species, b_fcoords, site_properties=grain_b.site_properties)
+
+        structure = Grain.from_sites(grain_a[:] + grain_b[:])
+        structure = structure.get_sorted_structure()
+        if to_primitive:
+            structure = structure.get_primitive_structure()
+
+        return cls.from_dict(structure.as_dict())

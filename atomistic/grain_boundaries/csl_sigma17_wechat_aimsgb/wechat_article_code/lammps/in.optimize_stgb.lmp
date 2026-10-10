@@ -1,0 +1,77 @@
+# Rigid-body translation scan for a Sigma17{223}[110] symmetric tilt GB.
+# Input structure must contain grain 1 as atom type 1 and grain 2 as type 2.
+
+variable input_file string sigma17_stgb_initial.lmp
+variable potential_file string Cu_u3.eam
+variable lattice_constant equal 3.597
+variable cohesive_energy equal -3.54
+variable energy_to_mj_m2 equal 16021.7733
+variable scan_points_y equal 11
+variable scan_points_z equal 11
+variable overlap_fraction equal 0.80
+
+shell mkdir result
+shell mkdir shifted
+
+variable iy loop ${scan_points_y}
+label loop_y
+variable iz loop ${scan_points_z}
+label loop_z
+
+clear
+units metal
+dimension 3
+boundary p p p
+atom_style atomic
+neigh_modify every 1 delay 0 check yes
+timestep 0.001
+
+read_data ${input_file}
+group grain_1 type 1
+group grain_2 type 2
+
+# Both atom types represent Cu; type 2 is only a grain label during setup.
+# Atomsk writes type 2 with the Al mass because Al is used solely as a label.
+# Reset both masses so every exported minimized structure is physically Cu.
+mass 1 63.546
+mass 2 63.546
+pair_style eam
+pair_coeff * * ${potential_file}
+
+# Periodic translation lengths for the in-plane directions of this orientation.
+variable y_period equal "v_lattice_constant*sqrt(0*0 + 1*1 + 3*3)/2"
+variable z_period equal "v_lattice_constant"
+variable y_shift equal "v_y_period/(v_scan_points_y-1)*(v_iy-1)"
+variable z_shift equal "v_z_period/(v_scan_points_z-1)*(v_iz-1)"
+variable nearest_neighbor equal "v_lattice_constant*sqrt(2)/2"
+variable overlap_distance equal "v_overlap_fraction*v_nearest_neighbor"
+
+# With periodic boundaries there are two grain-boundary planes.
+variable gb_area equal "2.0*lx*lz"
+
+displace_atoms grain_2 move 0.0 ${y_shift} ${z_shift} units box
+write_dump all atom shifted/model_${iy}_${iz}.xyz
+delete_atoms overlap ${overlap_distance} grain_1 grain_2
+
+min_style cg
+minimize 1.0e-10 1.0e-10 5000 5000
+
+# Relax normal stress. Change `y` if your GB normal uses another box direction.
+fix relax_box all box/relax y 0.0 vmax 0.001
+minimize 1.0e-10 1.0e-10 5000 5000
+unfix relax_box
+
+minimize 1.0e-10 1.0e-10 5000 5000
+
+variable atom_count equal count(all)
+variable excess_energy equal "pe-v_atom_count*v_cohesive_energy"
+variable gb_energy equal "v_excess_energy/v_gb_area*v_energy_to_mj_m2"
+print "@ ${iy} ${iz} ${gb_energy} mJ/m^2"
+write_data result/after_minimize_${iy}_${iz}.lmp
+
+next iz
+jump SELF loop_z
+variable iz delete
+next iy
+jump SELF loop_y
+print "All rigid-body translations completed."

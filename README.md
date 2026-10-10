@@ -6,6 +6,7 @@ Curated, de-duplicated collection of reusable scripts from five personal code fo
 
 - `atomistic/format_conversion` — converters between CIF, POSCAR/VASP, XYZ, LAMMPS, CFG, and related formats.
 - `atomistic/grain_boundaries` — grain-boundary construction and energy workflows.
+- `atomistic/grain_boundaries/csl_sigma17_wechat_aimsgb` — validated Σ17{223}[110] Cu workflow from Atomsk/LAMMPS and an aimsgb configuration-driven builder; see its README for setup and license constraints.
 - `atomistic/gsfe` — generalized stacking-fault (GSFE) construction and analysis.
 - `atomistic/material_properties` — EOS and elastic-property workflows.
 - `atomistic/simulation_workflows` — VASP, LAMMPS, EAM/SUS2, relaxation, training, and sampling helpers.
