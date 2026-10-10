@@ -11,7 +11,7 @@ Curated, de-duplicated collection of reusable scripts from five personal code fo
 - `atomistic/material_properties` — EOS and elastic-property workflows.
 - `atomistic/simulation_workflows` — VASP, LAMMPS, EAM/SUS2, relaxation, training, and sampling helpers.
 - `atomistic/twins_and_stacking` — twinning, stacking, and supercell construction.
-- `machine_learning` — regression, classification, feature selection, Bayesian optimization, and visualization utilities.
+- `machine_learning` — regression, classification, feature selection, Bayesian optimization, and visualization utilities; `random_forest_diagnostic_suite` provides a documented 18-figure binary-classification diagnostic workflow.
 - `python_learning` — standalone Python learning exercises and small applications.
 - `utilities_and_legacy` — miscellaneous utilities retained for reference.
 - `visualization` — standalone plotting helpers.
