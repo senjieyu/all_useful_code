@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated calculations and large data
+outputs/
+results/
+logs/
+*.out
+*.err
+*.zip
+*.tar
+*.tar.gz
+*.vasp
+*.xyz
+*.lammpstrj
+*.dump
